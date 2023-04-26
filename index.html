@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<title>The First Representational Alignment Workshop</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	  <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<!-- Custom styles for this template -->
+
+
+	<link href="../css/scrolling-nav.css" rel="stylesheet">
+	<link href="../css/style.css" rel="author stylesheet">
+	    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0M445FTS98"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0M445FTS98');
+</script>
+    </head>
+
+    <body id="page-top">
+
+	<!-- Navigation -->
+	<nav class="navbar navbar-expand-lg navbar-light bg-light" id="mainNav">
+	    <div class="container bar-container">
+		<a class="title-head" href="#page-top">The First Representational Alignment Workshop</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+		    <span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarResponsive">
+		    <ul class="navbar-nav ml-auto">
+				<li class="nav-item">
+				    <a class="nav-link js-scroll-trigger" href="#about">About</a>
+				</li>
+
+				<li class="nav-item">
+				    <a class="nav-link js-scroll-trigger" href="#speakers">Speakers</a>
+				</li>
+
+<!--				<li class="nav-item">-->
+<!--				    <a class="nav-link js-scroll-trigger" href="#schedule">Schedule</a>-->
+<!--				</li>-->
+
+<!-- 				<li class="nav-item">-->
+<!--				    <a class="nav-link js-scroll-trigger" href="#callpapers"> Call for papers </a>-->
+<!--				</li>-->
+
+<!--				<li class="nav-item">-->
+<!--				    <a class="nav-link js-scroll-trigger" href="#papers"> Papers </a>-->
+<!--				</li>-->
+
+				<!-- <li class="nav-item">
+				    <a class="nav-link js-scroll-trigger" href="#faq">FAQ</a>
+				</li> -->
+				<li class="nav-item">
+				    <a class="nav-link js-scroll-trigger" href="#organizers">Organizers</a>
+				</li>
+		    </ul>
+		</div>
+	    </div>
+	</nav>
+
+	<header class="headercontainer bg-primary text-white" style="padding: 0%; max-height: none; ">
+	    <div style="background-color: rgba(160,160,160,0.0)" class="text-center">
+		<div style="padding-bottom: 6%; padding-top: 6%; background-image: url('../images/nz.png'); background-size: cover; background-position: center">
+
+	    <div class="container titlebox"; style="display: inline-block; background-color:rgba(0,0,0, 0.7); width:auto;">
+		<p style="text-align: center; margin-bottom: 2" class="title">The First Representational Alignment Workshop</p>
+		<p style="text-align: center; margin-bottom: 0" class="subtitle">Workshop NeurIPS 2023 - Date TBD</p>
+		<p style="text-align: center; margin-bottom: 0" class="subtitle">In person location: TBD</p>
+		 <p style="text-align: center; margin-bottom: 0" class="subtitle">In person poster session: TBD</p>
+		</div>
+	    </div>
+	    </div>
+	</header>
+
+	    <hr class="half-rule"/>
+	<section id="about">
+	    <div class="container">
+		<div class="row">
+		    <div class="col-md-10 mx-auto">
+			<span class=titlesec>About</span>
+			<br>
+			<span>
+				As AI systems become increasingly embedded in every aspect of our lives, understanding whether these systems are aligned with humans is of paramount importance.
+				The exploration of human-model alignment has classically focused on value alignment (Gabriel, 2020; Kirchner et al., 2022).
+				This kind of alignment is hard to define and measure, so often researchers instead evaluate alignment between models and humans in output/behavior (i.e. task performance).
+				However, monitoring output alignment is insufficient to tell if a model is actually aligned with humans or just acting that way.
+				Meanwhile, the path to general AI value alignment remains unclear as relevant metrics are difficult to formalize and measure.
+				Recently, researchers have instead begun focusing on aligning model and human *representations*.
+				The advantages of representational alignment are that it is both measurable and captures the internal representations of a model rather than just its output behavior.
+				Representation alignment is intrinsically linked to value alignment and to behavioral alignment – a deeper understanding of representational alignment will help us understand whether representational guarantees will lead to general value alignment, and conversely, under what circumstances behavioral alignment is sufficient for value alignment.
+
+			</span>
+
+			<span>
+				The study of the kinds of representations that humans and machines construct about the world has a long history across cognitive science, neuroscience, and machine learning.
+				The alignment of these representations has gone by many names including latent space alignment, concept(ual) alignment, system alignment, representational similarity analysis, model alignment, and representational alignment  [Goldstone & Rogosky, 2002; Kriegeskorte et al., 2008; Stolk et al., 2016; Peterson et al., 2018; Roads & Love, 2020; Tucker et al., 2022; Muttenthaler et al., 2022; Aho et al., 2022; Marjieh et al., 2022, Fel et al., 2022; Sucholutsky & Griffiths 2023] and has implicitly or explicitly been an objective in many subareas of machine learning including knowledge distillation [Hinton et al., 2015], disentanglement [Monter et al., 2022], and concept bottleneck models [Koh et al., 2020].
+				Researchers working on disentanglement Knowing that ML systems share our representations of the world may enable us to more efficiently communicate with them and permit us to increase our trust in them (e.g., knowing that the model will understand decompositions of the world in the same way as we do).
+				To the extent that humans have useful representations of the world, representational alignment is also an effective source of inductive bias that may improve generalization and make it possible to learn from limited human supervision [Fel et al., 2022; Sucholutsky & Griffiths 2023].
+				Studying representational alignment can even reveal domains where models are able to learn better domain-specific representations than humans, which could be leveraged to complement and empower humans when designing hybrid systems [Steyvers et al, 2022; Shin et al, 2023].
+			</span>
+
+				<span>
+
+					At this workshop, we will welcome perspectives from cognitive science, neuroscience, machine learning, and related fields with the goal of posing and exploring questions about representational alignment including:
+				<br><br>-->
+				<ol>
+					<li style="padding-bottom: 10px"> What is representational alignment, and how should it be measured?</li>
+
+					<li style="padding-bottom: 10px"> How well do measures of representational alignment generalize to new data?</li>
+
+					<li style="padding-bottom: 10px"> What are the consequences (positive or negative) of representational alignment?</li>
+
+					<li style="padding-bottom: 10px"> How does representational alignment connect to value alignment and output alignment?</li>
+
+					<li style="padding-bottom: 10px"> How can we increase (or decrease) representational alignment?</li>
+				</ol>
+
+				While the focus of the workshop will generally be on the representational alignment of models with humans, we also welcome submissions regarding representational alignment in other settings (e.g. alignment of models with other models).
+				If you are interested in being a participant, we invite you to fill out <a href="https://docs.google.com/forms/d/e/1FAIpQLScwBKbHKRjPDjV3-cieuyKST8eQT8_UVjAzYVdYyt2mJ0INjA/viewform">this Google Form</a>!
+				</span>
+
+		    </div>
+		    <div class="col-md-7 mx-auto" style="text-align: center;">
+			<br>
+
+
+		    </div>
+		</div>
+
+	    </div>
+
+
+
+	</section>
+
+
+
+
+
+	<hr class="half-rule"/>
+	
+	<section id="speakers">
+	    <div class="container">
+		<div class="row">
+		    <div class="col-md-10 mx-auto">
+		<span class=titlesec> Speakers and Panelists</span><br>
+		<div class="row">
+			
+			<a href='https://lampinen.github.io/'>
+		    <div class="profpic speaker xlarge-1 columns">
+			    <img src="../images/speakers/profile_lampinen.jpeg" class="figure-img img-fluid ">
+			<p class=profname><a href="https://lampinen.github.io/"> Andrew Lampinen</a> </p>
+			<p class=institution> DeepMind </p>
+		    </div>
+			</a>
+
+			<a href='https://research.google/people/107313/'>
+		    <div class="profpic speaker xlarge-1 columns">
+			    <img  src="../images/speakers/profile_muller.jpeg" class="figure-img img-fluid ">
+			<p class=profname><a href="https://research.google/people/107313/">  Klaus-Robert Müller
+			</a></p>
+			<p class=institution> Technische Universität Berlin </p>
+		    </div>
+
+			</a>
+			<a href="https://mtoneva.com/">
+		    <div class="profpic speaker xlarge-1 columns">
+			    <img  src='../images/speakers/profile_toneva.jpeg' class="figure-img img-fluid ">
+			<p class=profname><a href="https://mtoneva.com/"> Mariya Toneva
+			</a></p>
+			<p class=institution> Max Planck Institute for Software Systems </p>
+
+		    </div>
+			</a>
+
+
+		</div>
+		<div class="row">
+			</a>
+			<a href="https://eringrant.github.io/">
+		    <div class="profpic speaker xlarge-1 columns">
+			    <img  src='../images/speakers/profile_grant.jpeg' class="figure-img img-fluid ">
+			<p class=profname><a href="https://eringrant.github.io/"> Erin Grant
+			</a></p>
+			<p class=institution>University College London</p>
+		    </div>
+			</a>
+
+			<a href="http://bradlove.org/">
+		   <div class="profpic speaker xlarge-1 columns">
+			    <img  src="../images/speakers/profile_love.jpeg" class="figure-img img-fluid ">
+			<p class=profname> <a href="http://bradlove.org/"> Bradley Love </a></p>
+			<p class=institution>University College London</p>
+
+		    </div>
+			</a>
+
+
+
+		</div>
+
+
+		</div>
+</div>
+
+<!--</section>-->
+
+<!--	<hr class="half-rule"/>-->
+<!--	<section class="">-->
+<!--	    <div class="container" id="schedule">-->
+<!--		<div class="row">-->
+<!--		    <div class="col-md-10 mx-auto">-->
+<!--			<span class="titlesec"><span></span>Schedule</span>-->
+<!--			<br><br>-->
+<!--			<table class="table table-striped">-->
+<!--				<tbody>-->
+<!--				<tr>-->
+<!--					<th style="width: 21%"> Time (NZDT)</th>-->
+<!--				</tr>-->
+<!--				<tr>-->
+<!--					<td style="width: 21%">	08:30 am - 08:45 am        <td/><td>  Organizers <br> <b> Introductory Remarks  </b> </td>-->
+<!--				</tr>-->
+
+<!--				<tr>-->
+<!--					<td style="width: 21%">	08:45 am - 09:15 am        <td/><td>    Mark Ho <br> <b> Artificial intelligence, natural stupidity, and resource rational cognition </b>-->
+
+<!-- 					<br>-->
+<!-- 					<a data-toggle="collapse" data-target="#abstractmark" class="collapsed abstract" aria-expanded="false"> Abstract</a>-->
+<!--								<div id="abstractmark" class="news collapse" style="margin-top: 10px; height: 22px;" aria-expanded="false">-->
+<!--									 There is a fundamental tension in AI and cognitive science between human intelligence (we want to build systems with human-like intelligence) and human stupidity (we know that humans are cognitively limited and can be irrational).-->
+<!--									As the psychologist Amos Tversky, whose work on people's cognitive biases won the Nobel Prize in Economics, put it: "My colleagues, they study artificial intelligence; me, I study natural stupidity."-->
+<!--									How can these two views on human cognition be reconciled and inform the design of AI systems?-->
+<!--									My talk will discuss recent advances in resource rationality, a general theoretical framework that seeks to explain humans' puzzling combination of intelligence and stupidity as a consequence of our condition as boundedly rational decision makers.-->
+<!--									I will focus on my own work on resource rational representations, the challenges and promise of this approach, and how this perspective can help guide the development of AI systems that effectively and safely help us overcome our cognitive limitations.-->
+<!--								</div>-->
+<!--					</td>-->
+<!--				</tr>-->
+
+<!--				<tr>-->
+<!--					<td style="width: 21%">	09:15 am - 09:55 am        <td/><td>    Jacob Andreas <br> <b> Toward natural language supervision </b>-->
+
+<!-- 					<br>-->
+<!-- 					<a data-toggle="collapse" data-target="#abstractjacob" class="collapsed abstract" aria-expanded="false"> Abstract</a>-->
+<!--								<div id="abstractjacob" class="news collapse" style="margin-top: 10px; height: 22px;" aria-expanded="false">-->
+<!--									 In the age of deep networks, "learning" almost invariably means "learning from examples".-->
+<!--									Image classifiers are trained with large datasets of images, machine translation systems with corpora of translated sentences, and robot policies with rollouts or demonstrations.-->
+<!--									When human learners acquire new concepts and skills, we often do so with richer supervision, especially in the form of language-&#45;&#45;we learn new concepts from exemplars accompanied by descriptions or definitions, and new skills from demonstrations accompanied by instructions.-->
+<!--									In natural language processing, recent years have seen a number of successful approaches to learning from task definitions and other forms of auxiliary language-based supervision.-->
+<!--									But these successes have been largely confined to tasks that also involve language as an input and an output-&#45;&#45;what will it take to make language-based training useful for the rest of the machine learning ecosystem? In this talk, I'll present two recent applications of natural language supervision to tasks outside the traditional domain of NLP: using language to guide visuomotor policy learning and inductive program synthesis. In these applications, natural language annotations reveal latent compositional structure in the space of programs and plans, helping models discover reusable abstractions for perception and interaction. This kind of compositional structure is present in many tasks beyond policy learning and program synthesis, and I'll conclude with a brief discussion of how these techniques can be applied even more generally.-->
+<!--								</div>-->
+<!--					</td>-->
+<!--				</tr>-->
+
+<!--				<tr>-->
+<!--					<td style="width: 21%">	09:45 am - 10:00 am        <td/><td>  Coffee Break </td>-->
+<!--				</tr>-->
+
+<!--				<tr>-->
+<!--					<td style="width: 21%">	10:00 am - 10:30 am        <td/><td>    Lerrel Pinto <br> <b> Teaching Robots to Manipulate in an Hour </b>-->
+
+<!-- 					<br>-->
+<!-- 					<a data-toggle="collapse" data-target="#abstractlerrel" class="collapsed abstract" aria-expanded="false"> Abstract</a>-->
+<!--								<div id="abstractlerrel" class="news collapse" style="margin-top: 10px; height: 22px;" aria-expanded="false">-->
+<!--									 I want to teach robots complex and dexterous behaviors in diverse real-world environments.-->
+<!--									But what is the fastest way to teach robots in the real world? — Among the prominent options in our robot learning toolbox, Sim2real requires careful modeling of the world, while real-world self-supervised learning or RL is far too slow.-->
+<!--									Currently, the only reasonably efficient approach that I know of is imitating humans.-->
+<!--									But making imitation learning feasible on real robots is not ‘easy’.-->
+<!--									They often require complicated demonstration collection setups, rely on having expert roboticists train them, and even then need a significant number of demonstrations to learn effectively.-->
+<!--									In this talk, I will present two ideas that can make robots learning far easier than it currently is.-->
+<!--									First, to collect demonstrations more easily we will use vision-based demonstration collection devices.-->
+<!--									This allows untrained humans to easily collect demonstrations from consumer-grade products.-->
+<!--									Second, to learn from these visual demonstrations, I will propose a new imitation learning algorithm that puts data efficiency on the forefront.-->
+<!--									Together this allows for significantly faster and easier imitation on a variety of real-world manipulation tasks.-->
+<!--								</div>-->
+<!--					</td>-->
+<!--				</tr>-->
+<!--				<tr>-->
+<!--					<td style="width: 21%">	10:30 am - 11:00 am        <td/><td>    Matthew Gombolay <br> <b> Confronting the Correspondence Problem with Self-supervised and Interactive Machine Learning </b>-->
+<!-- 					<br>-->
+<!-- 					<a data-toggle="collapse" data-target="#abstractmatthew" class="collapsed abstract" aria-expanded="false"> Abstract</a>-->
+<!--					<div id="abstractmatthew" class="news collapse" style="margin-top: 10px; height: 22px;" aria-expanded="false">-->
+<!--						New advances in robotics offer a promise of revitalizing final assembly manufacturing, assisting in personalized at-home healthcare, and even scaling the power of earth-bound scientists for robotic space exploration.-->
+<!--						Yet, manually programming robots for each end user's ad hoc needs is intractable.-->
+<!--						Interactive Machine Learning techniques seek to enable end users to intuitively program robots such as through skill demonstration, natural language instruction, and feedback.-->
+<!--						Yet, humans and robots alike struggle in situated learning interactions because of the correspondence problem: humans and robots perceive, think, and physically act differently.-->
+<!--						In this talk, I will present our latest work in developing interactive machine learning methods that seek to (1) enable users to program robots intuitively, (2) enable robots to characterize misspecified input and feedback from human end-users, and (3) close the loop on situated learning interactions through explainable Artificial Intelligence (XAI) techniques.-->
+<!--						The outcome of our research is a set of design principles that go towards addressing fundamental issues of the correspondence problem for democratizing robotics.-->
+<!--					</div>-->
+
+<!--					</td>-->
+<!--				</tr>-->
+<!--				-->
+<!--				<tr>-->
+<!--					<td style="width: 21%">	11:00 am - 12:00 pm        <td/><td>  Contributed Talks </td>-->
+<!--				</tr>-->
+
+<!--				<tr>-->
+<!--					<td style="width: 21%">	12:00 pm - 12:30 pm        <td/><td>    Daniel Brown <br> <b> Latent Spaces and Learned Representation for Better Human Preference Learning </b>-->
+
+<!-- 					<br>-->
+<!-- 					<a data-toggle="collapse" data-target="#abstractdaniel" class="collapsed abstract" aria-expanded="false"> Abstract</a>-->
+<!--								<div id="abstractdaniel" class="news collapse" style="margin-top: 10px; height: 22px;" aria-expanded="false">-->
+<!--									 In this talk I will discuss some of our recent work that uses latent spaces and representation learning to enable better human-robot interaction.-->
+<!--									I will discuss the importance of having the “right” latent space to better teach robots to act in ways that are aligned with human preferences, approaches for learning latent space embeddings for efficient Bayesian reward learning and generalizable robot assistance, and the use of task-agnostic similarity queries as a step towards the goal of enabling efficient learning of multiple down-stream tasks using a single shared representation.-->
+<!--								</div>-->
+<!--					</td>-->
+<!--				</tr>-->
+
+<!--				<tr>-->
+<!--					<td style="width: 21%">	12:30 pm - 01:30 pm        <td/><td>  Lunch Break </td>-->
+<!--				</tr>-->
+
+<!--				<tr>-->
+<!--					<td style="width: 21%">	01:30 pm - 02:00 pm        <td/><td>  Coffee Break </td>-->
+<!--				</tr>-->
+<!--				-->
+<!--				<tr>-->
+<!--					<td style="width: 21%">	02:00 pm - 02:30 pm        <td/><td>  Conference Opening Session </td>-->
+<!--				</tr>-->
+
+<!--			    <tr>-->
+<!--					<td style="width: 21%">	02:30 pm - 03:00 pm        <td/><td>    Amy Zhang <br> <b> Attending to What Matters with Representation Learning </b>-->
+
+<!-- 					<br>-->
+<!-- 					<a data-toggle="collapse" data-target="#abstractamy" class="collapsed abstract" aria-expanded="false"> Abstract</a>-->
+<!--								<div id="abstractamy" class="news collapse" style="margin-top: 10px; height: 22px;" aria-expanded="false">-->
+<!--									  In this talk, we focus on three different ways to extract additional signal from various, easily available data sources to improve human-robot alignment.-->
+<!--									We first present how state abstractions can accelerate reinforcement learning from rich observations, such as images, by disentangling task-relevant from irrelevant details using reward signal.-->
+<!--									However, while reward is the canonical way to specify task in reinforcement learning, it is often difficult to specify a well-shaped reward function in robotics.-->
+<!--									We then focus on goal-conditioned tasks and ways to extract and generalize functional equivariance.-->
+<!--									Finally, we explore how human demonstrations can be used to learn a representation that captures dense reward signal for robotics tasks.-->
+<!--								</div>-->
+<!--					</td>-->
+<!--				</tr>-->
+
+<!--							    <tr>-->
+<!--					<td style="width: 21%">	03:00 pm - 03:30 pm        <td/><td>    Dorsa Sadigh <br> <b> Aligning Humans and Robots : Active Elicitation of Informative and Compatible Queries </b>-->
+
+<!-- 					<br>-->
+<!-- 					<a data-toggle="collapse" data-target="#abstractdorsa" class="collapsed abstract" aria-expanded="false"> Abstract</a>-->
+<!--								<div id="abstractdorsa" class="news collapse" style="margin-top: 10px; height: 22px;" aria-expanded="false">-->
+<!--									 Aligning robot objectives with human preferences is a key challenge in robot learning.-->
+<!--									In this talk, I will start with discussing how active learning of human preferences can effectively query humans with the most informative questions to learn their preference reward functions.-->
+<!--									I will discuss some of the limitations of prior work, and how approaches such as few-shot learning can be integrated with active preference based learning for the goal of reducing the number of queries to a human expert and allowing for truly bringing in humans in the loop of learning neural reward functions.-->
+<!--									I will then talk about how we could go beyond active learning from a single human, and tap into large language models (LLMs) as another source of information to capture human preferences that are hard to specify.-->
+<!--									I will discuss how LLMs can be queried within a reinforcement learning loop and help with reward design.-->
+<!--									Finally I will discuss how the robot can also provide useful information to the human and be more transparent about its learning process.-->
+<!--									We demonstrate how the robot’s transparent behavior would guide the human to provide compatible demonstrations that are more useful and informative for learning.-->
+<!--								</div>-->
+<!--					</td>-->
+<!--				</tr>-->
+
+<!--				<tr>-->
+<!--					<td style="width: 21%">	03:30 pm - 04:00 pm        <td/><td>    George Konidaris <br> <b> Reintegrating AI: Skills, Symbols, and the Sensorimotor Dilemma </b>-->
+
+<!-- 					<br>-->
+<!-- 					<a data-toggle="collapse" data-target="#abstractgeorge" class="collapsed abstract" aria-expanded="false"> Abstract</a>-->
+<!--								<div id="abstractgeorge" class="news collapse" style="margin-top: 10px; height: 22px;" aria-expanded="false">-->
+<!--									 I will address the question of how a robot should learn an abstract, task-specific representation of an environment, which I will argue is the key capability required to achieve generally-intelligent robots.-->
+<!--									I will present a constructivist approach, where the computation the representation is required to support - here, planning using a given set of motor skills - is precisely defined, and then its properties are used to build the representation so that it is capable of doing so by construction.-->
+<!--									The result is a formal link between the skills available to a robot and the symbols it should use to plan with them.-->
+<!--									I will present an example of a robot autonomously learning a (sound and complete) abstract representation directly from sensorimotor data, and then using it to plan.-->
+<!--									I will also discuss ongoing work on making the resulting abstractions portable across tasks.-->
+<!--								</div>-->
+<!--					</td>-->
+<!--				</tr>-->
+
+<!--				<tr>-->
+<!--					<td style="width: 21%">	04:00 pm - 05:00 pm      <td/><td>-->
+<!--						<b> Panel Session</b>-->
+<!--					<div id="abstractkiley" class="news collapse" style="margin-top: 10px; height: 22px;" aria-expanded="false"> </td>-->
+<!--				</tr>-->
+
+<!--				<tr>-->
+<!--					<td style="width: 21%">-->
+<!--						05:00 pm - 05:10 pm    <td/><td>   Organizers <br>  <b>    Concluding Remarks </b>-->
+<!--					</td>-->
+<!--				</tr>-->
+<!--				<tr>-->
+<!--					<td style="width: 21%">-->
+<!--						05:10 pm - 06:00 pm       <td/><td>In person: 4th floor of ENG 405; Virtual: On Gather.Town <br>  <b>  Poster Session </b>-->
+<!--					</td>-->
+<!--				</tr>-->
+<!--				-->
+
+<!--				</tbody>-->
+
+<!--			</table>-->
+<!--		    </div>-->
+<!--		</div>-->
+<!--	    </div>-->
+<!--	</section>-->
+
+
+
+<!--	<br>-->
+<!--	<hr class="half-rule"/>-->
+<!--<section id="callpapers">-->
+<!--	    <div class="container">-->
+<!--		<div class="row">-->
+<!--		    <div class="col-md-10 mx-auto">-->
+<!--		<span class=titlesec>Call for papers</span><br>-->
+<!--&lt;!&ndash;			   To be announced.&ndash;&gt;-->
+<!--				<span style="color:red">New: </span> The call for papers is now open.-->
+<!--			<br><br>-->
+<!--			<h5 style="font-weight: bold"> Areas of interest </h5>-->
+<!--			We will accept submissions focusing on Aligning Robot Representations with Humans. Topics include but are not limited to:-->
+<!--			<br><br>-->
+<!--			<ol>-->
+<!--				<li style="padding-bottom: 10px"> <b> Human Representations: </b> What kind of representations do humans form about their surrounding world to plan and accomplish their goals effectively?-->
+<!--				 </li>-->
+
+<!--				<li style="padding-bottom: 10px"> <b> Robot Representations: </b> Conversely, what kinds of representations should robots learn in order to be most aligned with what humans care about? Should we represent the world using features? Knowledge graphs? Object-centric representations? Is it important that we learn representations that generalize across many tasks or should we always directly specialize?-->
+<!--			  </li>-->
+<!--				<li style="padding-bottom: 10px"> <b> The Role of Human Input for Learning Representations: </b> When and to what extent is human input necessary for learning good robot representations? Should we try to eliminate human input from representation alignment as best as possible or should we focus our efforts on enabling people to give the right kinds of input to distill their knowledge into the robot? What are the best types of human input for distilling a person’s knowledge of the world into the robot and aligning their representations?-->
+<!--			 </li>-->
+<!--				<li style="padding-bottom: 10px"> <b> The Role of Simulators for Building Representations: </b> What is the value of simulation for representation alignment? As a community, should we spend all the human effort building simulators with good assets and just collect a lot of human data OR should we focus our research effort into figuring out effective teaching strategies?-->
+<!--					</li>-->
+<!--				<li style="padding-bottom: 10px"> <b> Bi-directional Human-Robot Communication: </b> How can robots be more transparent about what representation they do or don’t know such that humans can more appropriately communicate what it is they care about? What is the role of domains such as vision and natural language in helping humans communicate representations to robots? In robots communicating representations to humans?-->
+<!--				</li>-->
+<!--			</ol>-->
+<!--					We welcome research papers of 4-8 pages, not including references or appendix.-->
+<!--			<br><br>-->
+<!--						    The paper submission deadline is on <b>October 28th, 11:59 pm (AOE)</b>. Papers should be submitted to <a href="https://cmt3.research.microsoft.com/CoRLARRH2022">https://cmt3.research.microsoft.com/CoRLARRH2022</a>. Submissions should follow the <a href="https://corl2022.org/instructions-for-authors/">CoRL template</a>, and be submitted as .pdf files. The review process will be double blind, and therefore the papers should be appropriately anonymized.-->
+<!--			<br><br>-->
+
+<!--			All accepted papers will be given oral presentations (lightning talks or spotlight talks) as well as poster presentations. For the oral presentations, authors would have the option to present in-person or remotely. The poster session will be held in-person and virtually on Gather.Town. Accepted papers will be made available online on the workshop website as non-archival reports, allowing submissions to future conferences or journals. <b>We will have a Best Paper Award.</b>-->
+<!--						    <br><br>-->
+<!--			<h5 style="font-weight: bold"> Important Dates </h5>-->
+<!--			<ul>-->
+
+
+<!--			<li style="display: list-item">-->
+<!--				<b>Submission deadline:</b> Friday, October <s>21st</s> 28th, 2022 (11:59 pm AOE).-->
+<!--			</li>-->
+<!--			<li style="display: list-item">-->
+<!--				<b>Author Notifications:</b> Friday, November 18th, 2022.-->
+
+<!--			</li>-->
+<!--				<li style="display: list-item">-->
+<!--					<b>Camera Ready:</b> Friday, November 25th, 2022 (11:59 pm AOE).-->
+
+<!--			</li>-->
+<!--					<li style="display: list-item">-->
+<!--					<b>Workshop:</b> Thursday, December 15th, 2022, Auckland, NZ.-->
+
+<!--			</li>-->
+<!--			</ul>-->
+<!--	    </div>-->
+<!--		</div>-->
+<!--			</div>-->
+<!--		    </div>-->
+<!--		</div>-->
+<!--	</section>-->
+
+
+<!--	<hr class="half-rule"/>-->
+<!--	<section id="papers">-->
+
+
+
+<!--		<div class="container">-->
+<!--			<div class="row">-->
+<!--			    <div class="col-md-10 mx-auto">-->
+<!--					<span class=titlesec>Papers</span><br>-->
+
+<!--					<p>Congratulations to Abhijat Biswas (Mitigating causal confusion in driving agents via gaze supervision)-->
+<!--					and Ruohan Zhang (A Dual Representation Framework for Robot Learning with Human Guidance) for each winning a Best Paper Award!</p>-->
+
+<!--					<ul class="listpapers">-->
+<!--						<li>-->
+<!--&lt;!&ndash;							<span class="postername">Poster #8 - <span>&ndash;&gt;-->
+<!--								Mitigating causal confusion in driving agents via gaze supervision-->
+<!--								<a class="linkpaper" href="./docs/camready_8.pdf"> [link]</a>-->
+<!--								<span style="color: #ff8c00">(spotlight)</span>-->
+<!--							<br>-->
+<!--							<span class="authorname">-->
+<!--							Abhijat Biswas; Badal Arun Pardhi; Caleb Chuck; Jarrett Holtz; Scott Niekum; Henny Admoni; Alessandro Allievi-->
+<!--						</span>-->
+<!--						</li>-->
+<!--						<li>-->
+<!--&lt;!&ndash;							 <span class="postername">Poster #1 - <span>&ndash;&gt;-->
+<!--							Learning Zero-Shot Cooperation with Humans, Assuming Humans Are Biased-->
+<!--								 <a class="linkpaper" href="./docs/camready_1.pdf"> [link]</a> <br>-->
+<!--							<span class="authorname">-->
+<!--							Chao Yu; Jiaxuan Gao; Weilin Liu; Botian Xu; Hao Tang; Jiaqi Yang; Yu Wang; Yi Wu-->
+<!--							</span>-->
+<!--						</li>-->
+<!--						<li>-->
+<!--&lt;!&ndash;							 <span class="postername"> Poster #3 - <span>&ndash;&gt;-->
+<!--								 Spatial Generalization of Visual Imitation Learning with Position-Invariant Regularization-->
+<!--								 <a class="linkpaper" href="./docs/camready_3.pdf"> [link]</a>-->
+<!--								<br> <span class="authorname"> Zhao-Heng Yin; Yang Gao; Qifeng Chen </span>-->
+<!--						</li>-->
+
+
+<!--						<li>-->
+<!--&lt;!&ndash;							<span class="postername">Poster #5 - <span>&ndash;&gt;-->
+<!--							Towards Universal Visual Reward and Representation via Value-Implicit Pre-Training-->
+<!--								<a class="linkpaper" href="./docs/camready_5.pdf"> [link]</a> <br>-->
+<!--							<span class="authorname">-->
+<!--							Yecheng Ma; Shagun Sodhani; Dinesh Jayaraman; Osbert Bastani; Vikash Kumar; Amy Zhang-->
+<!--							</span>-->
+<!--						</li>-->
+<!--						<li>-->
+<!--&lt;!&ndash;							<span class="postername">Poster #6 - <span>&ndash;&gt;-->
+
+<!--							Do you see what I see? Using questions and answers to align representations of robotic actions-->
+<!--							 <a class="linkpaper" href="./docs/camready_6.pdf"> [link]</a>-->
+<!--							<br>-->
+<!--							<span class="authorname">-->
+<!--							Chad DeChant; Iretiayo Akinola; Daniel Bauer-->
+<!--							</span>-->
+<!--						</li>-->
+<!--						<li>-->
+<!--&lt;!&ndash;							<span class="postername">Poster #11 - <span>&ndash;&gt;-->
+
+<!--							 A Sequential Group VAE for Robot Learning of Haptic Representations-->
+<!--								<a class="linkpaper" href="./docs/camready_11.pdf"> [link]</a>-->
+<!--							<br>-->
+<!--							<span class="authorname">-->
+<!--							Ben Richardson; Katherine J. Kuchenbecker; Georg Martius-->
+<!--							</span>-->
+<!--						</li>-->
+<!--						<li>-->
+<!--&lt;!&ndash;							<span class="postername">Poster #7 - <span>&ndash;&gt;-->
+
+<!--							A Dual Representation Framework for Robot Learning with Human Guidance-->
+<!--							 <a class="linkpaper" href="./docs/camready_7.pdf"> [link]</a>-->
+<!--								<span style="color: #ff8c00">(spotlight)</span>-->
+<!--							<br>-->
+<!--							<span class="authorname">-->
+<!--							Ruohan Zhang; Dhruva Bansal; Yilun Hao; Ayano Hiranaka; Jialu Gao; Chen Wang; Roberto Martín-Martín; Li Fei-Fei; Jiajun Wu-->
+<!--							</span>-->
+<!--						</li>-->
+<!--						<li>-->
+<!--&lt;!&ndash;							<span class="postername">Poster #9 - <span>&ndash;&gt;-->
+<!--						Learning Abstract Representations of Agent-Environment Interactions-->
+<!--								<a class="linkpaper" href="./docs/camready_9.pdf"> [link]</a>-->
+<!--						 <br>-->
+<!--							<span class="authorname">-->
+<!--								Tanmay Shankar; Jean Oh </span>-->
+<!--						</li>-->
+<!--						<li>-->
+<!--&lt;!&ndash;							<span class="postername">Poster #10 - <span>&ndash;&gt;-->
+
+<!--							Learning Visualization Policies of Augmented Reality for Human-Robot Collaboration-->
+<!--							  <a class="linkpaper" href="./docs/camready_10.pdf"> [link]</a>-->
+<!--							<br>-->
+<!--							<span class="authorname">-->
+<!--							Kishan Chandan; Jack Albertson; Shiqi Zhang-->
+<!--							</span>-->
+<!--						</li>-->
+
+
+<!--						<li>-->
+<!--&lt;!&ndash;							<span class="postername">Poster #12 - <span>&ndash;&gt;-->
+
+<!--							A Graph Neural Network Approach for Choosing Robot Addressees in Group Human-Robot Interactions-->
+<!--							  <a class="linkpaper" href="./docs/camready_12.pdf"> [link]</a>-->
+<!--							<br>-->
+<!--							<span class="authorname">-->
+<!--							Sarah Gillet; Iolanda Leite; Marynel Vázquez-->
+<!--							</span>-->
+<!--						</li>-->
+<!--						<li>-->
+<!--&lt;!&ndash;							<span class="postername">Poster #4 - <span>&ndash;&gt;-->
+<!--							Graph Inverse Reinforcement Learning from Diverse Videos-->
+<!--								<a class="linkpaper" href="./docs/camready_4.pdf"> [link]</a> <br>-->
+<!--							<span class="authorname">-->
+<!--								Sateesh Kumar; Jonathan Zamora; Nicklas A Hansen; Rishabh Jangir; Xiaolong Wang</span>-->
+<!--						</li>-->
+<!--						<li>-->
+<!--&lt;!&ndash;							<span class="postername"> Poster #2 - <span>&ndash;&gt;-->
+
+<!--							Watch and Match: Supercharging Imitation with Regularized Optimal Transport-->
+<!--							<a class="linkpaper" href="./docs/camready_2.pdf"> [link]</a>-->
+<!--							<br>-->
+<!--							<span class="authorname">-->
+<!--							Siddhant Haldar; Vaibhav Mathur; Denis Yarats; Lerrel Pinto-->
+<!--						</span>-->
+<!--						</li>-->
+<!--					</ul>-->
+
+
+
+
+
+<!--					<br><br>-->
+
+
+
+<!--					<h5 style="font-weight: bold"> Reviewers </h5>-->
+<!--					We thank the following people for their assistance in reviewing submitted papers.-->
+<!--					<br><br>-->
+<!--					<div class="row">-->
+<!--						<div class="col-md-3">-->
+<!--						<ul>-->
+<!--							<li> Andrea Bajcsy-->
+<!--							</li><li> Arjun Sripathy-->
+<!--							</li><li> Daniel Brown-->
+<!--							</li><li> Eoin Kenny-->
+<!--						</ul>-->
+<!--						</div>-->
+<!--						<div class="col-md-3">-->
+<!--						<ul>-->
+<!--							</li><li> Erdem Biyik-->
+<!--							</li><li> Felix Wang-->
+<!--							</li><li> Jerry He-->
+<!--							</li><li> Megha Srivastava-->
+
+
+<!--							</li>-->
+<!--						</ul>-->
+<!--						</div>-->
+<!--						<div class="col-md-3">-->
+<!--						<ul>-->
+<!--							</li><li> Micah Carroll-->
+<!--							</li><li> Minae Kwon-->
+<!--							</li><li> Nick Walker-->
+<!--							</li><li> Rohin Shah-->
+<!--							</li>-->
+<!--						</ul>-->
+<!--						</div>-->
+<!--						<div class="col-md-3">-->
+<!--						<ul>-->
+<!--							</li><li> Serena Booth-->
+<!--							</li><li> Xavier Puig-->
+<!--							</li><li> Xuning Yang-->
+<!--							</li><li> Yuchen Cui-->
+<!--							</li>-->
+<!--						</ul>-->
+<!--						</div>-->
+<!--					</div>-->
+
+<!--				</div>-->
+<!--			</div>-->
+<!--		</div>-->
+<!--	</section>-->
+
+	<hr class="half-rule"/>
+	<section id="organizers">
+	    <div class="container">
+		<div class="row">
+		    <div class="col-md-10 mx-auto">
+
+		<span class=titlesec>Organizers</span><br>
+		<div class="row">
+			
+			<a href='https://ilia10000.github.io/'>
+		    <div class="profpic xlarge-1 columns">
+			<img  src=../images/organizers/ilia.jpeg class="figure-img img-fluid ">
+			<p class=profname>  <a href="https://ilia10000.github.io/"> Ilia Sucholutsky </a> </p>
+			<p class=institution> Princeton University </p>
+		    </div>
+			</a>
+
+			<a href='https://lukasmut.github.io/'>
+		    <div class="profpic xlarge-1 columns">
+			    <img src=../images/organizers/lukas.jpeg class="figure-img img-fluid ">
+			<p class=profname><a href="https://lukasmut.github.io/"> Lukas Muttenthaler</a> </p>
+			<p class=institution> TU Berlin </p>
+		    </div>
+			</a>
+
+			<a href='https://sites.brown.edu/drewlinsley/'>
+		    <div class="profpic xlarge-1 columns">
+			    <img src=../images/organizers/drew.jpeg class="figure-img img-fluid ">
+			<p class=profname><a href="https://sites.brown.edu/drewlinsley/"> Drew Linsley</a> </p>
+			<p class=institution> Brown University </p>
+		    </div>
+			</a>
+
+			<a href='https://www.jachterberg.com/'>
+		    <div class="profpic xlarge-1 columns">
+			    <img  src=../images/organizers/jascha.jpeg class="figure-img img-fluid ">
+			<p class=profname><a href="https://www.jachterberg.com/"> Jascha Achterberg </a></p>
+			<p class=institution> University of Cambridge </p>
+		    </div>
+			</a>
+
+		</div>
+
+		<div class="row">
+
+			<a href='https://research.google/people/105793/'>
+		    <div class="profpic xlarge-1 columns">
+			    <img src=../images/organizers/sherol.jpeg class="figure-img img-fluid ">
+			<p class=profname><a href="https://research.google/people/105793/"> Sherol Chen</a></p>
+			<p class=institution>Google Research</p>
+		    </div>
+			</a>
+
+			<a href="https://research.google/people/106005/">
+		    <div class="profpic xlarge-1 columns">
+			    <img  src='../images/organizers/simon.jpeg' class="figure-img img-fluid ">
+			<p class=profname><a href="https://research.google/people/106005/"> Simon Kornblith </a></p>
+			<p class=institution>Google Brain</p>
+
+		    </div>
+			</a>
+
+			<a href='https://www.mycaltucker.com/'>
+		    <div class="profpic xlarge-1 columns">
+			    <img  src='../images/organizers/mycal.jpeg' class="figure-img img-fluid ">
+			<p class="profname"> <a href="https://www.mycaltucker.com/"> Mycal Tucker</a></p>
+			<p class=institution> Massachusetts Institute of Technology</p>
+		    </div>
+			</a>
+
+			<a href='https://www.linkedin.com/in/katherine-hermann-0a319a1b7'>
+		    <div class="profpic xlarge-1 columns">
+			    <img  src='../images/organizers/katherine.jpeg' class="figure-img img-fluid ">
+			<p class="profname"> <a href="https://www.linkedin.com/in/katherine-hermann-0a319a1b7"> Katherine Hermann</a></p>
+			<p class=institution> Google Brain</p>
+		    </div>
+			</a>
+
+		</div>
+
+		<div class="row">
+
+			<a href='https://andipeng.com/'>
+		    <div class="profpic xlarge-1 columns">
+			    <img src=../images/organizers/andi.jpeg class="figure-img img-fluid ">
+			<p class=profname><a href="https://andipeng.com/"> Andi Peng </a></p>
+			<p class=institution>Massachusetts Institute of Technology</p>
+		    </div>
+			</a>
+
+			<a href="https://richzhang.github.io/">
+		    <div class="profpic xlarge-1 columns">
+			    <img  src='../images/organizers/richard.jpeg' class="figure-img img-fluid ">
+			<p class=profname><a href="https://richzhang.github.io/"> Richard Zhang </a></p>
+			<p class=institution>Adobe Research</p>
+
+		    </div>
+			</a>
+
+			<a href='https://robertgeirhos.com/'>
+		    <div class="profpic xlarge-1 columns">
+			    <img  src='../images/organizers/robert.jpeg' class="figure-img img-fluid ">
+			<p class="profname"> <a href="https://robertgeirhos.com/"> Robert Geirhos</a></p>
+			<p class=institution> Google Brain</p>
+		    </div>
+			</a>
+
+		</div>
+
+		<div class="row">
+
+			<a href='https://collinskatie.github.io/'>
+		    <div class="profpic xlarge-1 columns">
+			    <img src=../images/organizers/katie.jpeg class="figure-img img-fluid ">
+			<p class=profname><a href="https://collinskatie.github.io/"> Katie Collins</a></p>
+			<p class=institution>University of Cambridge</p>
+		    </div>
+			</a>
+
+			<a href='https://people.eecs.berkeley.edu/~abobu/'>
+		    <div class="profpic xlarge-1 columns">
+			<img  src=../images/organizers/andreea.jpg class="figure-img img-fluid ">
+			<p class=profname>  <a href="https://people.eecs.berkeley.edu/~abobu/"> Andreea Bobu </a> </p>
+			<p class=institution> University of California Berkeley </p>
+		    </div>
+			</a>
+
+			<a href='https://openreview.net/profile?id=~Sunayana_Rane1'>
+		    <div class="profpic xlarge-1 columns">
+			    <img  src='../images/organizers/sunayana.jpeg' class="figure-img img-fluid ">
+			<p class="profname"> <a href="https://openreview.net/profile?id=~Sunayana_Rane1"> Sunayana Rane</a></p>
+			<p class=institution> Princeton University</p>
+		    </div>
+			</a>
+
+		</div>
+
+		</div>
+</div>
+
+	</section>
+
+	<br>
+	<hr class="half-rule"/>
+	<section id="contact">
+	    <div class="container">
+		<div class="row">
+		    <div class="col-md-10 mx-auto">
+		<span class=titlesec>Contact</span><br>
+		Reach out to <a href="mailto:representational.alignment@gmail.com">representational.alignment@gmail.com</a> for any questions.
+	    </div>
+		</div>
+		</div>
+	</section>
+
+
+<!--	<hr class="half-rule"/>-->
+<!--	<section id="sponsors">-->
+<!--	    <div class="container">-->
+<!--		<div class="row">-->
+<!--		    <div class="col-md-10 mx-auto">-->
+<!--		<span class=titlesec>Sponsors</span><br>-->
+<!--				<img  src=../images/sponsors/nvidia.png style="width:400px;height:220px;">-->
+<!--	    </div>-->
+<!--		</div>-->
+<!--		</div>-->
+<!--	</section>-->
+
+	<!-- Footer -->
+
+
+	<!-- Bootstrap core JavaScript -->
+<!-- 	<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+	<script src="vendor/jquery/jquery.min.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<!-- Plugin JavaScript -->
+	<!-- <script src="vendor/jquery-easing/jquery.easing.min.js"></script> --> -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js
+
+
+
+"> </script>
+
+	<!-- Custom JavaScript for this theme -->
+	<script src="js/scrolling-nav.js"></script>
+
+    </body>
+
+
+</html>
