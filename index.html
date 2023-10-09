@@ -1,358 +1,499 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-    <head>
-	<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta name="description" content="">
-	<meta name="author" content="">
-	<title>The First Representational Alignment Workshop</title>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>The First Representational Alignment Workshop</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-	  <meta charset="utf-8">
-	  <meta name="viewport" content="width=device-width, initial-scale=1">
-	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-	<!-- Latest compiled and minified JavaScript -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+      integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+      crossorigin="anonymous"
+    ></script>
 
+    <link
+      rel="stylesheet"
+      href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
+    />
+    <!-- Custom styles for this template -->
 
-	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-	<!-- Custom styles for this template -->
+    <link href="../css/scrolling-nav.css" rel="stylesheet" />
+    <link href="../css/style.css" rel="author stylesheet" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-0M445FTS98"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
+      gtag("config", "G-0M445FTS98");
+    </script>
+  </head>
 
-	<link href="../css/scrolling-nav.css" rel="stylesheet">
-	<link href="../css/style.css" rel="author stylesheet">
-	    <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-0M445FTS98"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <body id="page-top">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" id="mainNav">
+      <div class="container bar-container">
+        <a class="title-head" href="#page-top"
+          >The First Representational Alignment Workshop</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarResponsive"
+          aria-controls="navbarResponsive"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#about">About</a>
+            </li>
 
-  gtag('config', 'G-0M445FTS98');
-</script>
-    </head>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#speakers"
+                >Speakers</a
+              >
+            </li>
 
-    <body id="page-top">
+            <!--				<li class="nav-item">-->
+            <!--				    <a class="nav-link js-scroll-trigger" href="#schedule">Schedule</a>-->
+            <!--				</li>-->
 
-	<!-- Navigation -->
-	<nav class="navbar navbar-expand-lg navbar-light bg-light" id="mainNav">
-	    <div class="container bar-container">
-		<a class="title-head" href="#page-top">The First Representational Alignment Workshop</a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-		    <span class="navbar-toggler-icon"></span>
-		</button>
-		<div class="collapse navbar-collapse" id="navbarResponsive">
-		    <ul class="navbar-nav ml-auto">
-				<li class="nav-item">
-				    <a class="nav-link js-scroll-trigger" href="#about">About</a>
-				</li>
+            <!-- 				<li class="nav-item">-->
+            <!--				    <a class="nav-link js-scroll-trigger" href="#callpapers"> Call for papers </a>-->
+            <!--				</li>-->
 
-				<li class="nav-item">
-				    <a class="nav-link js-scroll-trigger" href="#speakers">Speakers</a>
-				</li>
+            <!--				<li class="nav-item">-->
+            <!--				    <a class="nav-link js-scroll-trigger" href="#papers"> Papers </a>-->
+            <!--				</li>-->
 
-<!--				<li class="nav-item">-->
-<!--				    <a class="nav-link js-scroll-trigger" href="#schedule">Schedule</a>-->
-<!--				</li>-->
-
-<!-- 				<li class="nav-item">-->
-<!--				    <a class="nav-link js-scroll-trigger" href="#callpapers"> Call for papers </a>-->
-<!--				</li>-->
-
-<!--				<li class="nav-item">-->
-<!--				    <a class="nav-link js-scroll-trigger" href="#papers"> Papers </a>-->
-<!--				</li>-->
-
-				<!-- <li class="nav-item">
+            <!-- <li class="nav-item">
 				    <a class="nav-link js-scroll-trigger" href="#faq">FAQ</a>
 				</li> -->
-				<li class="nav-item">
-				    <a class="nav-link js-scroll-trigger" href="#organizers">Organizers</a>
-				</li>
-		    </ul>
-		</div>
-	    </div>
-	</nav>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#organizers"
+                >Organizers</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
-	<header class="headercontainer bg-primary text-white" style="padding: 0%; max-height: none; ">
-	    <div style="background-color: rgba(160,160,160,0.0)" class="text-center">
-		<div style="padding-bottom: 6%; padding-top: 6%; background-image: url('../images/vienna.jpg'); background-size: cover; background-position: center">
+    <header
+      class="headercontainer bg-primary text-white"
+      style="padding: 0%; max-height: none"
+    >
+      <div style="background-color: rgba(160, 160, 160, 0)" class="text-center">
+        <div
+          style="
+            padding-bottom: 6%;
+            padding-top: 6%;
+            background-image: url(&quot;../images/vienna.jpg&quot;);
+            background-size: cover;
+            background-position: center;
+          "
+        >
+          <div
+            class="container titlebox"
+            ;
+            style="
+              display: inline-block;
+              background-color: rgba(0, 0, 0, 0.7);
+              width: auto;
+            "
+          >
+            <p style="text-align: center; margin-bottom: 2" class="title">
+              The First Representational Alignment Workshop
+            </p>
+            <p
+              style="text-align: center; margin-bottom: 0; font-size: 1em"
+              class="subtitle"
+            >
+              Let’s get aligned on representational alignment between artificial
+              and biological neural systems! What is representational alignment,
+              how should we measure it, and how can it be beneficial for the
+              science of intelligence?
+            </p>
+            <br />
+            <p style="text-align: center; margin-bottom: 0" class="subtitle">
+              Workshop Date: TBD
+            </p>
+            <p style="text-align: center; margin-bottom: 0" class="subtitle">
+              In person location: TBD
+            </p>
+            <p style="text-align: center; margin-bottom: 0" class="subtitle">
+              In person poster session: TBD
+            </p>
+          </div>
+        </div>
+      </div>
+    </header>
 
-	    <div class="container titlebox"; style="display: inline-block; background-color:rgba(0,0,0, 0.7); width:auto;">
-		    
-		<p style="text-align: center; margin-bottom: 2" class="title">The First Representational Alignment Workshop</p>
-		<p style="text-align: center; margin-bottom: 0; font-size: 1.0em" class="subtitle">Let’s get aligned on representational alignment between artificial and biological neural systems! What is representational alignment, how should we measure it, and how can it be beneficial for the science of intelligence?</p>
-		<br>
-		<p style="text-align: center; margin-bottom: 0" class="subtitle">Workshop Date: TBD</p>
-		<p style="text-align: center; margin-bottom: 0" class="subtitle">In person location: TBD</p>
-		<p style="text-align: center; margin-bottom: 0" class="subtitle">In person poster session: TBD</p>
-		</div>
-	    </div>
-	    </div>
-	</header>
+    <hr class="half-rule" />
+    <section id="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-10 mx-auto">
+            <span class="titlesec">About</span>
+            <br />
+            <span>
+              As artificial intelligence (AI) systems become increasingly
+              embedded in our lives, it becomes of paramount importance to
+              understand whether these systems are aligned with humans. In this
+              workshop, we seek to define and evaluate representational
+              alignment among biological & artificial systems by asking if
+              today’s large-scale deep learning models rely on the same internal
+              representations and strategies to solve tasks as humans do.
+              Answering this question will provide the field of artificial
+              intelligence with guidance on how to build safer, more
+              interpretable, and reliable models of behavior, and the biological
+              sciences with new tools for generating hypotheses about perception
+              and cognition.
+            </span>
+            <br /><br />
+            <span>
+              The study of the representations that humans and machines
+              construct about the world has a long history that spans cognitive
+              science, neuroscience, and machine learning. The alignment of
+              these representations has gone by many names – including latent
+              space alignment, concept(ual) alignment, system alignment, model
+              alignment, and representational similarity analysis – and has
+              implicitly or explicitly been an objective in many subareas of
+              machine learning, including knowledge distillation,
+              disentanglement, and concept-based models. Recent explorations of
+              human-model alignment has largely focused on value alignment, the
+              goal of building models that broadly benefit humanity. Value
+              alignment as just stated is ill-defined and, as a proxy so,
+              researchers instead often evaluate the alignment of model and
+              human behavioral outputs or task performance. However, monitoring
+              behavioral or output alignment in this manner may not reveal if an
+              artificial system merely appears aligned with humans in a
+              constrained evaluation setting; for instance, it has been found
+              that deep neural networks can generate similar behavior to humans
+              on ImageNet by relying on fundamentally different visual
+              strategies and features. Representations – in particular, the
+              internal representations that systems construct about the world –
+              determine behavioral and value alignment, and therefore a deeper
+              understanding of representational alignment will help us
+              understand whether guarantees on representational similarity can
+              subserve general value alignment, and conversely, under what
+              circumstances behavioral alignment is sufficient for value
+              alignment.
+            </span>
+            <br /><br />
+            <span>
+              Knowing that ML systems share our representations of the world may
+              increase our trust in them and enable us to more efficiently
+              communicate with them. To the extent that humans have useful
+              representations of the world, representational alignment is also a
+              constraint that we expect could improve generalization and make it
+              possible to learn from progressively less human supervision.
+              Further, studying representational alignment can even reveal
+              domains where models are able to learn better domain-specific
+              representations than humans, which could be leveraged to
+              complement and empower humans when designing hybrid systems.
+            </span>
+            <br /><br />
 
-	    <hr class="half-rule"/>
-	<section id="about">
-	    <div class="container">
-		<div class="row">
-		    <div class="col-md-10 mx-auto">
-			<span class=titlesec>About</span>
-			<br>
-			<span>
-				As artificial intelligence (AI) systems become increasingly embedded in our lives, it becomes of paramount importance to understand whether these systems are aligned with humans. 
-				In this workshop, we seek to define and evaluate representational alignment among biological & artificial systems by asking if today’s large-scale deep learning models rely on the same internal representations and strategies to solve tasks as humans do. 
-				Answering this question will provide the field of artificial intelligence with guidance on how to build safer, more interpretable, and reliable models of behavior, and the biological sciences with new tools for generating hypotheses about perception and cognition.
-			</span>
-			<br><br>
-			<span>
-				The study of the representations that humans and machines construct about the world has a long history that spans cognitive science, neuroscience, and machine learning. 
-				The alignment of these representations has gone by many names – including latent space alignment, concept(ual) alignment, system alignment, model alignment, and representational similarity analysis – and has implicitly or explicitly been an objective in many subareas of machine learning, including knowledge distillation, disentanglement, and concept-based models.
-				Recent explorations of human-model alignment has largely focused on value alignment, the goal of building models that broadly benefit humanity. 
-				Value alignment as just stated is ill-defined and, as a proxy so, researchers instead often evaluate the alignment of model and human behavioral outputs or task performance. 
-				However, monitoring behavioral or output alignment in this manner may not reveal if an artificial system merely appears aligned with humans in a constrained evaluation setting; 
-				for instance, it has been found that deep neural networks can generate similar behavior to humans on ImageNet by relying on fundamentally different visual strategies and features. 
-				Representations – in particular, the internal representations that systems construct about the world – determine behavioral and value alignment, and therefore a deeper understanding of representational alignment will help us understand whether guarantees on representational similarity can subserve general value alignment, and conversely, under what circumstances behavioral alignment is sufficient for value alignment.	
-			</span>
-			<br><br>
-			<span>
-				
-				Knowing that ML systems share our representations of the world may increase our trust in them and enable us to more efficiently communicate with them. To the extent that humans have useful representations of the world, representational alignment is also a constraint that we expect could improve generalization and make it possible to learn from progressively less human supervision. 
-				Further, studying representational alignment can even reveal domains where models are able to learn better domain-specific representations than humans, which could be leveraged to complement and empower humans when designing hybrid systems.
-			</span>
-			<br><br>
+            <span>
+              At this workshop, we will welcome perspectives from cognitive
+              science, neuroscience, machine learning, and related fields with
+              the goal of posing and exploring questions about representational
+              alignment including:
+              <br /><br />
+              <ul>
+                <li style="padding-bottom: 10px">
+                  What are different forms of representational alignment, and
+                  how can they be measured?
+                </li>
 
-				<span>
+                <li style="padding-bottom: 10px">
+                  How well do measures of representational alignment generalize
+                  to new data?
+                </li>
 
-					At this workshop, we will welcome perspectives from cognitive science, neuroscience, machine learning, and related fields with the goal of posing and exploring questions about representational alignment including:
-				<br><br>
-				<ul>
-					<li style="padding-bottom: 10px"> What are different forms of representational alignment, and how can they be measured?</li>
+                <li style="padding-bottom: 10px">
+                  What are the consequences (positive or negative) of
+                  representational alignment?
+                </li>
 
-					<li style="padding-bottom: 10px"> How well do measures of representational alignment generalize to new data?</li>
+                <li style="padding-bottom: 10px">
+                  How does representational alignment connect to value alignment
+                  and behavioral (i.e., output) alignment?
+                </li>
 
-					<li style="padding-bottom: 10px"> What are the consequences (positive or negative) of representational alignment?</li>
+                <li style="padding-bottom: 10px">
+                  How can we increase (or decrease) representational alignment?
+                </li>
 
-					<li style="padding-bottom: 10px"> How does representational alignment connect to value alignment and behavioral (i.e., output) alignment?</li>
+                <li style="padding-bottom: 10px">
+                  How aligned are humans with each other? Are current models
+                  aligned to a non-existent "average" human?
+                </li>
 
-					<li style="padding-bottom: 10px"> How can we increase (or decrease) representational alignment?</li>
+                <li style="padding-bottom: 10px">
+                  How does the degree of alignment between two systems impact
+                  their ability to compete, cooperate, and communicate?
+                </li>
 
-					<li style="padding-bottom: 10px"> How aligned are humans with each other? Are current models aligned to a non-existent "average" human?</li>
+                <li style="padding-bottom: 10px">
+                  Which inductive biases are encoded via representational
+                  alignment?
+                </li>
 
-					<li style="padding-bottom: 10px"> How does the degree of alignment between two systems impact their ability to compete, cooperate, and communicate?</li>
+                <li style="padding-bottom: 10px">
+                  What are the connections of representational alignment to AI
+                  safety and interpretability/explainability?
+                </li>
 
-					<li style="padding-bottom: 10px"> Which inductive biases are encoded via representational alignment?</li>
+                <li style="padding-bottom: 10px">
+                  Do models rely on the same internal representations and
+                  strategies to solve tasks as we do?
+                </li>
+              </ul>
 
-					<li style="padding-bottom: 10px"> What are the connections of representational alignment to AI safety and interpretability/explainability?</li>
+              While the focus of the workshop will generally be on the
+              representational alignment of models with humans, we also welcome
+              submissions regarding representational alignment in other settings
+              (e.g. alignment of models with other models).
+            </span>
+          </div>
+          <div class="col-md-7 mx-auto" style="text-align: center">
+            <br />
+          </div>
+        </div>
+      </div>
+    </section>
 
-					<li style="padding-bottom: 10px"> Do models rely on the same internal representations and strategies to solve tasks as we do?</li>
-				</ul>
+    <hr class="half-rule" />
 
-				While the focus of the workshop will generally be on the representational alignment of models with humans, we also welcome submissions regarding representational alignment in other settings (e.g. alignment of models with other models).
-				</span>
+    <section id="speakers">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-10 mx-auto"></div>
+        </div>
+        <span class="titlesec"> Speakers and Panelists</span><br />
 
-		    </div>
-		    <div class="col-md-7 mx-auto" style="text-align: center;">
-			<br>
+        <div class="row">
+          <a href="https://lampinen.github.io/">
+            <div class="profpic speaker xlarge-1 columns">
+              <img
+                src="../images/speakers/profile_lampinen.jpeg"
+                class="figure-img img-fluid"
+              />
+              <p class="profname">
+                <a href="https://lampinen.github.io/"> Andrew Lampinen</a>
+              </p>
+              <p class="institution">DeepMind</p>
+            </div>
+          </a>
 
+          <a href="http://bradlove.org/">
+            <div class="profpic speaker xlarge-1 columns">
+              <img
+                src="../images/speakers/profile_love.jpeg"
+                class="figure-img img-fluid"
+              />
+              <p class="profname">
+                <a href="http://bradlove.org/"> Bradley Love </a>
+              </p>
+              <p class="institution">University College London</p>
+            </div>
+          </a>
 
-		    </div>
-		</div>
+          <a href="https://research.google/people/106005/">
+            <div class="profpic speaker xlarge-1 columns">
+              <img
+                src="../images/speakers/profile_kornblith.jpeg"
+                class="figure-img img-fluid"
+              />
+              <p class="profname">
+                <a href="https://research.google/people/106005/">
+                  Simon Kornblith
+                </a>
+              </p>
+              <p class="institution">Google Brain</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
 
-	    </div>
+    <hr class="half-rule" />
+    <section id="organizers">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-10 mx-auto"></div>
+        </div>
 
+        <span class="titlesec">Organizers</span><br />
+        <div class="row">
+          <a href="https://ilia10000.github.io/">
+            <div class="profpic xlarge-1 columns">
+              <img
+                src="../images/organizers/ilia.jpeg"
+                class="figure-img img-fluid"
+              />
+              <p class="profname">
+                <a href="https://ilia10000.github.io/"> Ilia Sucholutsky </a>
+              </p>
+              <p class="institution">Princeton University</p>
+            </div>
+          </a>
 
+          <a href="https://lukasmut.github.io/">
+            <div class="profpic xlarge-1 columns">
+              <img
+                src="../images/organizers/lukas.jpeg"
+                class="figure-img img-fluid"
+              />
+              <p class="profname">
+                <a href="https://lukasmut.github.io/"> Lukas Muttenthaler</a>
+              </p>
+              <p class="institution">TU Berlin</p>
+            </div>
+          </a>
 
-	</section>
+          <a href="https://eringrant.github.io/">
+            <div class="profpic xlarge-1 columns">
+              <img
+                src="../images/organizers/erin.jpeg"
+                class="figure-img img-fluid"
+              />
+              <p class="profname">
+                <a href="https://eringrant.github.io/"> Erin Grant</a>
+              </p>
+              <p class="institution">University College London</p>
+            </div>
+          </a>
+        </div>
 
+        <div class="row">
+          <a href="https://www.linkedin.com/in/katherine-hermann-0a319a1b7">
+            <div class="profpic xlarge-1 columns">
+              <img
+                src="../images/organizers/katherine.jpeg"
+                class="figure-img img-fluid"
+              />
+              <p class="profname">
+                <a
+                  href="https://www.linkedin.com/in/katherine-hermann-0a319a1b7"
+                >
+                  Katherine Hermann</a
+                >
+              </p>
+              <p class="institution">Google DeepMind</p>
+            </div>
+          </a>
 
+          <a href="https://www.jachterberg.com/">
+            <div class="profpic xlarge-1 columns">
+              <img
+                src="../images/organizers/jascha.jpeg"
+                class="figure-img img-fluid"
+              />
+              <p class="profname">
+                <a href="https://www.jachterberg.com/"> Jascha Achterberg</a>
+              </p>
+              <p class="institution">University of Cambridge</p>
+            </div>
+          </a>
 
+          <a href="https://mtoneva.com/">
+            <div class="profpic xlarge-1 columns">
+              <img
+                src="../images/organizers/mariya.jpeg"
+                class="figure-img img-fluid"
+              />
+              <p class="profname">
+                <a href="https://mtoneva.com/"> Mariya Toneva </a>
+              </p>
+              <p class="institution">
+                Max Planck Institute for Software Systems
+              </p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
 
+    <br />
+    <hr class="half-rule" />
+    <section id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-10 mx-auto">
+            <span class="titlesec">Contact</span><br />
+            Reach out to
+            <a href="mailto:representational.alignment@gmail.com"
+              >representational.alignment@gmail.com</a
+            >
+            for any questions.
+            <br />
+            Cover image provided by Fabian Lackner via
+            <a href="https://creativecommons.org/licenses/by-sa/3.0/"
+              >CC BY-SA 3.0</a
+            >.
+          </div>
+        </div>
+      </div>
+    </section>
 
-	<hr class="half-rule"/>
-	
-	<section id="speakers">
-	    <div class="container">
-		<div class="row">
-		    <div class="col-md-10 mx-auto">
-		<span class=titlesec> Speakers and Panelists</span><br>
+    <!--	<hr class="half-rule"/>-->
+    <!--	<section id="sponsors">-->
+    <!--	    <div class="container">-->
+    <!--		<div class="row">-->
+    <!--		    <div class="col-md-10 mx-auto">-->
+    <!--		<span class=titlesec>Sponsors</span><br>-->
+    <!--	    </div>-->
+    <!--		</div>-->
+    <!--		</div>-->
+    <!--	</section>-->
 
-		<div class="row">
-			
-			<a href='https://lampinen.github.io/'>
-		    <div class="profpic speaker xlarge-1 columns">
-			    <img src="../images/speakers/profile_lampinen.jpeg" class="figure-img img-fluid ">
-			<p class=profname><a href="https://lampinen.github.io/"> Andrew Lampinen</a> </p>
-			<p class=institution> DeepMind </p>
-		    </div>
-			</a>
+    <!-- Footer -->
 
-			<a href="http://bradlove.org/">
-		   <div class="profpic speaker xlarge-1 columns">
-			    <img  src="../images/speakers/profile_love.jpeg" class="figure-img img-fluid ">
-			<p class=profname> <a href="http://bradlove.org/"> Bradley Love </a></p>
-			<p class=institution>University College London</p>
-
-		    </div>
-			</a>
-
-			<a href="https://research.google/people/106005/">
-		    <div class="profpic speaker xlarge-1 columns">
-			    <img  src='../images/speakers/profile_kornblith.jpeg' class="figure-img img-fluid ">
-			<p class=profname><a href="https://research.google/people/106005/"> Simon Kornblith </a></p>
-			<p class=institution>Google Brain</p>
-
-		    </div>
-			</a>
-
-		</div>
-</div>
-
-
-<!--					<h5 style="font-weight: bold"> Program Committee </h5>-->
-<!--					We thank the following people for their assistance in reviewing submitted papers.-->
-<!--					<br><br>-->
-<!--					<div class="row">-->
-<!--						<div class="col-md-3">-->
-<!--						<ul>-->
-<!--							<li> Reviewer </li> -->
-<!--						</ul>-->
-<!--						</div>-->
-<!--						<div class="col-md-3">-->
-<!--						<ul>-->
-<!--							<li> Reviewer </li> -->
-<!--						</ul>-->
-<!--						</div>-->
-<!--						<div class="col-md-3">-->
-<!--						<ul>-->
-<!--							<li> Reviewer </li> -->
-<!--						</ul>-->
-<!--						</div>-->
-<!--						<div class="col-md-3">-->
-<!--						<ul>-->
-<!--							<li> Reviewer </li> -->
-<!--						</ul>-->
-<!--						</div>-->
-<!--					</div>-->
-
-<!--				</div>-->
-<!--			</div>-->
-<!--		</div>-->
-<!--	</section>-->
-
-	<hr class="half-rule"/>
-	<section id="organizers">
-	    <div class="container">
-		<div class="row">
-		    <div class="col-md-10 mx-auto">
-
-		<span class=titlesec>Organizers</span><br>
-		<div class="row">
-			
-			<a href='https://ilia10000.github.io/'>
-		    <div class="profpic xlarge-1 columns">
-			<img  src=../images/organizers/ilia.jpeg class="figure-img img-fluid ">
-			<p class=profname>  <a href="https://ilia10000.github.io/"> Ilia Sucholutsky </a> </p>
-			<p class=institution> Princeton University </p>
-		    </div>
-			</a>
-
-			<a href='https://lukasmut.github.io/'>
-		    <div class="profpic xlarge-1 columns">
-			    <img src=../images/organizers/lukas.jpeg class="figure-img img-fluid ">
-			<p class=profname><a href="https://lukasmut.github.io/"> Lukas Muttenthaler</a> </p>
-			<p class=institution> TU Berlin </p>
-		    </div>
-			</a>
-
-			<a href='https://eringrant.github.io/'>
-		    <div class="profpic xlarge-1 columns">
-			    <img src=../images/organizers/erin.jpeg class="figure-img img-fluid ">
-			<p class=profname><a href="https://eringrant.github.io/"> Erin Grant</a> </p>
-			<p class=institution> University College London </p>
-		    </div>
-			</a>
-
-		</div>
-
-		<div class="row">
-
-			<a href='https://www.linkedin.com/in/katherine-hermann-0a319a1b7'>
-		    <div class="profpic xlarge-1 columns">
-			    <img  src=../images/organizers/katherine.jpeg class="figure-img img-fluid ">
-			<p class="profname"> <a href="https://www.linkedin.com/in/katherine-hermann-0a319a1b7"> Katherine Hermann</a></p>
-			<p class=institution> Google DeepMind</p>
-		    </div>
-			</a>
-			
-			<a href='https://www.jachterberg.com/'>
-		    <div class="profpic xlarge-1 columns">
-			    <img src=../images/organizers/jascha.jpeg class="figure-img img-fluid ">
-			<p class=profname><a href="https://www.jachterberg.com/"> Jascha Achterberg</a></p>
-			<p class=institution>University of Cambridge</p>
-		    </div>
-			</a>
-
-			<a href='https://mtoneva.com/'>
-		    <div class="profpic xlarge-1 columns">
-			    <img src=../images/organizers/mariya.jpeg class="figure-img img-fluid ">
-			<p class=profname><a href="https://mtoneva.com/"> Mariya Toneva </a></p>
-			<p class=institution>Max Planck Institute for Software Systems</p>
-		    </div>
-			</a>
-
-		</div>
-</div>
-
-	</section>
-
-	<br>
-	<hr class="half-rule"/>
-	<section id="contact">
-	    <div class="container">
-		<div class="row">
-		    <div class="col-md-10 mx-auto">
-		<span class=titlesec>Contact</span><br>
-		Reach out to <a href="mailto:representational.alignment@gmail.com">representational.alignment@gmail.com</a> for any questions.
-		<br>
-		Cover image provided by Fabian Lackner via <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>.
-	    </div>
-		</div>
-		</div>
-	</section>
-
-
-<!--	<hr class="half-rule"/>-->
-<!--	<section id="sponsors">-->
-<!--	    <div class="container">-->
-<!--		<div class="row">-->
-<!--		    <div class="col-md-10 mx-auto">-->
-<!--		<span class=titlesec>Sponsors</span><br>-->
-<!--	    </div>-->
-<!--		</div>-->
-<!--		</div>-->
-<!--	</section>-->
-
-	<!-- Footer -->
-
-
-	<!-- Bootstrap core JavaScript -->
-<!-- 	<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <!-- 	<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
 	<script src="vendor/jquery/jquery.min.js"></script>
 	<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 	<!-- Plugin JavaScript -->
-	<!-- <script src="vendor/jquery-easing/jquery.easing.min.js"></script> -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"> </script>
+    <!-- <script src="vendor/jquery-easing/jquery.easing.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
 
-	<!-- Custom JavaScript for this theme -->
-	<script src="js/scrolling-nav.js"></script>
-
-    </body>
-
-
+    <!-- Custom JavaScript for this theme -->
+    <script src="js/scrolling-nav.js"></script>
+  </body>
 </html>
