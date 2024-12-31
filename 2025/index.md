@@ -37,14 +37,14 @@ speakers:
     affiliation: MIT
     website: https://web.mit.edu/phillipi/
     image: profile_isola.jpeg
-  - name: Alex Williams
-    affiliation: NYU
-    website: https://neurostatslab.org/
-    image: profile_williams.jpg
   - name: Janet Wiles
     affiliation: University of Queensland
     website: https://eecs.uq.edu.au/profile/2444/janet-wiles
     image: profile_wiles.jpg
+  - name: Alex Williams
+    affiliation: NYU
+    website: https://neurostatslab.org/
+    image: profile_williams.jpg
 
 organizers:
   - name: Brian Cheung
