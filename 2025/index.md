@@ -51,7 +51,7 @@ organizers:
     affiliation: MIT
     website: https://briancheung.github.io/
     image: brian.jpg
-  - name: Dota (Tianai) Dong
+  - name: Dota Dong
     affiliation: MPI for Psycholinguistics
     website: https://tianaidong.github.io/
     image: dota.jpg
