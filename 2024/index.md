@@ -74,9 +74,9 @@ sponsors:
     image: EY.png
 
 news:
-  - content: We've update the Re-Align position paper ([📄 paper](https://arxiv.org/abs/2310.13018)) with new insights generated during the workshop. Check it out!
+  - content: We've updated the Re-Align position paper ([📄 paper](https://arxiv.org/abs/2310.13018)) with new insights generated during the workshop. Check it out!
   - content: Thank you to our invited speakers and panellists, contributing authors, and attendees for a successful workshop! The video recording of all sessions are now available on the [ICLR.cc website](https://iclr.cc/virtual/2024/workshop/20578).
-  - content: All decisions have been sent out and the list of accepted papers and the updated workshop schedule can be found below. We are super excited to see you all in Vienna!
+  - content: All decisions have been sent out and the list of accepted papers can be found on [OpenReview](https://openreview.net/group?id=ICLR.cc/2024/Workshop/Re-Align). We are super excited to see you all in Vienna!
 
 about: |
   The question of <i>What makes a good representation?</i> in machine
