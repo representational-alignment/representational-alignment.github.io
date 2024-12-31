@@ -1,0 +1,29 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  color: $text-color;
+  background: #fff;
+  line-height: 1.8;
+  overflow-x: hidden;
+}
+
+a {
+  color: $link-color;
+  text-decoration: none;
+  transition: color $transition-normal;
+
+  &:hover {
+    color: $link-hover;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}

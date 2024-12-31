@@ -1,1 +1,20 @@
-theme: jekyll-theme-cayman
+title: Re-Align Workshop
+description: ICLR Workshop on Representational Alignment
+url: ""
+baseurl: ""
+
+markdown: kramdown
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-redirect-from
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+
+social:
+  email: representational-alignment@googlegroups.com

@@ -1,0 +1,40 @@
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <h5>Contact</h5>
+        <p>
+          <a href="mailto:representational-alignment@googlegroups.com">
+            representational-alignment@googlegroups.com
+          </a>
+        </p>
+      </div>
+
+      <div class="col-md-4">
+        <h5>Attribution</h5>
+        <p>
+          Cover image provided by {{ page.cover_image.author }} via
+          <a href="{{ page.cover_image.licence_link }}"
+            >{{ page.cover_image.licence_name }}</a
+          >. Website design adapted from
+          <a href="https://genai4health.github.io">GenAI for Health</a>.
+        </p>
+      </div>
+
+      <div class="col-md-4">
+        <h5>Editions</h5>
+        <p><a href="/2024">Re-Align Workshop @ ICLR 2024</a></p>
+        <p><a href="/2025">Re-Align Workshop @ ICLR 2025</a></p>
+      </div>
+    </div>
+
+    <div class="row mt-4">
+      <div class="col-12 text-center">
+        <p class="mb-0">
+          &copy; {{ "now" | date: '%Y' }} Re-Align Workshop. All rights
+          reserved.
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
