@@ -27,7 +27,7 @@ important_dates:
     date: Monday, February 3rd, 2025
   - event: Reviewing deadline
     date: Friday, February 21st, 2025
-  - event: Author notificiation
+  - event: Author notification
     date: Monday, March 3rd, 2025
   - event: Camera-ready copy (CRC) deadline
     date: Sunday, April 20th, 2025
