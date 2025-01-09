@@ -2,7 +2,7 @@
 layout: workshop
 year: 2025
 date: April 2025
-location: <a href="iclr.cc/2025">ICLR 2025</a> in Singapore
+location: <a href="https://iclr.cc/Conferences/2025">ICLR 2025</a> in Singapore
 openreview: https://openreview.net/group?id=ICLR.cc/2025/Workshop/Re-Align
 
 cover_image:

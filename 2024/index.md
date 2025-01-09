@@ -2,7 +2,7 @@
 layout: workshop
 year: 2024
 date: May 11th, 2024
-location: <a href="iclr.cc/2024">ICLR 2024</a> in Vienna, Austria
+location: <a href="https://iclr.cc/Conferences/2024">ICLR 2024</a> in Vienna, Austria
 paper_url: https://arxiv.org/abs/2310.13018
 
 cover_image:
