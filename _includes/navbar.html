@@ -19,31 +19,35 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a class="nav-link" href="#about">About</a>
+          <a class="scroll-link nav-link" href="#about">About</a>
         </li>
         {% if page.show_cfp %}
         <li class="nav-item">
-          <a class="nav-link" href="#cfp">CfP</a>
+          <a class="scroll-link nav-link" href="#cfp">CfP</a>
+        </li>
+        {% endif %} {% if page.hackathon %}
+        <li class="nav-item">
+          <a class="scroll-link nav-link" href="#hackathon">Hackathon</a>
         </li>
         {% endif %}
         <li class="nav-item">
-          <a class="nav-link" href="#speakers">Speakers</a>
+          <a class="scroll-link nav-link" href="#speakers">Speakers</a>
         </li>
-        {% if page.show_schedule %}
+        {% if page.schedule %}
         <li class="nav-item">
-          <a class="nav-link" href="#schedule">Schedule</a>
+          <a class="scroll-link nav-link" href="#schedule">Schedule</a>
         </li>
         {% endif %}
         <li class="nav-item">
-          <a class="nav-link" href="#organizers">Organizers</a>
+          <a class="scroll-link nav-link" href="#organizers">Organizers</a>
         </li>
-        {% if page.show_reviewers %}
+        {% if page.program_committee %}
         <li class="nav-item">
-          <a class="nav-link" href="#program-committee">PC</a>
+          <a class="scroll-link nav-link" href="#program-committee">PC</a>
         </li>
-        {% endif %} {% if page.show_sponsors %}
+        {% endif %} {% if page.sponsors %}
         <li class="nav-item">
-          <a class="nav-link" href="#sponsors">Sponsor</a>
+          <a class="scroll-link nav-link" href="#sponsors">Sponsor</a>
         </li>
         {% endif %} {% if page.paper_url %}
         <li class="nav-item">

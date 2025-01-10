@@ -4,6 +4,7 @@ year: 2025
 date: April 2025
 location: <a href="https://iclr.cc/Conferences/2025">ICLR 2025</a> in Singapore
 openreview: https://openreview.net/group?id=ICLR.cc/2025/Workshop/Re-Align
+show_cfp: true
 
 cover_image:
   image: "/assets/images/locations/vienna.jpg"
@@ -14,13 +15,8 @@ cover_image:
 buttons:
   - text: OpenReview
     url: https://openreview.net/group?id=ICLR.cc/2025/Workshop/Re-Align
-
-show_news: true
-show_dates: true
-show_cfp: true
-show_schedule: false
-show_reviewers: false
-show_sponsors: false
+  - text: ICLR.cc
+    url: https://iclr.cc/Conferences/2025
 
 important_dates:
   - event: Paper submission deadline
