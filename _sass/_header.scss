@@ -45,6 +45,15 @@
       font-weight: 700;
       margin-bottom: $spacing-unit * 3;
       color: white;
+
+      @media screen and (max-width: 768px) {
+        font-size: 36px;
+      }
+
+      @media screen and (max-width: 480px) {
+        font-size: 28px;
+      }
+
     }
 
     .info-wrapper {
