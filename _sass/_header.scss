@@ -38,11 +38,13 @@
   .header-text {
     text-align: center;
     padding: $spacing-unit * 4;
+    color: white;
 
     h2 {
       font-size: 54px;
       font-weight: 700;
       margin-bottom: $spacing-unit * 3;
+      color: white;
     }
 
     .info-wrapper {

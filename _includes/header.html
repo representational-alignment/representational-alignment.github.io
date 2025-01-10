@@ -2,8 +2,9 @@
   class="welcome-hero"
   {%
   if
-  page.hero_image
-  %}style="background-image: url('{{ page.cover_image.image | relative_url }}');"
+  page.cover_image
+  %}
+  style="background-image: linear-gradient(rgba(255, 255, 255, 0.4), rgba(0, 0, 0, 0.6)), url('{{ page.cover_image.image }}');"
   {%
   endif
   %}
@@ -15,7 +16,7 @@
           <h2>
             ICLR {{ page.year }} Workshop on<br />
             Representational Alignment<br />
-            <span class="span-highlight">(Re-Align)</span>
+            (Re-Align)
           </h2>
 
           <div class="info-wrapper">

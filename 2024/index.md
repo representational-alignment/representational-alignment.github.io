@@ -2,12 +2,12 @@
 layout: workshop
 year: 2024
 date: May 11th, 2024
-location: <a href="https://iclr.cc/Conferences/2024">ICLR 2024</a> in Vienna, Austria
+location: ICLR 2024 in Vienna, Austria
 paper_url: https://arxiv.org/abs/2310.13018
 show_cfp: false
 
 cover_image:
-  image: "/assets/images/locations/singapore.jpg"
+  image: "/assets/images/locations/vienna.jpg"
   author: Fabian Lackner
   licence_name: "CC BY-SA 3.0"
   licence_link: "https://creativecommons.org/licenses/by-sa/3.0/"
@@ -15,7 +15,7 @@ cover_image:
 buttons:
   - text: OpenReview
     url: https://openreview.net/group?id=ICLR.cc/2024/Workshop/Re-Align
-  - text: ICLR Schedule
+  - text: ICLR.cc
     url: https://iclr.cc/virtual/2024/workshop/20578
 
 speakers:

@@ -2,12 +2,12 @@
 layout: workshop
 year: 2025
 date: April 2025
-location: <a href="https://iclr.cc/Conferences/2025">ICLR 2025</a> in Singapore
+location: ICLR 2025 in Singapore
 openreview: https://openreview.net/group?id=ICLR.cc/2025/Workshop/Re-Align
 show_cfp: true
 
 cover_image:
-  image: "/assets/images/locations/vienna.jpg"
+  image: "/assets/images/locations/singapore.jpg"
   author: Brandon Lim
   licence_name: "CC BY-SA 2.0"
   licence_link: "https://creativecommons.org/licenses/by-sa/2.0/"
