@@ -69,7 +69,8 @@ organizers:
     image: sid.jpg
 
 news:
-  - content: "The 2025 edition of Re-Align was accepted as a workshop at ICLR 2025! Stay tuned for the call for contributed papers."
+  - content: The <a class="scroll-link" href="#cfp">call for contributed papers</a> at Re-Align 2025 is now live!
+  - content: The 2025 edition of Re-Align was accepted as a workshop at ICLR 2025!
 
 about: |
   Both natural and artificial intelligences form representations of the world that they use to reason, make decisions,
