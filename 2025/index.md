@@ -124,4 +124,7 @@ about: |
   the hackathon component of the workshop will be helpful in articulating the consequences of these methodologies
   by facilitating a common language among researchers and as a result increase the reproducibility of research in this
   subdomain.
+
+hackathon: |
+  *Details coming soon!*
 ---
