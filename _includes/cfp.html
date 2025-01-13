@@ -28,7 +28,7 @@
           <div class="col-md-11">
             <table class="table table-striped table-sm">
               <tbody>
-                {% for date in page.important_dates %}
+                {% for date in page.cfp.dates %}
                 <tr>
                   <td class="font-weight-bold" style="width: 40%">
                     {{ date.event }}
@@ -57,7 +57,7 @@
             here</a
           >. We welcome <strong>short</strong> (up to 5 pages + references and
           appendix) or <strong>long</strong> (up to 9 pages + references and
-          appendix) technical or positional papers that have not yet been
+          appendix) technical and position papers that have not yet been
           accepted for publication at other venues. Submissions of late-breaking
           results and unpublished or ongoing work, including works currently
           under review at other venues, are welcome.
@@ -129,9 +129,12 @@
           capacity for all papers to be presented as posters, we will feature
           any papers we cannot accommodate via presentation in an asynchronous
           virtual format to be determined. This option will also be available to
-          presenters who are unable to travel due to visa issues or restrictions
-          in terms of their available funding.
+          presenters who are unable to travel due to visa or funding restrictions.
         </p>
+
+        {{ page.cfp.extra_instructions | markdownify }}
+
+        <p>
       </div>
     </div>
   </div>

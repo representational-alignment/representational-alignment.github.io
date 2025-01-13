@@ -18,15 +18,30 @@ buttons:
   - text: ICLR.cc
     url: https://iclr.cc/Conferences/2025
 
-important_dates:
-  - event: Paper submission deadline
-    date: Monday, February 3rd, 2025
-  - event: Reviewing deadline
-    date: Friday, February 21st, 2025
-  - event: Author notification
-    date: Monday, March 3rd, 2025
-  - event: Camera-ready copy (CRC) deadline
-    date: Sunday, April 20th, 2025
+cfp:
+    dates:
+      - event: Paper submission deadline
+        date: Monday, February 3rd, 2025
+      - event: Reviewing deadline
+        date: Friday, February 21st, 2025
+      - event: Author notification
+        date: Monday, March 3rd, 2025
+      - event: Camera-ready copy (CRC) deadline
+        date: Sunday, April 20th, 2025
+    extra_instructions: |
+        ##### Funding for contributors to ICLR 2025
+        This year, ICLR is discontinuing the separate "Tiny Papers" track, and 
+        is instead requiring each workshop to accept short paper 
+        submissions, with an eye toward inclusion; see the
+        [ICLR page on Tiny Papers](https://iclr.cc/Conferences/2025/CallForTinyPapers) 
+        for more details. Authors of these papers will be earmarked for 
+        potential funding from ICLR, but need to submit a separate application 
+        for Financial Assistance that evaluates their eligibility. This 
+        application for Financial Assistance to attend ICLR 2025 will become 
+        available on the
+        [ICLR 2025 conference homepage](https://iclr.cc/Conferences/2025/)
+        at the beginning of February, and close on March 2nd.
+
 
 speakers:
   - name: Phil Isola
