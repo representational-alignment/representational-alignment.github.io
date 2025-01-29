@@ -16,7 +16,7 @@ buttons:
   - text: OpenReview
     url: https://openreview.net/group?id=ICLR.cc/2025/Workshop/Re-Align
   - text: ICLR.cc
-    url: https://iclr.cc/Conferences/virtual/2025/events/workshop
+    url: https://iclr.cc/virtual/2025/workshop/23963
 
 cfp:
     dates:
