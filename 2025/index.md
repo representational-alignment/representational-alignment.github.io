@@ -1,7 +1,7 @@
 ---
 layout: workshop
 year: 2025
-date: April 2025
+date: Monday, April 28th, 2025
 location: ICLR 2025 in Singapore
 openreview: https://openreview.net/group?id=ICLR.cc/2025/Workshop/Re-Align
 show_cfp: true
@@ -16,7 +16,7 @@ buttons:
   - text: OpenReview
     url: https://openreview.net/group?id=ICLR.cc/2025/Workshop/Re-Align
   - text: ICLR.cc
-    url: https://iclr.cc/Conferences/2025
+    url: https://iclr.cc/Conferences/virtual/2025/events/workshop
 
 cfp:
     dates:
@@ -84,6 +84,7 @@ organizers:
     image: sid.jpg
 
 news:
+  - content: "Announcing the workshop date: Monday, April 28th, 2025 (Day 2 of the ICLR Workshops)!"
   - content: The <a class="scroll-link" href="#cfp">call for contributed papers</a> at Re-Align 2025 is now live!
   - content: The 2025 edition of Re-Align was accepted as a workshop at ICLR 2025!
 
