@@ -21,7 +21,7 @@ buttons:
 cfp:
     dates:
       - event: Paper submission deadline
-        date: Monday, February 3rd, 2025
+        date: Wednesday, February 5th, 2025
       - event: Reviewing deadline
         date: Friday, February 21st, 2025
       - event: Author notification
