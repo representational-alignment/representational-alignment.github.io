@@ -21,7 +21,7 @@ buttons:
 cfp:
     dates:
       - event: Paper submission deadline
-        date: Wednesday, February 5th, 2025
+        date: ~Monday, February 3rd, 2025~ Wednesday, February 5th, 2025
       - event: Reviewing deadline
         date: Friday, February 21st, 2025
       - event: Author notification
@@ -84,6 +84,7 @@ organizers:
     image: sid.jpg
 
 news:
+  - content: "Small deadline extension! The deadline for for contributed papers is now Wednesday, February 5th, 2025."
   - content: "Announcing the workshop date: Monday, April 28th, 2025 (Day 2 of the ICLR Workshops)!"
   - content: The <a class="scroll-link" href="#cfp">call for contributed papers</a> at Re-Align 2025 is now live!
   - content: The 2025 edition of Re-Align was accepted as a workshop at ICLR 2025!
