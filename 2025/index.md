@@ -37,10 +37,9 @@ cfp:
         for more details. Authors of these papers will be earmarked for 
         potential funding from ICLR, but need to submit a separate application 
         for Financial Assistance that evaluates their eligibility. This 
-        application for Financial Assistance to attend ICLR 2025 will become 
-        available on the
-        [ICLR 2025 conference homepage](https://iclr.cc/Conferences/2025/)
-        at the beginning of February, and close on March 2nd.
+        application for Financial Assistance to attend ICLR 2025 is available at
+        [ICLR 2025 Financial Assistance](https://iclr.cc/Conferences/2025/FinancialAssistance),
+        and closes on March 2nd.
 
 
 speakers:
@@ -85,9 +84,9 @@ organizers:
 
 news:
   - content: "Small deadline extension! The deadline for for contributed papers is now <b>Wednesday, February 5th, 2025</b>."
-  - content: "Announcing the workshop date: Monday, April 28th, 2025 (Day 2 of the ICLR Workshops)!"
+  - content: "Announcing the workshop date: <b>Monday, April 28th, 2025</b> (Day 2 of the ICLR Workshops)!"
   - content: The <a class="scroll-link" href="#cfp">call for contributed papers</a> at Re-Align 2025 is now live!
-  - content: The 2025 edition of Re-Align was accepted as a workshop at ICLR 2025!
+  - content: The 2025 edition of Re-Align was accepted as a workshop at <a class="https://iclr.cc/Conferences/2025/">ICLR 2025</a>!
 
 about: |
   Both natural and artificial intelligences form representations of the world that they use to reason, make decisions,
