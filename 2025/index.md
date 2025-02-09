@@ -43,10 +43,10 @@ cfp:
 
 
 speakers:
-  - name: Phil Isola
-    affiliation: MIT
-    website: https://web.mit.edu/phillipi/
-    image: profile_isola.jpeg
+  - name: Iris Groen
+    affiliation: University of Amsterdam
+    website: https://sites.google.com/view/irisgroen
+    image: profile_iris.jpeg
   - name: Janet Wiles
     affiliation: University of Queensland
     website: https://eecs.uq.edu.au/profile/2444/janet-wiles
