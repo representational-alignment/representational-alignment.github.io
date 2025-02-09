@@ -46,7 +46,7 @@ speakers:
   - name: Iris Groen
     affiliation: University of Amsterdam
     website: https://sites.google.com/view/irisgroen
-    image: profile_iris.jpeg
+    image: profile_iris.png
   - name: Janet Wiles
     affiliation: University of Queensland
     website: https://eecs.uq.edu.au/profile/2444/janet-wiles
