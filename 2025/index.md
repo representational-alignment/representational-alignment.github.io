@@ -25,7 +25,7 @@ cfp:
       - event: Reviewing deadline
         date: Friday, February 21st, 2025
       - event: Author notification
-        date: Monday, March 3rd, 2025
+        date: Wednesday, March 5th, 2025
       - event: Camera-ready copy (CRC) deadline
         date: Sunday, April 20th, 2025
     extra_instructions: |
