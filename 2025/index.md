@@ -83,11 +83,11 @@ organizers:
     image: sid.jpg
 
 news:
-  - content: "All decisions have been sent out and the list of accepted papers can be found on [OpenReview](https://openreview.net/group?id=ICLR.cc/2025/Workshop/Re-Align). We are super excited to see you all in Singapore!"
+  - content: "All decisions have been sent out and the list of accepted papers can be found on <a href="https://openreview.net/group?id=ICLR.cc/2025/Workshop/Re-Align">OpenReview</a>. We are super excited to see you all in Singapore!"
   - content: "Small deadline extension! The deadline for for contributed papers is now <b>Wednesday, February 5th, 2025</b>."
   - content: "Announcing the workshop date: <b>Monday, April 28th, 2025</b> (Day 2 of the ICLR Workshops)!"
   - content: The <a class="scroll-link" href="#cfp">call for contributed papers</a> at Re-Align 2025 is now live!
-  - content: The 2025 edition of Re-Align was accepted as a workshop at <a class="https://iclr.cc/Conferences/2025/">ICLR 2025</a>!
+  - content: The 2025 edition of Re-Align was accepted as a workshop at <a href="https://iclr.cc/Conferences/2025/">ICLR 2025</a>!
 
 about: |
   Both natural and artificial intelligences form representations of the world that they use to reason, make decisions,
