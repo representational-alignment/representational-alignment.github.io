@@ -47,6 +47,10 @@ speakers:
     affiliation: University of Amsterdam
     website: https://sites.google.com/view/irisgroen
     image: profile_iris.png
+  - name: Dianbo Liu
+    affiliation: National University of Singapore
+    website: https://www.cogai4sci.com/
+    image: profile_liu.jpg
   - name: Janet Wiles
     affiliation: University of Queensland
     website: https://eecs.uq.edu.au/profile/2444/janet-wiles
