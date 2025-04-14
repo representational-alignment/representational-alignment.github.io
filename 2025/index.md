@@ -59,6 +59,10 @@ speakers:
     affiliation: NYU
     website: https://neurostatslab.org/
     image: profile_williams.jpg
+  - name: Martin Schrimpf
+    affiliation: EPFL
+    website: https://mschrimpf.altervista.org/
+    image: profile_schrimpf.jpg
 
 organizers:
   - name: Brian Cheung
