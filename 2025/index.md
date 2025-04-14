@@ -62,7 +62,7 @@ speakers:
   - name: Martin Schrimpf
     affiliation: EPFL
     website: https://mschrimpf.altervista.org/
-    image: profile_schrimpf.jpg
+    image: profile_schimpf.jpg
 
 organizers:
   - name: Brian Cheung
