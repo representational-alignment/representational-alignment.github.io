@@ -51,6 +51,10 @@ speakers:
     affiliation: National University of Singapore
     website: https://www.cogai4sci.com/
     image: profile_liu.jpg
+  - name: Martin Schrimpf
+    affiliation: EPFL
+    website: https://mschrimpf.altervista.org/
+    image: profile_schimpf.jpg
   - name: Janet Wiles
     affiliation: University of Queensland
     website: https://eecs.uq.edu.au/profile/2444/janet-wiles
@@ -59,10 +63,6 @@ speakers:
     affiliation: NYU
     website: https://neurostatslab.org/
     image: profile_williams.jpg
-  - name: Martin Schrimpf
-    affiliation: EPFL
-    website: https://mschrimpf.altervista.org/
-    image: profile_schimpf.jpg
 
 organizers:
   - name: Brian Cheung
