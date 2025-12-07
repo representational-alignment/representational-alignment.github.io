@@ -7,14 +7,18 @@
           <div class="separator-div"></div>
         </div>
 
+        {% if page.cfp.intro %} {{ page.cfp.intro | markdownify }} {% else %}
         <p>
           We invite the submission of papers for presentation at the workshop.
           We broadly welcome submissions related to representational alignment
           among artificial and biological information processing systems.
           Submissions can come from any area of cognitive science, neuroscience,
-          machine learning, or related fields. We will accept both technical
-          papers (theory and/or application) and position papers.
+          machine learning, or related fields. We welcome
+          <strong>short</strong> (up to 5 pages + references and appendix) or
+          <strong>long</strong> (up to 10 pages + references and appendix)
+          technical and position papers.
         </p>
+        {% endif %}
 
         <h5>Important dates</h5>
         <p>
@@ -43,26 +47,34 @@
 
         <h5>Submission instructions</h5>
 
+        <h6>Submission portal</h6>
         <p>
           All submissions should be made via
           <a href="{{ page.openreview }}"> OpenReview</a>.
         </p>
 
+        <h6>Submission format</h6>
         <p>
           Submissions should consist of a single PDF that follows the official
           ICLR LaTeX template but with an edited header that identifies the
           submission as to the workshop rather than as to the main conference;
-          for convenience, we have adapted the official template
-          <a href="https://representational-alignment.github.io/re-align2025.zip">
+          for convenience, we have thus adapted the <b>official template</b>
+          <a
+            href="https://representational-alignment.github.io/re-align2025.zip"
+          >
             here</a
-          >. We welcome <strong>short</strong> (up to 5 pages + references and
-          appendix) or <strong>long</strong> (up to 10 pages + references and
-          appendix) technical and position papers that have not yet been
-          accepted for publication at other venues. Submissions of late-breaking
-          results and unpublished or ongoing work, including works currently
-          under review at other venues, are welcome.
+          >.
         </p>
 
+        <h6>Prohibition on prior publication</h6>
+        <p>
+          We welcome only papers that have not yet been accepted for publication
+          at other venues. Submission of late-breaking results and unpublished
+          or ongoing work, including works currently under review but not yet
+          accepted at other venues, are welcome.
+        </p>
+
+        <h6>Interdisciplinarity</h6>
         <p>
           During submission, authors will be asked to specify if their
           submission aligns more with cognitive science, neuroscience, or
@@ -113,7 +125,6 @@
           format on the workshop website.
         </p>
 
-        <h5>Poster format</h5>
         <p>
           Please follow the official
           <a href="https://iclr.cc/FAQ/PosterInformation">ICLR guidelines</a>
@@ -129,12 +140,11 @@
           capacity for all papers to be presented as posters, we will feature
           any papers we cannot accommodate via presentation in an asynchronous
           virtual format to be determined. This option will also be available to
-          presenters who are unable to travel due to visa or funding restrictions.
+          presenters who are unable to travel due to visa or funding
+          restrictions.
         </p>
 
         {{ page.cfp.extra_instructions | markdownify }}
-
-        <p>
       </div>
     </div>
   </div>

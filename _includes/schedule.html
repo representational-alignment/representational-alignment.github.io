@@ -7,7 +7,7 @@
           <h3>Schedule</h3>
           <div class="separator-div"></div>
         </div>
-        
+
         <table class="table">
           <thead>
             <tr>
@@ -17,15 +17,14 @@
           </thead>
           <tbody>
             {% for item in page.schedule %}
-            <tr{% if item.highlight %} class="table-{{ item.highlight }}"{% endif %}>
+            <tr
+              class="{% if item.highlight %}table-{{ item.highlight }}{% endif %}"
+            >
               <td>{{ item.time }}</td>
               <td>
                 {% if item.speaker %}
-                  <strong>{{ item.title }}</strong><br>
-                  {{ item.speaker }}
-                {% else %}
-                  {{ item.title }}
-                {% endif %}
+                <strong>{{ item.title }}</strong><br />
+                {{ item.speaker }} {% else %} {{ item.title }} {% endif %}
               </td>
             </tr>
             {% endfor %}

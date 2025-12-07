@@ -23,15 +23,23 @@
 
       <div class="col-md-4" style="padding-top: 20px">
         <h5>Editions</h5>
-        <p><a href="/2024">Re-Align Workshop @ ICLR 2024</a></p>
-        <p><a href="/2025">Re-Align Workshop @ ICLR 2025</a></p>
+        {% assign sorted_editions = site.editions | sort: "year" | reverse %} {%
+        for edition in sorted_editions %}
+        <p class="mb-1">
+          <a href="/{{ edition.year }}"
+            >Re-Align Workshop @ {{ edition.location }}</a
+          >
+        </p>
+        {% endfor %}
       </div>
     </div>
 
     <div class="row mt-4" style="padding-top: 20px">
       <div class="col-12 text-center">
         <p class="mb-0">
-          &copy; {{ "now" | date: '%Y' }} Re-Align Workshop. All rights
+          {% assign first_year = site.editions | map: "year" | sort | first %}
+          {% assign last_year = site.editions | map: "year" | sort | last %}
+          &copy; {{ first_year }}–{{ last_year }} Re-Align Workshop. All rights
           reserved.
         </p>
       </div>

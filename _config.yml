@@ -18,3 +18,11 @@ exclude:
 
 social:
   email: representational-alignment@googlegroups.com
+
+editions:
+  - year: 2024
+    location: ICLR 2024
+  - year: 2025
+    location: ICLR 2025
+  - year: 2026
+    location: ICLR 2026
