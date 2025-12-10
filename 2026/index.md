@@ -48,7 +48,7 @@ speakers:
     website: https://baulab.info/
     image: profile_bau.png
   - name: Arturo Deza
-    affiliation: Artificio / UTEC
+    affiliation: Artificio
     website: http://arturodeza.wikidot.com/
     image: profile_deza.jpg
   - name: Alona Fyshe
