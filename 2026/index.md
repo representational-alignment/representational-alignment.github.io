@@ -60,7 +60,7 @@ speakers:
     website: https://web.mit.edu/phillipi/
     image: profile_isola.jpeg
   - name: Danielle Perszyk
-    affiliation: Amazon
+    affiliation: Amazon AGI SF Lab
     website: https://scholar.google.com/citations?user=jLcGAcQAAAAJ
     image: profile_perszyk.jpg
 
@@ -94,7 +94,7 @@ organizers:
     website: https://ilia10000.github.io/
     image: ilia.jpeg
   - name: Siddharth Suresh
-    affiliation: University of Wisconsin-Madison and Amazon AGI SF Labs
+    affiliation: University of Wisconsin-Madison and Amazon AGI SF Lab
     website: https://www.sidsuresh.com/
     image: sid.jpg
 
