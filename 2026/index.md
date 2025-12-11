@@ -94,7 +94,7 @@ organizers:
     website: https://ilia10000.github.io/
     image: ilia.jpeg
   - name: Siddharth Suresh
-    affiliation: University of Wisconsin-Madison
+    affiliation: University of Wisconsin-Madison and Amazon AGI SF Labs
     website: https://www.sidsuresh.com/
     image: sid.jpg
 
