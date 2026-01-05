@@ -1,7 +1,7 @@
 ---
 layout: workshop
 year: 2026
-date: April 27th or 28th, 2026
+date: April 26th or 27th, 2026
 location: ICLR 2026
 openreview: https://openreview.net/group?id=ICLR.cc/2026/Workshop/Re-Align
 show_cfp: true
@@ -38,7 +38,7 @@ cfp:
     - event: Author notification
       date: Sunday, March 1st, 2026
     - event: Camera-ready copy (CRC) deadline
-      date: Monday, April 20th, 2026
+      date: Sunday, April 19th, 2026
   extra_instructions: |
     *More details coming in January 2026!*
 
