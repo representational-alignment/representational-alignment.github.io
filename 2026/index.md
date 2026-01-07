@@ -51,6 +51,10 @@ speakers:
     affiliation: Artificio
     website: http://arturodeza.wikidot.com/
     image: profile_deza.jpg
+  - name: Judy Fan
+    affiliation: Stanford
+    website: https://psychology.stanford.edu/people/judith-ellen-fan
+    image: profile_fan.jpg
   - name: Alona Fyshe
     affiliation: University of Alberta
     website: https://webdocs.cs.ualberta.ca/~alona/
