@@ -30,5 +30,21 @@
         $(".navbar").removeClass("scrolled");
       }
     });
+
+    // Close mobile navbar when clicking outside of it
+    $(document).on("click", function (e) {
+      var navbar = $(".navbar-collapse");
+      if (navbar.hasClass("show") && !$(e.target).closest(".navbar").length) {
+        navbar.collapse("hide");
+      }
+    });
+
+    // Close mobile navbar when clicking a nav link
+    $(".navbar-nav .nav-link").on("click", function () {
+      var navbar = $(".navbar-collapse");
+      if (navbar.hasClass("show")) {
+        navbar.collapse("hide");
+      }
+    });
   });
 </script>
