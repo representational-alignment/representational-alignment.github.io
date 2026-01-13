@@ -8,8 +8,8 @@
 <!-- Custom Scripts -->
 <script>
   $(document).ready(function () {
-    // Smooth scrolling
-    $('a.scroll-link[href^="#"]').on("click", function (e) {
+    // Smooth scrolling for all anchor links
+    $('a[href^="#"]').on("click", function (e) {
       e.preventDefault();
       var target = $(this.hash);
       if (target.length) {
