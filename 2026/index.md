@@ -5,6 +5,7 @@ date: April 26th or 27th, 2026
 location: ICLR 2026
 openreview: https://openreview.net/group?id=ICLR.cc/2026/Workshop/Re-Align
 show_cfp: true
+show_cfcr: true
 
 cover_image:
   image: "/assets/images/locations/rio.jpg"
@@ -22,13 +23,13 @@ cfp:
     We broadly welcome submissions related to representational alignment
     among artificial and biological information processing systems.
     Submissions can come from any area of cognitive science, neuroscience,
-    machine learning, or related fields.
+    machine learning, or related fields. We welcome
+    **short** (up to 5 pages + references and appendix) or
+    **long** (up to 10 pages + references and appendix)
+    technical and position papers.
 
-    This year we have **three submission tracks**:
-
-    1. **Tiny / short paper track (up to 5 pages)** for preliminary findings, position papers, and new ideas
-    2. **Long paper track (up to 10 pages)** for full-length technical research papers
-    3. **Challenge report track (up to 5 pages)** for reports describing findings from the [Re-Align Challenge](#challenge)
+    (*For submissions related to the Re-Align Challenge, please see the
+    [call for challenge reports](#cfcr).*)
 
   dates:
     - event: Paper submission deadline
@@ -37,10 +38,33 @@ cfp:
       date: Thursday, February 26th, 2026
     - event: Author notification
       date: Sunday, March 1st, 2026
-    - event: Camera-ready copy (CRC) deadline
+    - event: Camera-ready deadline
       date: Sunday, April 19th, 2026
-  extra_instructions: |
-    *More details coming in January 2026!*
+
+cfcr:
+  intro: |
+    [Research in representational alignment converges on central questions but diverges in its answers.](https://arxiv.org/abs/2310.13018) Building on our
+    successful [hackathon](/2025#hackathon) from last year, we have prepared the 
+    <a href="https://github.com/representational-alignment/challenge" class="btn btn-secondary btn-xs" target="_blank">Re-Align Challenge</a> to
+    promote transparency, reproducibility, and collaboration in representational alignment
+    research. The challenge provides access to
+    efficient implementations of representational comparison measures and a leaderboard for
+    friendly competition on a representational alignment benchmark.
+
+    We invite submissions of **challenge reports** as companions to leaderboard submissions.
+    For leaderboard submissions to be considered as ICLR 2026 workshop contributions, authors must submit
+    a challenge report through OpenReview that will undergo review by the organizing committee.
+
+    (*Position papers and other contributions **not** directly tied to leaderboard submissions
+    should be submitted to the [call for papers](#cfp).*)
+
+  dates:
+    - event: Challenge report submission deadline
+      date: Thursday, February 26th, 2026
+    - event: Author notification
+      date: Sunday, March 1st, 2026
+    - event: Camera-ready deadline
+      date: Sunday, April 19th, 2026
 
 speakers:
   - name: David Bau
@@ -103,7 +127,8 @@ organizers:
     image: sid.jpg
 
 news:
-  - content: The 2026 edition of Re-Align was accepted as a workshop at <a href="https://iclr.cc/Conferences/2026/">ICLR 2026</a>!
+  - content: The <a href="#cfp">call for papers</a> and <a href="#cfcr">call for challenge reports</a> are now live!
+  - content: The 2026 edition of Re-Align was accepted as a <a href="https://iclr.cc/virtual/2026/workshop/10000807">workshop</a> at <a href="https://iclr.cc/Conferences/2026/">ICLR 2026</a>!
 
 about: |
   The [first](/2024) [two](/2025) editions of the Workshop on Representational Alignment (Re-Align) at ICLR established a community
@@ -131,22 +156,8 @@ about: |
   dynamically reconfigured to meet novel demands in complex domains like collaboration and communication. We invite
   contributions exploring how alignment transforms static representations into controllable computational primitives.
 
-  In addition, this year we will introduce a new component, the [Re-Align Challenge](#challenge).
-
-challenge: |
-  Research in representational alignment converges on central questions but diverges in its answers. Building on our
-  successful hackathon from last year, we're preparing a **persistent shared-task challenge**
-  promoting transparency, reproducibility, and collaboration in representational alignment
-  research. The challenge provides access to:
-
-  - Standardized stimulus sets and model repositories
-  - Efficient implementations of representational comparison measures
-  - A leaderboard for friendly competition on representational alignment benchmarks
-
-  The **challenge report track** welcomes both leaderboard submissions and creative/critical contributions related to the challenge, including novel stimulus sets, evaluation metrics, or modeling approaches.
-
-  *Detailed challenge specifications and leaderboard access coming December 2025 or January 2026!*
+  In addition, this year we introduced a new component, the [Re-Align Challenge](#cfcr).
 
 program_committee:
-  - name: To be announced
+  - name: To be announced.
 ---

@@ -20,7 +20,7 @@
         </p>
         {% endif %}
 
-        <h5>Important dates</h5>
+        <h5>Important dates for paper submissions</h5>
         <p>
           All deadlines are
           <a href="https://www.timeanddate.com/time/zones/aoe"
@@ -45,24 +45,31 @@
           </div>
         </div>
 
-        <h5>Submission instructions</h5>
+        <h5>Submission instructions for papers</h5>
 
         <h6>Submission portal</h6>
         <p>
-          All submissions should be made via
-          <a href="{{ page.openreview }}"> OpenReview</a>.
+          All paper submissions should be made via
+          <a
+            href="{{ page.openreview }}"
+            class="btn btn-custom btn-xs"
+            target="_blank"
+            >OpenReview</a
+          >.
         </p>
 
         <h6>Submission format</h6>
         <p>
-          Submissions should consist of a single PDF that follows the official
-          ICLR LaTeX template but with an edited header that identifies the
-          submission as to the workshop rather than as to the main conference;
-          for convenience, we have thus adapted the <b>official template</b>
+          Paper submissions should consist of a single PDF that follows the
+          official ICLR LaTeX template but with an edited header that identifies
+          the submission as to the workshop rather than as to the main
+          conference; for convenience, we have adapted the official ICLR
+          conference template into a
           <a
             href="https://github.com/representational-alignment/iclr-workshop-template/raw/refs/heads/master/re-align{{ page.year }}.zip"
-          >
-            here</a
+            class="btn btn-secondary btn-xs"
+            target="_blank"
+            >Re-Align template </a
           >.
         </p>
 
@@ -82,21 +89,22 @@
           this workshop is interdisciplinary with the goal to bring together and
           enable knowledge transfer between researchers from various
           communities, we suggest (but do not require) submissions to use the
-          terminology and general formalism described in the position paper that
-          the organizers of this workshop recently co-authored in collaboration
-          with others (<a href="https://arxiv.org/abs/2310.13018">📄 paper</a>).
-          (Commentaries and critiques of this framework are also welcome!)
+          terminology and general formalism described in the
+          <a href="https://arxiv.org/abs/2310.13018">position paper</a>
+          that the organizers of this workshop co-authored in collaboration with
+          others. (Commentaries and critiques of this framework are also
+          welcome!)
         </p>
 
-        <h5>Double-blind policy</h5>
+        <h5>Double-blind policy for papers</h5>
         <p>
-          All submissions should be fully anonymized. Please remove any
+          All paper submissions should be fully anonymized. Please remove any
           identifying information such as author names, affiliations,
           personalized GitHub links, etc. Links to anonymized content are OK,
           though we don't require reviewers to examine such content.
         </p>
 
-        <h5>Archival policy</h5>
+        <h5>Archival policy for papers</h5>
         <p>
           Work that has already appeared in a venue (including any workshop,
           conference, or journal) must be significantly extended to be eligible
@@ -108,40 +116,39 @@
           extended to our short or long paper format.
         </p>
 
-        <h5>Selection criteria</h5>
+        <h5>Selection criteria for papers</h5>
         <p>
-          All submissions will undergo peer review by the workshop’s program
-          committee, and editorial decisions will be made by the organizing
-          committee. Accepted abstracts will be chosen based on theoretical or
-          empirical validation, novelty, and suitability to the workshop’s
-          goals.
+          All paper submissions will undergo peer review by the workshop's
+          program committee, and editorial decisions will be made by the
+          organizing committee. Accepted papers will be chosen based on
+          theoretical or empirical validation, novelty, and suitability to the
+          workshop's goals.
         </p>
 
-        <h5>Presentation format</h5>
+        <h5>Presentation format for papers</h5>
         <p>
-          All accepted abstracts will be invited for presentation in the form of
-          a poster. A few select contributions will additionally be invited as
-          contributed talks. Accepted papers will be posted in a non-archival
-          format on the workshop website.
+          All accepted papers will be invited for presentation at the ICLR
+          Workshop in the form of a poster. A few select contributions will
+          additionally be invited as contributed talks. Accepted papers will be
+          posted in a non-archival format on the workshop website.
         </p>
 
         <p>
-          Please follow the official
-          <a href="https://iclr.cc/FAQ/PosterInformation">ICLR guidelines</a>
-          regarding the size of workshop posters.
+          Posters should be in portrait orientation with a maximum height of
+          91cm (36") and a maximum width of 61cm (24").
         </p>
 
-        <h5>Remote presentation</h5>
+        <h5>Remote presentation for papers</h5>
         <p>
-          Acceptance decisions on submissions will be considered independently
-          from any constraints on the ability of authors to attend ICLR in
-          person. Our goal is to allow every accepted paper to be presented in
-          person. If our assigned space at the conference does not have the
-          capacity for all papers to be presented as posters, we will feature
-          any papers we cannot accommodate via presentation in an asynchronous
-          virtual format to be determined. This option will also be available to
-          presenters who are unable to travel due to visa or funding
-          restrictions.
+          Acceptance decisions on paper submissions will be considered
+          independently from any constraints on the ability of authors to attend
+          ICLR in person. Our goal is to allow every accepted paper to be
+          presented in person. If our assigned space at the conference does not
+          have the capacity for all papers to be presented as posters, we will
+          feature any papers we cannot accommodate via presentation in an
+          asynchronous virtual format to be determined. This option will also be
+          available to presenters who are unable to travel due to visa or
+          funding restrictions.
         </p>
 
         {{ page.cfp.extra_instructions | markdownify }}

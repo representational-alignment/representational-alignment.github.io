@@ -34,6 +34,22 @@
   }
 }
 
+// Secondary button (dark)
+.btn-secondary {
+  background-color: $text-color;
+  color: white;
+
+  &:hover {
+    background-color: darken($text-color, 10%);
+    color: white;
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}
+
 // Secondary/outline button
 .btn-outline {
   background-color: transparent;
@@ -65,6 +81,18 @@
 }
 
 // Button sizes
+.btn-xs {
+  padding: $spacing-unit * 0.5 $spacing-unit;
+  font-size: 0.8rem;
+  vertical-align: baseline;
+  position: relative;
+  top: -1px;
+
+  &:hover {
+    transform: none;
+  }
+}
+
 .btn-sm {
   padding: $spacing-unit $spacing-unit * 2;
   font-size: 0.875rem;
