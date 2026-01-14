@@ -68,6 +68,14 @@ cfcr:
     - event: Camera-ready deadline
       date: Sunday, April 19th, 2026
 
+  extra_instructions: |
+    ###### Outstanding challenge report awards
+
+    In addition to leaderboard winners, we will also award several
+    awards for outstanding challenge report. We intend to give these awards
+    to submissions that are innovative, unusual, or make novel and
+    significant contributions to representational alignment research.
+
 speakers:
   - name: David Bau
     affiliation: Northeastern University
