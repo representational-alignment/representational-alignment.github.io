@@ -16,9 +16,6 @@ section {
 
 // Grid system enhancements
 .row {
-  margin-left: -$spacing-unit * 2;
-  margin-right: -$spacing-unit * 2;
-
   &.justify-content-center {
     justify-content: center;
   }
@@ -162,7 +159,7 @@ section {
 
 @media (max-width: 576px) {
   .container {
-    padding: 0 $spacing-unit / 2;
+    padding: 0 $spacing-unit * 2;
   }
 
   .schedule-table {
