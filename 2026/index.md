@@ -98,7 +98,7 @@ organizers:
     website: https://bkhmsi.github.io/
     image: badr.jpeg
   - name: Brian Cheung
-    affiliation: UCSF
+    affiliation: MIT / UCSF
     website: https://briancheung.github.io/
     image: brian.jpg
   - name: Dota Dong
@@ -106,7 +106,7 @@ organizers:
     website: https://tianaidong.github.io/
     image: dota.jpg
   - name: Erin Grant
-    affiliation: NYU
+    affiliation: NYU / UAlberta
     website: https://eringrant.github.io/
     image: erin.jpeg
   - name: Stephanie Fu
@@ -118,7 +118,7 @@ organizers:
     website: https://kushinm.com/
     image: kushin.jpeg
   - name: Ilia Sucholutsky
-    affiliation: NYU
+    affiliation: NYU / Purdue
     website: https://ilia10000.github.io/
     image: ilia.jpeg
   - name: Siddharth Suresh
