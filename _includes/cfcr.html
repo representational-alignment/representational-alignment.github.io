@@ -22,10 +22,12 @@
             <table class="table table-striped table-sm">
               <tbody>
                 {% for date in page.cfcr.dates %}
+                {% if date.event contains "submission" %}
+                <tr class="highlight-row">
+                {% else %}
                 <tr>
-                  <td class="font-weight-bold" style="width: 40%">
-                    {{ date.event }}
-                  </td>
+                {% endif %}
+                  <td class="font-weight-bold" style="width: 40%">{{ date.event }}</td>
                   <td style="width: 40%">{{ date.date }}</td>
                 </tr>
                 {% endfor %}
@@ -34,9 +36,21 @@
           </div>
         </div>
 
-        <h5>Submission instructions</h5>
+        <h5>Submission instructions for challenge reports</h5>
 
-        <h6>Submission portal</h6>
+        <h6 id="leaderboard-submission">Leaderboard submission</h6>
+        <p>
+          <i>The Hugging Face leaderboard is coming soon</i>. In the meantime,
+          starter code is available via the
+          <a
+            href="https://github.com/representational-alignment/hackathon"
+            class="btn btn-secondary btn-xs"
+            target="_blank"
+            >Re-Align Hackathon</a
+          >.
+        </p>
+
+        <h6>Challenge report submission</h6>
         <p>
           All challenge report submissions should be made via
           <a
@@ -44,34 +58,27 @@
             class="btn btn-custom btn-xs"
             target="_blank"
             >OpenReview</a
-          >.
+          >. Challenge reports should be anonymized and format content in
+          Markdown, with additional metadata as specified by our submission form
+          on OpenReview. Challenge reports should be associated with a
+          submission to the
+          <a href="#leaderboard-submission">Re-Align Challenge leaderboard</a>.
         </p>
 
-        <h6>Submission format</h6>
+        <h6>Review policy</h6>
         <p>
-          Challenge reports should be in a markdown-style blog post format, with
-          additional metadata as specified by our submission form on OpenReview.
-          Challenge reports should be associated with a submission to the
-          Re-Align Challenge leaderboard, in the form of a link to a GitHub pull
-          request (PR) authored by one of the authors of the challenge report.
+          Challenge reports submitted on OpenReview should be fully anonymized.
+          These submissions will go through double-blind peer review for
+          quality. The organizers will separately review leaderboard submissions
+          to ensure they are valid and consistent with the corresponding
+          challenge report.
         </p>
 
-        <h5>Review policy</h5>
-        <p>
-          Since GitHub PRs cannot be anonymized, it is acceptable to have PRs
-          associated with a GitHub user that reveals author identity. However,
-          the challenge report submitted on OpenReview should be fully
-          anonymized. These submissions will go through double-blind peer review
-          for quality. Separately, the organizers will review the GitHub PR to
-          ensure the leaderboard submission is valid and consistent with the
-          corresponding challenge report.
-        </p>
-
-        <h5>Presentation format</h5>
+        <h6>Presentation format</h6>
         <p>
           Accepted challenge reports will be invited for presentation at the
-          ICLR Workshop in the form of a poster. Select contributions may
-          additionally be invited as contributed talks.
+          ICLR {{ page.year }} Re-Align Workshop in the form of a poster. Select
+          contributions may additionally be invited as contributed talks.
         </p>
 
         <p>

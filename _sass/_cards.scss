@@ -12,7 +12,7 @@
     height: 200px;
     border-radius: 10%;
     object-fit: cover;
-    margin-bottom: $spacing-unit * 3;
+    margin-bottom: $spacing-unit * 2;
     border: 1px solid $border-color;
     transition: box-shadow $transition-normal;
 
@@ -23,7 +23,7 @@
 
   h6 {
     font-size: $large-font-size;
-    margin-bottom: $spacing-unit;
+    margin-bottom: $spacing-unit / 2;
     transition: color $transition-normal;
 
     &:hover {
@@ -35,5 +35,6 @@
   p {
     font-size: $base-font-size;
     color: $text-light;
+    line-height: 1.3;
   }
 }

@@ -16,10 +16,12 @@ cover_image:
 buttons:
   - text: OpenReview
     url: https://openreview.net/group?id=ICLR.cc/2026/Workshop/Re-Align
+  - text: ICLR.cc
+    url: https://iclr.cc/virtual/2026/workshop/10000807
 
 cfp:
   intro: |
-    We invite the submission of papers for presentation at the workshop.
+    We invite the submission of papers for presentation at the ICLR 2026 Re-Align workshop.
     We broadly welcome submissions related to representational alignment
     among artificial and biological information processing systems.
     Submissions can come from any area of cognitive science, neuroscience,
@@ -53,7 +55,7 @@ cfcr:
 
     We invite submissions of **challenge reports** as companions to leaderboard submissions.
     For leaderboard submissions to be considered as ICLR 2026 workshop contributions, authors must submit
-    a challenge report through OpenReview that will undergo review by the organizing committee.
+    a challenge report through OpenReview that will undergo review by the [organizing committee](#organizers).
 
     (*Position papers and other contributions **not** directly tied to leaderboard submissions
     should be submitted to the [call for papers](#cfp).*)
@@ -133,8 +135,7 @@ news:
 about: |
   The [first](/2024) [two](/2025) editions of the Workshop on Representational Alignment (Re-Align) at ICLR established a community
   bringing together researchers from **machine learning, neuroscience, and cognitive science** to tackle a foundational
-  question: How can we meaningfully compare and align the internal representations of intelligent systems
-  ([Sucholutsky et al., 2023](https://arxiv.org/abs/2310.13018))?
+  question: [How can we meaningfully compare and align the internal representations of intelligent systems?](https://arxiv.org/abs/2310.13018)
 
   Building on this foundation, the third edition of the Re-Align Workshop at ICLR pivots from asking *how* we measure
   alignment to *what we can conclude from observing alignment*. In particular, our next edition brings focus on what
