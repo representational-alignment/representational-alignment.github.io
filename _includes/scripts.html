@@ -11,8 +11,10 @@
     // Smooth scrolling for all anchor links
     $('a[href^="#"]').on("click", function (e) {
       e.preventDefault();
-      var target = $(this.hash);
+      var hash = this.hash;
+      var target = $(hash);
       if (target.length) {
+        history.pushState(null, null, hash);
         $("html, body").animate(
           {
             scrollTop: target.offset().top - 70,
