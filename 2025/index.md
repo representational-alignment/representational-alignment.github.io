@@ -19,28 +19,27 @@ buttons:
     url: https://iclr.cc/virtual/2025/workshop/23963
 
 cfp:
-    dates:
-      - event: Paper submission deadline
-        date: <strike>Monday, February 3rd, 2025</strike> <br> Wednesday, February 5th, 2025
-      - event: Reviewing deadline
-        date: Friday, February 21st, 2025
-      - event: Author notification
-        date: Wednesday, March 5th, 2025
-      - event: Camera-ready copy (CRC) deadline
-        date: Sunday, April 20th, 2025
-    extra_instructions: |
-        ##### Funding for contributors to ICLR 2025
-        This year, ICLR is discontinuing the separate "Tiny Papers" track, and 
-        is instead requiring each workshop to accept short paper 
-        submissions, with an eye toward inclusion; see the
-        [ICLR page on Tiny Papers](https://iclr.cc/Conferences/2025/CallForTinyPapers) 
-        for more details. Authors of these papers will be earmarked for 
-        potential funding from ICLR, but need to submit a separate application 
-        for Financial Assistance that evaluates their eligibility. This 
-        application for Financial Assistance to attend ICLR 2025 is available at
-        [ICLR 2025 Financial Assistance](https://iclr.cc/Conferences/2025/FinancialAssistance),
-        and closes on March 2nd.
-
+  dates:
+    - event: Paper submission deadline
+      date: <strike>Monday, February 3rd, 2025</strike> <br> Wednesday, February 5th, 2025
+    - event: Reviewing deadline
+      date: Friday, February 21st, 2025
+    - event: Author notification
+      date: Wednesday, March 5th, 2025
+    - event: Camera-ready copy (CRC) deadline
+      date: Sunday, April 20th, 2025
+  extra_instructions: |
+    ##### Funding for contributors to ICLR 2025
+    This year, ICLR is discontinuing the separate "Tiny Papers" track, and 
+    is instead requiring each workshop to accept short paper 
+    submissions, with an eye toward inclusion; see the
+    [ICLR page on Tiny Papers](https://iclr.cc/Conferences/2025/CallForTinyPapers) 
+    for more details. Authors of these papers will be earmarked for 
+    potential funding from ICLR, but need to submit a separate application 
+    for Financial Assistance that evaluates their eligibility. This 
+    application for Financial Assistance to attend ICLR 2025 is available at
+    [ICLR 2025 Financial Assistance](https://iclr.cc/Conferences/2025/FinancialAssistance),
+    and closes on March 2nd.
 
 speakers:
   - name: Iris Groen
@@ -131,7 +130,11 @@ about: |
   subdomain.
 
 hackathon: |
-  *Details coming soon!*
+  The <a href="https://github.com/representational-alignment/hackathon" class="btn btn-secondary btn-xs" target="_blank">Re-Align Hackathon</a>
+  was a fun, hands-on activity where participants explored the question: are representations across vision models
+  "universal" or "idiosyncratic"? Attendees split into **Blue Teams** and **Red Teams** to investigate
+  this question in friendly competition. We hosted this hackathon at both ICLR 2025 and
+  <a href="https://2025.ccneuro.org/community-event-representational-alignment/">CCN 2025</a> in Amsterdam.
 
 program_committee:
   - url: https://openreview.net/profile?id=~Akash_Nagaraj2
