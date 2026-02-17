@@ -36,8 +36,6 @@ cfp:
   dates:
     - event: Paper submission deadline
       date: Thursday, February 5th, 2026
-    - event: Challenge report submission deadline
-      date: Thursday, February 26th, 2026
     - event: Reviewing deadline
       date: Thursday, February 26th, 2026
     - event: Author notification
