@@ -1,7 +1,7 @@
 ---
 layout: workshop
 year: 2026
-date: April 26th or 27th, 2026
+date: April 27th, 2026
 location: ICLR 2026
 openreview: https://openreview.net/group?id=ICLR.cc/2026/Workshop/Re-Align
 show_cfp: true
