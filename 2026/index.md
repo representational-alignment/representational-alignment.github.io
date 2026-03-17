@@ -133,6 +133,7 @@ organizers:
     image: sid.jpg
 
 news:
+  - content: All decisions have been sent out! The list of accepted papers can be found on <a href="https://openreview.net/group?id=ICLR.cc/2026/Workshop/Re-Align">OpenReview</a>. 
   - content: The <a href="#cfp">call for papers</a> and <a href="#cfcr">call for challenge reports</a> are now live!
   - content: The 2026 edition of Re-Align was accepted as a <a href="https://iclr.cc/virtual/2026/workshop/10000807">workshop</a> at <a href="https://iclr.cc/Conferences/2026/">ICLR 2026</a>!
 
