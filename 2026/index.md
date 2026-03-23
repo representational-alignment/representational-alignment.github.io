@@ -89,10 +89,6 @@ speakers:
     affiliation: University of Alberta
     website: https://webdocs.cs.ualberta.ca/~alona/
     image: profile_fyshe.webp
-  - name: Phillip Isola
-    affiliation: MIT
-    website: https://web.mit.edu/phillipi/
-    image: profile_isola.jpeg
   - name: Danielle Perszyk
     affiliation: Amazon AGI SF Lab
     website: https://scholar.google.com/citations?user=jLcGAcQAAAAJ
