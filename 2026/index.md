@@ -97,7 +97,7 @@ cfcr:
   camera_ready: |
     ###### Deanonymization
 
-    Don't forget to deanonymize your challenge report by adding in the author information.
+    Don't forget to deanonymize your challenge report by adding in the author information. Once the camera-ready deadline passes, we will compile your challenge report into a blog post to be hosted on [representational-alignment.github.io](https://representational-alignment.github.io/).
 
     ###### In-person poster presentation
 
@@ -115,14 +115,6 @@ cfcr:
     ###### Travel grants
 
     We are providing travel grants to make workshop attendance more accessible. Please refer to the e-mail sent to accepted authors for details on how to apply.
-
-  extra_instructions: |
-    ###### Outstanding challenge report awards
-
-    In addition to leaderboard winners, we will also award several
-    awards for outstanding challenge report. We intend to give these awards
-    to submissions that are innovative, unusual, or make novel and
-    significant contributions to representational alignment research.
 
 speakers:
   - name: David Bau
