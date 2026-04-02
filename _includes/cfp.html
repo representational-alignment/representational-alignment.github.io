@@ -14,8 +14,8 @@
           representational alignment among artificial and biological information
           processing systems. Submissions can come from any area of cognitive
           science, neuroscience, machine learning, or related fields. We welcome
-          <strong>short</strong> (up to 5 pages + references and supplement) or
-          <strong>long</strong> (up to 10 pages + references and supplement)
+          <strong>short</strong> (up to 5 pages + references and appendix) or
+          <strong>long</strong> (up to 10 pages + references and appendix)
           technical and position papers.
         </p>
         {% endif %}
@@ -63,9 +63,9 @@
         <h6 id="submission-format">Submission format</h6>
         <p>
           Authors must select between the
-          <strong>short</strong> (up to 5 pages + references and supplement) or
-          <strong>long</strong> (up to 10 pages + references and supplement)
-          paper submission tracks. The supplement can include an author
+          <strong>short</strong> (up to 5 pages + references and appendix) or
+          <strong>long</strong> (up to 10 pages + references and appendix)
+          paper submission tracks. The appendix can include an author
           contributions statement, a disclosure on the use of automated tools
           (such as generative AI), and/or a technical appendix. Submissions will
           be evaluated within the track to which they are submitted.
@@ -104,7 +104,7 @@
             >policies on large language model usage at ICLR 2026</a
           >, any use of (generative) artificial intelligence to prepare the
           content of a paper submission must be disclosed. (This disclosure can
-          be placed in the supplement.)
+          be placed in the appendix.)
         </p>
 
         <h6>Interdisciplinarity</h6>
@@ -194,11 +194,6 @@
           workshop website.
         </p>
 
-        <p>
-          Posters should be in portrait orientation with a maximum height of
-          91cm (36") and a maximum width of 61cm (24").
-        </p>
-
         <h6>Remote presentation for papers</h6>
         <p>
           Acceptance decisions on paper submissions will be considered
@@ -211,6 +206,12 @@
           available to presenters who are unable to travel due to visa or
           funding restrictions.
         </p>
+
+        {% if page.cfp.camera_ready %}
+        <h5>Camera-ready instructions for papers</h5>
+
+        {{ page.cfp.camera_ready | markdownify }}
+        {% endif %}
 
         {{ page.cfp.extra_instructions | markdownify }}
       </div>

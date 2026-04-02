@@ -85,10 +85,11 @@
           contributions may additionally be invited as contributed talks.
         </p>
 
-        <p>
-          Posters should be in portrait orientation with a maximum height of
-          91cm (36") and a maximum width of 61cm (24").
-        </p>
+        {% if page.cfcr.camera_ready %}
+        <h5>Camera-ready instructions for challenge reports</h5>
+
+        {{ page.cfcr.camera_ready | markdownify }}
+        {% endif %}
 
         {{ page.cfcr.extra_instructions | markdownify }}
       </div>
