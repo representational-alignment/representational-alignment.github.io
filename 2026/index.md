@@ -117,6 +117,10 @@ cfcr:
     We are providing travel grants to make workshop attendance more accessible. Please refer to the e-mail sent to accepted authors for details on how to apply.
 
 speakers:
+  - name: Valentina Pyatkin
+    affiliation: Allen Institute for AI / University of Washington
+    website: https://valentinapy.github.io/
+    image: profile_pyatkin.jpg
   - name: Arturo Deza
     affiliation: Artificio
     website: http://arturodeza.wikidot.com/
