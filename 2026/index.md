@@ -117,10 +117,6 @@ cfcr:
     We are providing travel grants to make workshop attendance more accessible. Please refer to the e-mail sent to accepted authors for details on how to apply.
 
 speakers:
-  - name: David Bau
-    affiliation: Northeastern University
-    website: https://baulab.info/
-    image: profile_bau.png
   - name: Arturo Deza
     affiliation: Artificio
     website: http://arturodeza.wikidot.com/
