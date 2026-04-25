@@ -1,4 +1,0 @@
-User-agent: *
-Disallow:
-
-Sitemap: https://representational-alignment.github.io/sitemap.xml
