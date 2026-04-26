@@ -15,6 +15,7 @@ exclude:
   - Gemfile.lock
   - node_modules
   - vendor
+  - 2026/blog
 
 social:
   email: representational-alignment@googlegroups.com

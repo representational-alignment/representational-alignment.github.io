@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<!-- _layouts/distill.html --><html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>
+  let thunk = () => {
+    let trimIt = (e) => e.trim();
+    let getText = (e) => e.innerText;
+    let splitNameAndFamilyName = (e) => {
+      let splitted = e.split(" ");
+
+      let fnames = splitted.slice(0, -1).join(" ");
+      let lname = splitted.at(-1);
+
+      return [lname, fnames];
+    }
+
+    let authors = Array.from(document.getElementsByClassName("author")).map(getText).map(trimIt).map(splitNameAndFamilyName);
+    let firstAuthorLName = authors[0][0];
+    let affiliationElements = Array.from(document.getElementsByClassName("affiliation")).filter(e => e.nodeName === "P").map(getText).map(trimIt);
+
+    // getting stuff directly from Jekyll
+    let publishedWhen = "April 27, 2026";
+    let title = "🟥 Maximally Disagreeing Images CKA-Weighted Multi-Scale Divergence for Red Team Stimulus Selection".replace(/^[🟦🟥]\s*/u, '');
+    let description = "";
+
+    {
+      let authorsBibtex = authors.map(e => `${e[0]}, ${e[1]}`).join(" and ");
+      let bibtexTitleShorthand = (firstAuthorLName +
+              "2026" +
+              title.split(" ").slice(0, 3).join("")
+      ).replace(" ", "").replace(/[\p{P}$+<=>^`|~]/gu, '').toLowerCase().trim();
+      let bibtexTemplate = `
+@inproceedings{${bibtexTitleShorthand},
+  author = {${authorsBibtex}},
+  title = {${title}},
+  abstract = {${description}},
+  booktitle = {ICLR Blogposts 2026},
+  year = {2026},
+  date = {${publishedWhen}},
+  note = {${window.location.href}},
+  url  = {${window.location.href}}
+}
+  `.trim();
+      document.getElementById("bibtex-box").innerText = bibtexTemplate;
+    }
+
+    {
+      let academicLFI = authors.map(e => e[0]);
+      {
+        if (academicLFI.length > 2) academicLFI = academicLFI[0] + ", et al.";
+        else if (academicLFI.length == 2) academicLFI = academicLFI[0] + " & " + academicLFI[1];
+        else academicLFI = academicLFI[0];
+      }
+      let academicTemplate = `
+${academicLFI}, "${title}", ICLR Blogposts, 2026.
+`.trim();
+      document.getElementById("bibtex-academic-attribution").innerText = academicTemplate;
+    }
+  };
+
+  document.addEventListener('readystatechange', function(event) {
+    if (document.readyState === "complete") {
+      thunk();
+    }
+  });
+
+
+
+</script>
+
+      <!-- Metadata, OpenGraph and Schema.org -->
+    
+
+    <!-- Standard metadata -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>🟥 Maximally Disagreeing Images CKA-Weighted Multi-Scale Divergence for Red Team Stimulus Selection</title>
+    <meta name="author" content="ICLR  Blog">
+    <meta name="description" content="Home to the 2025 ICLR Blogposts track
+">
+    <meta name="keywords" content="machine-learning, ml, deep-learning, reinforcement-learning, iclr">
+
+
+    <!-- Bootstrap & MDB -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-DF7Zhf293AJxJNTmh5zhoYYIMs2oXitRfBjY+9L//AY=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/css/mdb.min.css" integrity="sha256-jpjYvU3G3N6nrrBwXJoVEYI/0zw8htfFnhT9ljN3JJw=" crossorigin="anonymous">
+
+    <!-- Fonts & Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.1/css/academicons.min.css" integrity="sha256-i1+4qU2G2860dGGIOJscdC30s9beBXjFfzjWLjBRsBg=" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CRoboto+Slab:100,300,400,500,700%7CMaterial+Icons">
+
+    <!-- Code Syntax Highlighting -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/github.css" media="" id="highlight_theme_light">
+
+    <link rel="stylesheet" href="/2026/challenge/assets/css/main.css">
+    <link rel="canonical" href="https://representational-alignment.github.io/2026/challenge/blog/sub-04/">
+    
+    <!-- Dark Mode -->
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/native.css" media="none" id="highlight_theme_dark">
+
+    <script src="/2026/challenge/assets/js/theme.js"></script>
+    <script src="/2026/challenge/assets/js/dark_mode.js"></script>
+    
+
+
+    <!-- jQuery -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <!-- MathJax -->
+  <script type="text/javascript">
+    window.MathJax = {
+      tex: {
+        tags: 'ams'
+      }
+    };
+  </script>
+  <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js"></script>
+  <script defer src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+
+    <!-- Distill js -->
+    <script src="/2026/challenge/assets/js/distillpub/template.v2.js"></script>
+    <script src="/2026/challenge/assets/js/distillpub/transforms.v2.js"></script>
+    <script src="/2026/challenge/assets/js/distillpub/overrides.js"></script>
+    
+    <!-- Page/Post style -->
+    <style type="text/css">
+      .fake-img {
+  background: #bbb;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 12px;
+} .fake-img p {
+  font-family: monospace;
+  color: white;
+  text-align: left;
+  margin: 12px 0;
+  text-align: center;
+  font-size: 16px;
+}
+
+    </style>
+  
+
+  <d-front-matter>
+    <script async type="text/json">{
+      "title": "Maximally Disagreeing Images CKA-Weighted Multi-Scale Divergence for Red Team Stimulus Selection",
+      "description": "",
+      "published": "April 27, 2026",
+      "authors": [
+        {
+          "author": "Dhia Naouali",
+          "authorURL": "",
+          "affiliations": [
+            {
+              "name": "Higher institute of mathematics and computer sciences of monastir",
+              "url": ""
+            }
+          ]
+        }
+        
+      ],
+      "katex": {
+        "delimiters": [
+          {
+            "left": "$",
+            "right": "$",
+            "display": false
+          },
+          {
+            "left": "$$",
+            "right": "$$",
+            "display": true
+          }
+        ]
+      }
+    }</script>
+  </d-front-matter>
+
+  </head>
+<body class="fixed-top-nav">
+
+    <!-- Header -->
+    <header>
+
+      <!-- Nav Bar -->
+      <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top">
+        <div class="container">
+          <a class="navbar-brand title font-weight-lighter" href="/2026/challenge/">
+            Re-Align Challenge Track 2026
+          </a>
+          <!-- Navbar Toggle -->
+          <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar top-bar"></span>
+            <span class="icon-bar middle-bar"></span>
+            <span class="icon-bar bottom-bar"></span>
+          </button>
+
+          <!-- [#&lt;Jekyll::Page @relative_path=&quot;404.html&quot;&gt;, #&lt;Jekyll::Page @relative_path=&quot;_pages/about.md&quot;&gt;, #&lt;Jekyll::Page @relative_path=&quot;index.md&quot;&gt;, #&lt;Jekyll::Page @relative_path=&quot;assets/css/main.scss&quot;&gt;, #&lt;Jekyll::Page @relative_path=&quot;robots.txt&quot;&gt;, #&lt;Jekyll:Archive @type=year @title={:year=&gt;&quot;2025&quot;} @data={&quot;layout&quot;=&gt;&quot;archive-year&quot;}&gt;, #&lt;Jekyll:Archive @type=year @title={:year=&gt;&quot;2026&quot;} @data={&quot;layout&quot;=&gt;&quot;archive-year&quot;}&gt;, #&lt;JekyllRedirectFrom::PageWithoutAFile @relative_path=&quot;redirects.json&quot;&gt;, #&lt;Jekyll::PageWithoutAFile @relative_path=&quot;sitemap.xml&quot;&gt;, #&lt;JekyllFeed::PageWithoutAFile @relative_path=&quot;feed.xml&quot;&gt;, #&lt;Jekyll::PaginateV2::Generator::PaginationPage @relative_path=&quot;.html&quot;&gt;] -->
+
+          <div class="collapse navbar-collapse text-right" id="navbarNav">
+            <ul class="navbar-nav ml-auto flex-nowrap">
+
+              <!-- About -->
+              <!-- <li class="nav-item ">
+                <a class="nav-link" href="/2026/challenge/2023/about">about</a>
+              </li> -->
+              <!-- Call -->
+              <!-- <li class="nav-item ">
+                <a class="nav-link" href="/2026/challenge/2023/call">call</a>
+              </li> -->
+              <!-- submissions -->
+              <!-- <li class="nav-item ">
+                <a class="nav-link" href="/2026/challenge/2023/submissions/">submissions</a>
+              </li> -->
+              <!-- Blog -->
+              <!-- <li class="nav-item active">
+                <a class="nav-link" href="/2026/challenge/blog/">blog<span class="sr-only">(current)</span></a>
+              </li> -->
+              <!-- 2022 -->
+              <!-- <li class="nav-item">
+                <a class="nav-link" href="https://iclr-blog-track.github.io/home/">2022 edition <u>⤤</u><span class="sr-only">(current)</span></a>
+              </li> -->
+
+              <!-- Other pages -->
+              <li class="nav-item ">
+                <a class="nav-link" href="/2026/challenge/about/">about</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="/2026/challenge/blog/index.html">blog</a>
+              </li>
+
+              <!-- Toogle theme mode -->
+              <li class="toggle-container">
+                <button id="light-toggle" title="Change theme">
+                  <i class="fas fa-moon"></i>
+                  <i class="fas fa-sun"></i>
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Content -->
+    <div class="post distill">
+
+      <d-title>
+        <h1 style="display:flex;align-items:flex-start;gap:0.4em;">
+          
+          
+            <span style="font-size:0.75em;line-height:1;">🟥</span>
+            
+          
+          Maximally Disagreeing Images CKA-Weighted Multi-Scale Divergence for Red Team Stimulus Selection
+        </h1>
+        <p></p>
+      </d-title>
+
+      <d-byline></d-byline>
+
+      <d-article>
+        
+
+        <!-- Note: please use the table of contents as defined in the front matter rather than the traditional markdown styling. -->
+
+<h2 id="abstract">Abstract</h2>
+
+<p>We present a GPU-accelerated pipeline for the <strong>Red Team</strong> track of the ICLR 2026 Re-Align Challenge. Starting from a diverse set of vision models selected via a vectorised Centered Kernel Alignment (CKA) matrix, we identify 1,000 images from the ImageNet validation split that produce maximally divergent representations across models. Divergence is scored via CKA-weighted pairwise cosine distances in a multi-scale randomised-PCA embedding space, and final image rankings are obtained by fusing scores across PCA scales through rank aggregation. The entire pipeline runs on a single H100 GPU.</p>
+
+<hr>
+
+<h2 id="1-introduction">1. Introduction</h2>
+
+<p>The Re-Align Red Team challenge asks: which images cause the greatest disagreement in internal representations across vision models? Answering this requires both a scalable inter-model similarity metric and an efficient per-image disagreement score. We adopt <strong>Centered Kernel Alignment (CKA)</strong> as our similarity metric—consistent with the challenge evaluation protocol—and use it both to select a diverse reference set of models and to weight pairwise disagreements when scoring images.</p>
+
+<hr>
+
+<h2 id="2-methods">2. Methods</h2>
+
+<h3 id="21-feature-extraction">2.1 Feature Extraction</h3>
+
+<p>For each model, activations are extracted from the designated layer using a forward hook registered via <code class="language-plaintext highlighter-rouge">timm</code>. Images are preprocessed with standard ImageNet normalisation (resize 256, centre-crop 224) and inference runs under <code class="language-plaintext highlighter-rouge">torch.amp.autocast</code> on a single H100. GPU memory is explicitly freed after each model. All images are drawn exclusively from the <strong>ImageNet validation split</strong>.</p>
+
+<p>For CKA estimation, <strong>2,048 images</strong> are subsampled. For divergence scoring, the <strong>full ImageNet validation set</strong> (~50k images) is used.</p>
+
+<h3 id="22-vectorised-cka-matrix">2.2 Vectorised CKA Matrix</h3>
+
+<p>We use the unbiased HSIC estimator:</p>
+
+\[\text{HSIC}(K, L) = \frac{\operatorname{tr}(KL) + \dfrac{(\mathbf{1}^\top K \mathbf{1})(\mathbf{1}^\top L \mathbf{1})}{(n-1)(n-2)} - \dfrac{2\,(K\mathbf{1})^\top(L\mathbf{1})}{n-2}}{n(n-3)}\]
+
+\[\text{CKA}(K, L) = \frac{\text{HSIC}(K, L)}{\sqrt{\text{HSIC}(K,K)\cdot\text{HSIC}(L,L)}}\]
+
+<p>All $K$ centred Gram matrices $G_i \in \mathbb{R}^{n \times n}$ are stacked into a single tensor $\mathbf{G} \in \mathbb{R}^{K \times n \times n}$. The three required pairwise quantities are computed in a fixed number of GPU kernel launches:</p>
+
+<ul>
+  <li>
+<strong>Pairwise traces:</strong> $T_{ij} = \operatorname{tr}(G_i G_j)$ via <code class="language-plaintext highlighter-rouge">einsum("imn,jmn-&gt;ij", G, G)</code>
+</li>
+  <li>
+<strong>Row-sum cross-products:</strong> $R_{ij} = (G_i\mathbf{1})^\top(G_j\mathbf{1})$ via row-sum vectors and a single matmul</li>
+  <li>
+<strong>Scalar outer products:</strong> $S_{ij} = (\mathbf{1}^\top G_i \mathbf{1})(\mathbf{1}^\top G_j \mathbf{1})$</li>
+</ul>
+
+<h3 id="23-reference-model-selection">2.3 Reference Model Selection</h3>
+
+<p>A diverse reference set of 20 models is selected greedily from the full model suite to maximise collective representational dissimilarity. At each step the candidate with the lowest cumulative CKA to the already-selected set is added. A running vector <code class="language-plaintext highlighter-rouge">cum_sim</code> $\in \mathbb{R}^K$ is updated with a single $O(K)$ addition per step, yielding $O(K^2)$ total complexity. The seed is the model with the lowest mean-row CKA globally. This set is then used as the reference for all downstream divergence scoring.</p>
+
+<h3 id="24-randomised-gpu-pca">2.4 Randomised GPU PCA</h3>
+
+<p>Full-dataset features for each reference model are reduced to PCA embeddings at three scales $d \in {16, 32, 64}$ using a randomised SVD implemented in PyTorch, avoiding materialisation of the full $D \times D$ covariance matrix:</p>
+
+<ol>
+  <li>Random projection: $Y = X\Omega$, $\Omega \in \mathbb{R}^{D \times (d+10)}$</li>
+  <li>QR: $Q, _ = \operatorname{QR}(Y)$</li>
+  <li>Small SVD: $U, \Sigma, V^\top = \operatorname{SVD}(Q^\top X)$</li>
+  <li>Projection: $X_r = X V_{:d}$, then L2-normalised</li>
+</ol>
+
+<p>Peak GPU memory is $O(Nk + kD)$, typically 1–2 GB for ImageNet-scale features on the H100.</p>
+
+<h3 id="25-cka-weighted-per-image-disagreement-score">2.5 CKA-Weighted Per-Image Disagreement Score</h3>
+
+<p>For a fixed scale $d$, all reference model embeddings are stacked into $\mathcal{V} \in \mathbb{R}^{M \times N \times d}$. For each image $x$:</p>
+
+\[\text{score}(x) = \sum_{i &lt; j} w_{ij} \cdot \bigl(1 - \cos(\mathbf{v}_i(x),\, \mathbf{v}_j(x))\bigr)\]
+
+<p>where $w_{ij}$ is the normalised CKA similarity between models $i$ and $j$. Upweighting high-CKA pairs means that images are ranked highly when they cause divergence among representationally <em>similar</em> models—disagreements that cannot be explained by architectural idiosyncrasy alone. Scoring is computed in chunked GPU einsum operations (512 images per chunk) with a single host-to-device transfer per scale.</p>
+
+<h3 id="26-rank-fusion-across-scales">2.6 Rank Fusion Across Scales</h3>
+
+<p>Per-scale disagreement scores are converted to ranks, and the mean rank across the three PCA scales is used as the final score. This makes the ranking robust to scale-specific distributional differences without requiring commensurable score magnitudes.</p>
+
+<h3 id="27-greedy-diverse-image-selection">2.7 Greedy Diverse Image Selection</h3>
+
+<p>From the top-5,000 candidates by fused rank score, 1,000 images are selected greedily by combining divergence score and diversity:</p>
+
+\[\text{combined}(x) = (1-\lambda)\,\hat{s}(x) + \lambda\,\hat{d}(x), \quad \lambda = 0.3\]
+
+<p>where $\hat{s}$ is the min-max normalised divergence score and $\hat{d}$ is the min-max normalised minimum cosine distance to the already-selected set in a mean-model proxy feature space.</p>
+
+<hr>
+
+<h2 id="3-experimental-setup">3. Experimental Setup</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Hyperparameter</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Hardware</td>
+      <td>1× NVIDIA H100 (80 GB)</td>
+    </tr>
+    <tr>
+      <td>Image dataset</td>
+      <td>ImageNet validation split</td>
+    </tr>
+    <tr>
+      <td>Images for CKA estimation</td>
+      <td>2,048</td>
+    </tr>
+    <tr>
+      <td>Batch size</td>
+      <td>256</td>
+    </tr>
+    <tr>
+      <td>Reference models</td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <td>PCA scales $d$</td>
+      <td>16, 32, 64</td>
+    </tr>
+    <tr>
+      <td>GPU scoring chunk size</td>
+      <td>512</td>
+    </tr>
+    <tr>
+      <td>Diversity weight $\lambda$</td>
+      <td>0.3</td>
+    </tr>
+    <tr>
+      <td>Candidate pool</td>
+      <td>Top-5,000</td>
+    </tr>
+    <tr>
+      <td>Final images selected</td>
+      <td>1,000</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr>
+
+<h2 id="4-results">4. Results</h2>
+
+<h3 id="41-reference-model-set">4.1 Reference Model Set</h3>
+
+<p>The greedy selection procedure produced a set of 20 models with a mean pairwise CKA of <strong>0.087</strong>. Most pairwise similarities fall below 0.15, with only a small number of pairs exceeding 0.4, confirming low representational overlap across the selected set.</p>
+
+<h3 id="42-image-divergence-scoring">4.2 Image Divergence Scoring</h3>
+
+<p>Figure 1 (top row) shows that the per-image disagreement distributions are approximately unimodal and centred near 0.5 across all three PCA scales, with the score range slightly expanding as $d$ increases. The Spearman $\rho$ between scale pairs (Figure 1, bottom centre) is low across all pairs, with only PCA-16 vs. PCA-64 reaching approximately 0.15 and the remaining pairs near zero. This low inter-scale agreement motivates the rank-fusion step: no single scale dominates, and the fused score integrates complementary signals from all three. The top-1000 threshold falls in the right tail of the fused distribution (Figure 1, bottom left). The top-1000 score curve by rank (Figure 1, bottom right) shows a smooth decay from ~47,000 to ~37,000, indicating no abrupt cliff between selected and excluded images.</p>
+
+<figure>
+
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/2026/challenge/assets/img/2026-04-27-sub-04/6_Maximally_Disagreeing_Images_Figures-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/2026/challenge/assets/img/2026-04-27-sub-04/6_Maximally_Disagreeing_Images_Figures-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/2026/challenge/assets/img/2026-04-27-sub-04/6_Maximally_Disagreeing_Images_Figures-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/2026/challenge/assets/img/2026-04-27-sub-04/6_Maximally_Disagreeing_Images_Figures.png" class="img-fluid" width="auto" height="auto" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture><figcaption class="caption">Figure 1: Disagreement distributions, fused score distribution, Spearman correlations, and top-1000 score curve.</figcaption>
+
+</figure>
+
+<p><em>Figure 1. (Top row) Per-image weighted cosine distance distributions for PCA-16, PCA-32, and PCA-64. (Bottom left) Fused rank score distribution with top-1000 threshold marked. (Bottom centre) Spearman $\rho$ between scale pairs. (Bottom right) Top-1000 fused score by rank.</em></p>
+
+<hr>
+
+<h2 id="5-discussion">5. Discussion</h2>
+
+<p><strong>Low inter-scale correlation.</strong> The near-zero Spearman $\rho$ between most scale pairs (Figure 1) shows that different PCA dimensionalities capture non-overlapping aspects of representational disagreement. This makes rank fusion essential rather than cosmetic—any single scale would leave signal on the table.</p>
+
+<p><strong>CKA-based pair weighting.</strong> Upweighting high-CKA pairs focuses the score on images that challenge models with otherwise similar representations. Such disagreements are more likely to reflect genuine ambiguity in the image content rather than incidental differences in model architecture.</p>
+
+<p><strong>Limitations.</strong> CKA is estimated on a 2,048-image subsample; larger samples would improve accuracy. The greedy final selection approximates the NP-hard maximum-diversity problem.</p>
+
+<hr>
+
+<h2 id="6-conclusion">6. Conclusion</h2>
+
+<p>We describe a single-GPU pipeline for Red Team stimulus selection. A vectorised CKA matrix, randomised GPU PCA at three scales, CKA-weighted pairwise disagreement scoring, and rank fusion together identify 1,000 ImageNet validation images that maximise representational disagreement across a diverse reference set of vision models, all running on a single H100.</p>
+
+<hr>
+
+<h2 id="references">References</h2>
+
+<ul>
+  <li>[Kornblith et al., 2019] Kornblith, S., Norouzi, M., Lee, H., &amp; Hinton, G. Similarity of neural network representations revisited. <em>ICML 2019</em>.</li>
+  <li>[Nguyen et al., 2021] Nguyen, T., Raghu, M., &amp; Kornblith, S. Do wide and deep networks learn the same things? <em>ICLR 2021</em>.</li>
+  <li>[Halko et al., 2011] Halko, N., Martinsson, P.-G., &amp; Tropp, J. A. Finding structure with randomness: Probabilistic algorithms for constructing approximate matrix decompositions. <em>SIAM Review, 53(2)</em>.</li>
+</ul>
+
+      </d-article>
+
+      <d-appendix>
+        <d-footnote-list></d-footnote-list>
+        <d-citation-list></d-citation-list>
+      </d-appendix>
+
+    </div>
+
+    <d-bibliography src="/2026/challenge/assets/bibliography/2026-04-27-sub-04.bib"></d-bibliography>
+
+    <d-article id="bibtex-container" class="related highlight">
+      For attribution in academic contexts, please cite this work as
+      <pre id="bibtex-academic-attribution">
+        PLACEHOLDER FOR ACADEMIC ATTRIBUTION
+  </pre>
+
+      BibTeX citation
+      <pre id="bibtex-box">
+        PLACEHOLDER FOR BIBTEX
+  </pre>
+    </d-article>
+
+
+    <script src="https://utteranc.es/client.js" repo="iclr-blogposts/2025" issue-term="pathname" theme="github-light" crossorigin="anonymous" async>
+</script>
+    
+    <!-- Bootsrap & MDB scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha256-fgLAgv7fyCGopR/gBNq2iW3ZKIdqIcyshnUULC4vex8=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/js/mdb.min.js" integrity="sha256-NdbiivsvWt7VYCt6hYNT3h/th9vSTL4EDWeGs5SN3DA=" crossorigin="anonymous"></script>
+
+    
+  </body>
+
+
+</html>

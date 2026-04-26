@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<!-- _layouts/distill.html --><html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>
+  let thunk = () => {
+    let trimIt = (e) => e.trim();
+    let getText = (e) => e.innerText;
+    let splitNameAndFamilyName = (e) => {
+      let splitted = e.split(" ");
+
+      let fnames = splitted.slice(0, -1).join(" ");
+      let lname = splitted.at(-1);
+
+      return [lname, fnames];
+    }
+
+    let authors = Array.from(document.getElementsByClassName("author")).map(getText).map(trimIt).map(splitNameAndFamilyName);
+    let firstAuthorLName = authors[0][0];
+    let affiliationElements = Array.from(document.getElementsByClassName("affiliation")).filter(e => e.nodeName === "P").map(getText).map(trimIt);
+
+    // getting stuff directly from Jekyll
+    let publishedWhen = "April 27, 2026";
+    let title = "🟥 Self-Supervised Divergent Embeddings (SSDE) for Divergence-Driven Stimulus Selection".replace(/^[🟦🟥]\s*/u, '');
+    let description = "";
+
+    {
+      let authorsBibtex = authors.map(e => `${e[0]}, ${e[1]}`).join(" and ");
+      let bibtexTitleShorthand = (firstAuthorLName +
+              "2026" +
+              title.split(" ").slice(0, 3).join("")
+      ).replace(" ", "").replace(/[\p{P}$+<=>^`|~]/gu, '').toLowerCase().trim();
+      let bibtexTemplate = `
+@inproceedings{${bibtexTitleShorthand},
+  author = {${authorsBibtex}},
+  title = {${title}},
+  abstract = {${description}},
+  booktitle = {ICLR Blogposts 2026},
+  year = {2026},
+  date = {${publishedWhen}},
+  note = {${window.location.href}},
+  url  = {${window.location.href}}
+}
+  `.trim();
+      document.getElementById("bibtex-box").innerText = bibtexTemplate;
+    }
+
+    {
+      let academicLFI = authors.map(e => e[0]);
+      {
+        if (academicLFI.length > 2) academicLFI = academicLFI[0] + ", et al.";
+        else if (academicLFI.length == 2) academicLFI = academicLFI[0] + " & " + academicLFI[1];
+        else academicLFI = academicLFI[0];
+      }
+      let academicTemplate = `
+${academicLFI}, "${title}", ICLR Blogposts, 2026.
+`.trim();
+      document.getElementById("bibtex-academic-attribution").innerText = academicTemplate;
+    }
+  };
+
+  document.addEventListener('readystatechange', function(event) {
+    if (document.readyState === "complete") {
+      thunk();
+    }
+  });
+
+
+
+</script>
+
+      <!-- Metadata, OpenGraph and Schema.org -->
+    
+
+    <!-- Standard metadata -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>🟥 Self-Supervised Divergent Embeddings (SSDE) for Divergence-Driven Stimulus Selection</title>
+    <meta name="author" content="ICLR  Blog">
+    <meta name="description" content="Home to the 2025 ICLR Blogposts track
+">
+    <meta name="keywords" content="machine-learning, ml, deep-learning, reinforcement-learning, iclr">
+
+
+    <!-- Bootstrap & MDB -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-DF7Zhf293AJxJNTmh5zhoYYIMs2oXitRfBjY+9L//AY=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/css/mdb.min.css" integrity="sha256-jpjYvU3G3N6nrrBwXJoVEYI/0zw8htfFnhT9ljN3JJw=" crossorigin="anonymous">
+
+    <!-- Fonts & Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.1/css/academicons.min.css" integrity="sha256-i1+4qU2G2860dGGIOJscdC30s9beBXjFfzjWLjBRsBg=" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CRoboto+Slab:100,300,400,500,700%7CMaterial+Icons">
+
+    <!-- Code Syntax Highlighting -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/github.css" media="" id="highlight_theme_light">
+
+    <link rel="stylesheet" href="/2026/challenge/assets/css/main.css">
+    <link rel="canonical" href="https://representational-alignment.github.io/2026/challenge/blog/sub-05/">
+    
+    <!-- Dark Mode -->
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/native.css" media="none" id="highlight_theme_dark">
+
+    <script src="/2026/challenge/assets/js/theme.js"></script>
+    <script src="/2026/challenge/assets/js/dark_mode.js"></script>
+    
+
+
+    <!-- jQuery -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <!-- MathJax -->
+  <script type="text/javascript">
+    window.MathJax = {
+      tex: {
+        tags: 'ams'
+      }
+    };
+  </script>
+  <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js"></script>
+  <script defer src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+
+    <!-- Distill js -->
+    <script src="/2026/challenge/assets/js/distillpub/template.v2.js"></script>
+    <script src="/2026/challenge/assets/js/distillpub/transforms.v2.js"></script>
+    <script src="/2026/challenge/assets/js/distillpub/overrides.js"></script>
+    
+    <!-- Page/Post style -->
+    <style type="text/css">
+      .fake-img {
+  background: #bbb;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 12px;
+} .fake-img p {
+  font-family: monospace;
+  color: white;
+  text-align: left;
+  margin: 12px 0;
+  text-align: center;
+  font-size: 16px;
+}
+
+    </style>
+  
+
+  <d-front-matter>
+    <script async type="text/json">{
+      "title": "Self-Supervised Divergent Embeddings (SSDE) for Divergence-Driven Stimulus Selection",
+      "description": "",
+      "published": "April 27, 2026",
+      "authors": [
+        {
+          "author": "Pavish Sainath",
+          "authorURL": "",
+          "affiliations": [
+            {
+              "name": "University of Montreal",
+              "url": ""
+            }
+          ]
+        }
+        
+      ],
+      "katex": {
+        "delimiters": [
+          {
+            "left": "$",
+            "right": "$",
+            "display": false
+          },
+          {
+            "left": "$$",
+            "right": "$$",
+            "display": true
+          }
+        ]
+      }
+    }</script>
+  </d-front-matter>
+
+  </head>
+<body class="fixed-top-nav">
+
+    <!-- Header -->
+    <header>
+
+      <!-- Nav Bar -->
+      <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top">
+        <div class="container">
+          <a class="navbar-brand title font-weight-lighter" href="/2026/challenge/">
+            Re-Align Challenge Track 2026
+          </a>
+          <!-- Navbar Toggle -->
+          <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar top-bar"></span>
+            <span class="icon-bar middle-bar"></span>
+            <span class="icon-bar bottom-bar"></span>
+          </button>
+
+          <!-- [#&lt;Jekyll::Page @relative_path=&quot;404.html&quot;&gt;, #&lt;Jekyll::Page @relative_path=&quot;_pages/about.md&quot;&gt;, #&lt;Jekyll::Page @relative_path=&quot;index.md&quot;&gt;, #&lt;Jekyll::Page @relative_path=&quot;assets/css/main.scss&quot;&gt;, #&lt;Jekyll::Page @relative_path=&quot;robots.txt&quot;&gt;, #&lt;Jekyll:Archive @type=year @title={:year=&gt;&quot;2025&quot;} @data={&quot;layout&quot;=&gt;&quot;archive-year&quot;}&gt;, #&lt;Jekyll:Archive @type=year @title={:year=&gt;&quot;2026&quot;} @data={&quot;layout&quot;=&gt;&quot;archive-year&quot;}&gt;, #&lt;JekyllRedirectFrom::PageWithoutAFile @relative_path=&quot;redirects.json&quot;&gt;, #&lt;Jekyll::PageWithoutAFile @relative_path=&quot;sitemap.xml&quot;&gt;, #&lt;JekyllFeed::PageWithoutAFile @relative_path=&quot;feed.xml&quot;&gt;, #&lt;Jekyll::PaginateV2::Generator::PaginationPage @relative_path=&quot;.html&quot;&gt;] -->
+
+          <div class="collapse navbar-collapse text-right" id="navbarNav">
+            <ul class="navbar-nav ml-auto flex-nowrap">
+
+              <!-- About -->
+              <!-- <li class="nav-item ">
+                <a class="nav-link" href="/2026/challenge/2023/about">about</a>
+              </li> -->
+              <!-- Call -->
+              <!-- <li class="nav-item ">
+                <a class="nav-link" href="/2026/challenge/2023/call">call</a>
+              </li> -->
+              <!-- submissions -->
+              <!-- <li class="nav-item ">
+                <a class="nav-link" href="/2026/challenge/2023/submissions/">submissions</a>
+              </li> -->
+              <!-- Blog -->
+              <!-- <li class="nav-item active">
+                <a class="nav-link" href="/2026/challenge/blog/">blog<span class="sr-only">(current)</span></a>
+              </li> -->
+              <!-- 2022 -->
+              <!-- <li class="nav-item">
+                <a class="nav-link" href="https://iclr-blog-track.github.io/home/">2022 edition <u>⤤</u><span class="sr-only">(current)</span></a>
+              </li> -->
+
+              <!-- Other pages -->
+              <li class="nav-item ">
+                <a class="nav-link" href="/2026/challenge/about/">about</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="/2026/challenge/blog/index.html">blog</a>
+              </li>
+
+              <!-- Toogle theme mode -->
+              <li class="toggle-container">
+                <button id="light-toggle" title="Change theme">
+                  <i class="fas fa-moon"></i>
+                  <i class="fas fa-sun"></i>
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Content -->
+    <div class="post distill">
+
+      <d-title>
+        <h1 style="display:flex;align-items:flex-start;gap:0.4em;">
+          
+          
+            <span style="font-size:0.75em;line-height:1;">🟥</span>
+            
+          
+          Self-Supervised Divergent Embeddings (SSDE) for Divergence-Driven Stimulus Selection
+        </h1>
+        <p></p>
+      </d-title>
+
+      <d-byline></d-byline>
+
+      <d-article>
+        
+
+        <!-- Note: please use the table of contents as defined in the front matter rather than the traditional markdown styling. -->
+<h2 id="introduction">Introduction</h2>
+
+<p>The <strong>Red Team</strong> track of the Re-Align Challenge 2026 asks participants to submit a set of <strong>1000 images</strong> intended to <strong>maximize representational divergence</strong> across a fixed suite of vision models, with divergence evaluated on a hidden split using <strong>Centered Kernel Alignment (CKA)</strong> between model embeddings. [@realign_workshop_2026; @realign_leaderboard_space_2026; @kornblith2019cka] CKA is closely related to the Hilbert–Schmidt Independence Criterion (HSIC), providing a robust similarity measure that is invariant to isotropic scaling and commonly used for comparing representational geometry. [@gretton2005hsic; @kornblith2019cka] Our goal is therefore to select stimuli that <em>systematically expose</em> differences in representational geometry across models, rather than simply selecting images that are difficult in a behavioral sense.</p>
+
+<p>We frame stimulus selection as <strong>set optimization</strong> over a candidate pool drawn from the datasets allowed by the challenge (ImageNet validation and ObjectNet). [@deng2009imagenet; @barbu2019objectnet; @objectnet_website] The approach has two stages:</p>
+
+<ol>
+  <li>
+<strong>Baseline selector (proxy divergence + diversity):</strong> compute per-image <em>divergence signatures</em> from multi-model representations, score images using a <strong>multi-directional disagreement</strong> proxy (including a <strong>log-det</strong> term), then select a set of 1000 images with an explicit diversity criterion.</li>
+  <li>
+<strong>Enhanced selector (SSDE + diversity):</strong> learn a <strong>Self-Supervised Divergence Embedding (SSDE)</strong> from the signatures using contrastive learning with <strong>hard negative mining</strong>, then perform diversity-aware selection in the learned embedding space. [@chen2020simclr; @robinson2021hard_negatives; @kalantidis2020hard_negative_mixing]</li>
+</ol>
+
+<p>All experiments were run on a multi-node GPU cluster for representation extraction, with CPU- and GPU-based jobs for aggregation, SSDE training, and subset selection.</p>
+
+<figure>
+
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/2026/challenge/assets/img/2026-04-27-sub-05/figure-SSDE-illustration-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/2026/challenge/assets/img/2026-04-27-sub-05/figure-SSDE-illustration-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/2026/challenge/assets/img/2026-04-27-sub-05/figure-SSDE-illustration-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/2026/challenge/assets/img/2026-04-27-sub-05/figure-SSDE-illustration.png" class="img-fluid" width="auto" height="auto" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture><figcaption class="caption">Figure 1: Conceptual schematic of SSDE and how hard negatives amplify disagreement structure.</figcaption>
+
+</figure>
+
+<hr>
+
+<h2 id="methods">Methods</h2>
+
+<h3 id="objective-and-notation">Objective and notation</h3>
+
+<p>Let the candidate stimulus pool (of images) be (\mathcal{D}={x_i}<em>{i=1}^N), where each (x_i) is an image from either ImageNet-val or ObjectNet. Let ({f_m}</em>{m=1}^M) denote the suite of (M) fixed vision models used by the challenge. For each model (m), we extract a feature vector at a designated layer:
+[
+h_m(x_i)\in\mathbb{R}^{d_m}.
+]
+The challenge evaluation computes a representational similarity (CKA) over <strong>sets</strong> of embeddings across images. [@kornblith2019cka] Because we do not have access to the hidden evaluation set, we build <strong>per-image proxies</strong> designed to predict which stimuli will decrease cross-model similarity when aggregated.</p>
+
+<h3 id="stage-a--dimensionality-harmonization-via-random-projections">Stage A — Dimensionality harmonization via random projections</h3>
+
+<p>Models produce features of different dimensions (d_m). To standardize computations and reduce I/O and memory, we map each (h_m(x_i)) into a shared dimension (d) using a fixed random projection:
+[
+e_m(x_i) = P_m,\tilde{h}_m(x_i)\in\mathbb{R}^{d},
+]
+where:</p>
+
+<ul>
+  <li>(\tilde{h}_m(x_i)) is a <strong>standardized</strong> version of (h_m(x_i)) (e.g., centering and (\ell_2)-normalization),</li>
+  <li>(P_m\in\mathbb{R}^{d\times d_m}) is a random matrix sampled once per model and held fixed.</li>
+</ul>
+
+<p>Random projections approximately preserve pairwise distances under mild conditions (Johnson–Lindenstrauss), enabling substantial dimensionality reduction while retaining geometric structure. [@johnson1984jl; @achlioptas2003random_projections]</p>
+
+<p>In our runs we used (d=256) for projected model features (reported in Table 1).</p>
+
+<h3 id="stage-b--divergence-signatures-and-multi-directional-disagreement-scores">Stage B — Divergence signatures and multi-directional disagreement scores</h3>
+
+<p>For each image (x_i), we stack the projected features across models into a matrix:
+[
+E_i =
+\begin{bmatrix}
+e_1(x_i)^\top<br>
+\vdots<br>
+e_M(x_i)^\top
+\end{bmatrix}
+\in\mathbb{R}^{M\times d}.
+]</p>
+
+<h4 id="b1-pairwise-disagreement-hardness-proxy">B.1 Pairwise disagreement (“hardness” proxy)</h4>
+
+<p>A simple proxy for cross-model disagreement is the <strong>mean pairwise cosine distance</strong>:
+[
+u_i
+===</p>
+
+<p>\frac{2}{M(M-1)}
+\sum_{1\le a &lt; b \le M}
+\left(
+1-\frac{\langle e_a(x_i), e_b(x_i)\rangle}{|e_a(x_i)|_2,|e_b(x_i)|_2}
+\right).
+]
+This increases when different models place the same image in dissimilar directions in feature space, which we expect to reduce representational alignment when many such images are aggregated. This choice is aligned with the representational-similarity viewpoint that comparisons should reflect <em>geometry</em>, not raw coordinates. [@kriegeskorte2008rsa; @sucholutsky2023getting_aligned]</p>
+
+<p>The diagnostic plot in Figure 2 visualizes this quantity as “hardness”:
+[
+\mathrm{hardness}(x_i) \equiv u_i.
+]</p>
+
+<figure>
+
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/2026/challenge/assets/img/2026-04-27-sub-05/hardness_distributions-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/2026/challenge/assets/img/2026-04-27-sub-05/hardness_distributions-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/2026/challenge/assets/img/2026-04-27-sub-05/hardness_distributions-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/2026/challenge/assets/img/2026-04-27-sub-05/hardness_distributions.png" class="img-fluid" width="auto" height="auto" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture><figcaption class="caption">Figure 2: Distributions of cross-model hardness (u_i) across candidate sources (samples of 10,000 images across different datasets and mixtures) and the selected set (median shown).</figcaption>
+
+</figure>
+
+<h4 id="b2-multi-directional-disagreement-via-log-det">B.2 Multi-directional disagreement via log-det</h4>
+
+<p>Pairwise averages can over-select stimuli that drive disagreement in a single direction (e.g., a shared “failure mode”). We therefore include a <strong>multi-directional</strong> term based on the log-determinant of the model–model Gram matrix:
+[
+G_i = \frac{1}{d}E_i E_i^\top \in \mathbb{R}^{M\times M},
+\qquad
+\ell_i = \log\det\left(G_i + \varepsilon I\right).
+]
+Here (\ell_i) is large when the model feature vectors for (x_i) span a high-volume simplex (i.e., are diverse and not confined to a low-dimensional subspace). Log-det objectives are widely used as diversity/coverage surrogates and appear in submodular sensor-placement and information-gain settings. [@krause2008sensor_placement]</p>
+
+<h4 id="b3-divergence-signature-and-scalar-score">B.3 Divergence signature and scalar score</h4>
+
+<p>We define a <strong>divergence signature</strong> (s_i\in\mathbb{R}^{D}) that concatenates:</p>
+
+<ol>
+  <li>the upper-triangular entries of (G_i) (flattened), and</li>
+  <li>auxiliary summary statistics such as (u_i) and (\ell_i).</li>
+</ol>
+
+<p>A scalar <strong>divergence score</strong> is then computed as:
+[
+d_i = \alpha,u_i + (1-\alpha),\operatorname{clip}(\ell_i;,\ell_{\min},\ell_{\max}),
+]
+with (\alpha\in[0,1]) controlling the contribution of pairwise vs. multi-directional disagreement and (\varepsilon&gt;0) stabilizing the log-det.</p>
+
+<h3 id="stage-c--diversity-aware-subset-selection-baseline-selector">Stage C — Diversity-aware subset selection (baseline selector)</h3>
+
+<p>Selecting the top 1000 images by (d_i) alone tends to produce near-duplicates. We therefore treat selection as maximizing a <em>score–diversity</em> trade-off.</p>
+
+<h4 id="c1-mmr-style-greedy-selection">C.1 MMR-style greedy selection</h4>
+
+<p>Given an embedding (v_i) used solely for measuring redundancy (either (s_i) or SSDE embeddings (z_i); see below), we use a greedy Maximal Marginal Relevance (MMR) criterion: [@carbonell1998mmr]
+[
+i^\star =
+\arg\max_{i\notin S}
+\left[
+d_i
+—</p>
+
+<p>\lambda\cdot
+\max_{j\in S}\mathrm{sim}(v_i, v_j)
+\right],
+\qquad
+\mathrm{sim}(a,b)=\frac{a^\top b}{|a|_2|b|_2}.
+]
+(\lambda\ge 0) is the diversity weight. To keep runtime manageable, selection is performed on the top (P) candidates by (d_i) (a “prefilter”).</p>
+
+<h4 id="c2-relation-to-log-detdpp-diversity-context">C.2 Relation to log-det/DPP diversity (context)</h4>
+
+<p>As an alternative diversity regularizer, one can use:
+[
+\log\det(K_S+\delta I),
+]
+where (K) is a positive semidefinite similarity kernel on candidate signatures. This is closely related to determinantal point processes (DPPs), a classic probabilistic model for diverse subset selection. [@kulesza2012dpp] For PSD (K), log-det exhibits diminishing returns and admits greedy approximation guarantees under standard submodularity conditions. [@nemhauser1978submodular] In practice, MMR offered a simpler and more scalable approximation, so it was used in all reported runs.</p>
+
+<hr>
+
+<h2 id="stage-d--ssde-self-supervised-divergence-embedding-enhanced-selector">Stage D — SSDE: Self-Supervised Divergence Embedding (enhanced selector)</h2>
+
+<p>The baseline selector uses hand-designed signatures (s_i) both for scoring and for redundancy control. To obtain a more stable <strong>low-dimensional geometry</strong> for diversity selection, we learn a Self-Supervised Divergence Embedding:
+[
+z_i = \frac{g_\theta(\tilde s_i)}{|g_\theta(\tilde s_i)|<em>2}\in\mathbb{R}^{p},
+]
+where (g</em>\theta) is a small MLP projection head and (\tilde s_i) is a stochastically perturbed view of (s_i) (feature dropout + Gaussian noise), analogous to “two-view” contrastive learning. [@chen2020simclr]</p>
+
+<h3 id="d1-clear-definitions-anchor--positives--hard-negatives">D.1 Clear definitions (anchor / positives / hard negatives)</h3>
+
+<p>For an anchor image (x_i), we define training pairs and negatives as follows (in our implementation, this is done <strong>in signature space</strong>, for efficiency):</p>
+
+<ul>
+  <li>
+<strong>Anchor:</strong> (x_i) (represented by its divergence signature (s_i)).</li>
+  <li>
+<strong>Positive:</strong> the <em>same image</em> (x_i) under a second stochastic “view” of its signature (e.g., independent feature dropout + noise), yielding (\tilde s_i^{(1)}) and (\tilde s_i^{(2)}), then embeddings (z_i^{(1)}), (z_i^{(2)}).
+<em>Interpretation:</em> “same stimulus, same cross-model disagreement pattern,” analogous to augmentations in SimCLR. [@chen2020simclr]</li>
+  <li>
+<strong>Hard negatives:</strong> images (x_j) whose disagreement profiles are <strong>confusable</strong> with (x_i) in the current embedding geometry (high similarity), but should be separated to prevent SSDE collapse into near-duplicate clusters. We implement this by mining the top-(k) most similar negatives in-batch and upweighting them. [@robinson2021hard_negatives; @kalantidis2020hard_negative_mixing]</li>
+</ul>
+
+<h3 id="d2-infonce-style-contrastive-loss-with-mined-negatives">D.2 InfoNCE-style contrastive loss (with mined negatives)</h3>
+
+<table>
+  <tbody>
+    <tr>
+      <td>Let (\mathrm{sim}(u,v) = \frac{u^\top v}{</td>
+      <td>u</td>
+      <td>_2</td>
+      <td>v</td>
+      <td>_2}) (cosine similarity) and (\tau&gt;0) be the temperature. For each anchor (i), define a mined negative set (\mathcal{N}_i) (the other examples in the batch), and a hard-negative subset (\mathcal{H}_i\subset\mathcal{N}_i) (top-(k) by similarity).</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>A generic weighted InfoNCE loss can be written:
+[
+\mathcal{L}_i
+=============</p>
+
+<p>-\log
+\frac{
+\exp(\mathrm{sim}(z_i^{(1)}, z_i^{(2)})/\tau)
+}{
+\exp(\mathrm{sim}(z_i^{(1)}, z_i^{(2)})/\tau)
++
+\sum_{j\in\mathcal{N}<em>i}
+w</em>{ij},\exp(\mathrm{sim}(z_i^{(1)}, z_j^{(2)})/\tau)
+},
+]
+where the hard-negative weights are:
+[
+w_{ij}=
+\begin{cases}
+1+\alpha_{\mathrm{hard}}, &amp; j\in\mathcal{H}_i,<br>
+1, &amp; \text{otherwise.}
+\end{cases}
+]</p>
+
+<p>In our implementation, this weighting is applied equivalently by adding (\log(1+\alpha_{\mathrm{hard}})) to the logits of hard negatives before the (\log\sum\exp) operation. [@robinson2021hard_negatives]</p>
+
+<h3 id="d3-ssde-trained-space-used-for-selection">D.3 SSDE-trained space used for selection</h3>
+
+<p>After training SSDE, we perform diversity-aware greedy selection in the learned space. The <strong>SSDE-aware marginal score</strong> used at selection step (t) is:
+[
+s_{\mathrm{SSDE}}(x_i \mid S_{t-1})
+===================================</p>
+
+<h2 id="d_i">d_i</h2>
+
+<p>\lambda\cdot \max_{j\in S_{t-1}}
+\langle z_i, z_j\rangle,
+]
+where (S_{t-1}) is the set selected so far, and (\langle z_i,z_j\rangle) equals cosine similarity because (z) vectors are normalized.</p>
+
+<p>This is exactly the MMR criterion, but the redundancy term is now measured in the SSDE geometry rather than in the raw hand-crafted signature geometry.</p>
+
+<hr>
+
+<h2 id="results">Results</h2>
+
+<h3 id="performance-scores-higher-is-better">Performance scores (higher is better)</h3>
+
+<p>We report the divergence score ((1 - \mathrm{avg\ CKA})) for representative submissions using the methods above, as obtained from the hackathon’s leaderboard.</p>
+
+<p>Table 1 summarizes four representative runs: the first two are <strong>baseline</strong> (with and without MMR), and the last two are <strong>SSDE + MMR</strong> under two parameter settings (with the best achieving <strong>0.5447</strong>). Additional submissions in the same range were repeats/ablations and are omitted for clarity.</p>
+
+<p><strong>Table 1 — Red Team runs and complete hyperparameter settings.</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: right">Run</th>
+      <th>Method</th>
+      <th>Selection objective &amp; space</th>
+      <th>Parameters (all)</th>
+      <th style="text-align: right">Score</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: right">1</td>
+      <td>Baseline (Top-(K))</td>
+      <td>select Top-(K) by (d_i)</td>
+      <td>
+<strong>Proxy:</strong> (d{=}256), (\alpha{=}0.5), (\varepsilon{=}10^{-3}) • <strong>Selection:</strong> (K{=}1000), (\lambda{=}0), prefilter (P{=}) N/A, quota: none</td>
+      <td style="text-align: right">0.4782</td>
+    </tr>
+    <tr>
+      <td style="text-align: right">2</td>
+      <td>Baseline + MMR</td>
+      <td>(d_i - \lambda\max_{j\in S}\mathrm{sim}(s_i,s_j))</td>
+      <td>
+<strong>Proxy:</strong> (d{=}256), (\alpha{=}0.5), (\varepsilon{=}10^{-3}) • <strong>Selection:</strong> (K{=}1000), (\lambda{=}0.20), prefilter (P{=}20000), quota: none</td>
+      <td style="text-align: right">0.5099</td>
+    </tr>
+    <tr>
+      <td style="text-align: right">3</td>
+      <td>SSDE + MMR</td>
+      <td>(d_i - \lambda\max_{j\in S}\langle z_i,z_j\rangle)</td>
+      <td>
+<strong>Proxy:</strong> (d{=}256), (\alpha{=}0.5), (\varepsilon{=}10^{-3}) • <strong>SSDE:</strong> (p{=}128), hidden (=512), epochs (=8), batch (=2048), lr (=3\cdot10^{-4}), wd (=10^{-4}), (\tau{=}0.10), mask (=0.20), noise (=0.01), hard-(k{=}128), (\alpha_{\mathrm{hard}}{=}2.0), score_temp (=1.0), max_train (=0), amp (=) on, seed (=0) • <strong>Selection:</strong> (K{=}1000), (\lambda{=}0.25), prefilter (P{=}20000), quota: none</td>
+      <td style="text-align: right">0.5409</td>
+    </tr>
+    <tr>
+      <td style="text-align: right">4</td>
+      <td><strong>SSDE + MMR + quota</strong></td>
+      <td>same as Run 3</td>
+      <td>
+<strong>Proxy:</strong> (d{=}256), (\alpha{=}0.5), (\varepsilon{=}10^{-3}) • <strong>SSDE:</strong> same as Run 3 • <strong>Selection:</strong> (K{=}1000), (\lambda{=}0.35), prefilter (P{=}20000), quota: ObjectNet 700 / ImageNet 300, seed (=0)</td>
+      <td style="text-align: right"><strong>0.5447</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="structure-of-disagreement-and-diversity">Structure of disagreement and diversity</h3>
+
+<ul>
+  <li>
+<strong>Selected images are systematically harder:</strong> Figure 2 shows the selected set’s hardness distribution is shifted toward higher (u_i), with the selected median around (\approx 0.71), consistent with targeting cross-model disagreement rather than random sampling.</li>
+  <li>
+<strong>Model suite is heterogeneous:</strong> Figure 3 shows substantial variation in average model–model agreement (some clusters of higher agreement, and many low-agreement pairs), motivating multi-directional disagreement terms and diversity-aware selection.</li>
+</ul>
+
+<figure>
+
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/2026/challenge/assets/img/2026-04-27-sub-05/model_agreement_heatmap-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/2026/challenge/assets/img/2026-04-27-sub-05/model_agreement_heatmap-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/2026/challenge/assets/img/2026-04-27-sub-05/model_agreement_heatmap-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/2026/challenge/assets/img/2026-04-27-sub-05/model_agreement_heatmap.png" class="img-fluid" width="auto" height="auto" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture><figcaption class="caption">Figure 3: Model–model agreement heatmap computed as the mean per-image cosine similarity in signature space.</figcaption>
+
+</figure>
+
+<ul>
+  <li>
+<strong>Selected set remains diverse:</strong> Figure 4 visualizes a representative subset RDM (1 − cosine), indicating broad dispersion with limited strong block structure (i.e., reduced redundancy).</li>
+</ul>
+
+<figure>
+
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/2026/challenge/assets/img/2026-04-27-sub-05/selected_rdm_heatmap-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/2026/challenge/assets/img/2026-04-27-sub-05/selected_rdm_heatmap-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/2026/challenge/assets/img/2026-04-27-sub-05/selected_rdm_heatmap-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/2026/challenge/assets/img/2026-04-27-sub-05/selected_rdm_heatmap.png" class="img-fluid" width="auto" height="auto" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture><figcaption class="caption">Figure 4: Representational dissimilarity matrix (1 − cosine similarity) for a clustered subset of selected items (illustrative sample of 150 image signatures).</figcaption>
+
+</figure>
+
+<ul>
+  <li>
+<strong>Greedy trade-off dynamics:</strong> Figure 5 shows that as selection proceeds, chosen items tend to become less hard (hardness decreases) while redundancy (max similarity to previous) increases, which is expected for greedy selection balancing signal and coverage.</li>
+</ul>
+
+<figure>
+
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/2026/challenge/assets/img/2026-04-27-sub-05/selection_trace_tradeoff-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/2026/challenge/assets/img/2026-04-27-sub-05/selection_trace_tradeoff-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/2026/challenge/assets/img/2026-04-27-sub-05/selection_trace_tradeoff-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/2026/challenge/assets/img/2026-04-27-sub-05/selection_trace_tradeoff.png" class="img-fluid" width="auto" height="auto" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture><figcaption class="caption">Figure 5: Greedy selection trace showing the hardness of selected items (top) and the maximum similarity to previously selected items (bottom).</figcaption>
+
+</figure>
+
+<h3 id="observed-sensitivity-to-key-experimental-knobs">Observed sensitivity to key experimental knobs</h3>
+
+<ul>
+  <li>
+<strong>Diversity weight (\lambda):</strong> introducing diversity ((\lambda&gt;0)) improved over Top-(K) (Run 2 vs. Run 1), consistent with the idea that redundant high-score images contribute limited marginal information. [@carbonell1998mmr]</li>
+  <li>
+<strong>SSDE geometry vs. raw signatures:</strong> SSDE increased scores substantially (Runs 3–4 vs. Run 2), suggesting that a learned embedding geometry for divergence profiles can be a better space for diversity control than hand-engineered signatures alone. [@chen2020simclr; @robinson2021hard_negatives]</li>
+  <li>
+<strong>Dataset mixture (quota):</strong> the best run used an explicit ObjectNet/ImageNet mixture, consistent with ObjectNet’s goal of probing robustness under dataset bias and distribution shift. [@barbu2019objectnet]</li>
+</ul>
+
+<hr>
+
+<h2 id="discussion">Discussion</h2>
+
+<h3 id="why-does-ssde-help">Why does SSDE help?</h3>
+
+<p>A plausible interpretation is that the pipeline decomposes the divergence objective into <em>signal</em> and <em>coverage</em>:</p>
+
+<ol>
+  <li>The divergence score (d_i) is a <strong>signal proxy</strong>, designed to prioritize stimuli where models disagree strongly and in multiple directions (via (\ell_i)).</li>
+  <li>SSDE provides a learned <strong>geometry</strong> over divergence profiles that helps distinguish “meaningfully different” disagreement modes from near-duplicates; hard negatives are especially helpful for separating close-but-nonidentical signatures. [@robinson2021hard_negatives]</li>
+  <li>MMR then enforces <strong>coverage</strong> across the learned disagreement modes, which can generalize better to the hidden evaluation split than simply maximizing a proxy on the observed pool.</li>
+</ol>
+
+<p>This emphasis on probing representational geometry rather than only accuracy mirrors core themes in representational alignment research. [@sucholutsky2023getting_aligned; @kriegeskorte2008rsa]</p>
+
+<h3 id="connection-to-brainscore-style-model-comparisons">Connection to BrainScore-style model comparisons</h3>
+
+<p>BrainScore studies compare models by how well their internal representations predict neural/behavioral measurements and show that architectural and training differences can yield substantial representational differences even when models achieve similar task performance. [@kubilius2019brainscore; @schrimpf2020integrative_benchmarking] This supports the general intuition behind this divergence maximization task: <strong>stimuli that expose inductive-bias differences</strong> (including distribution shifts such as ObjectNet) are likely to magnify representational divergence across a heterogeneous model suite.</p>
+
+<h3 id="limitations-and-future-work">Limitations and future work</h3>
+
+<p>This was a hackathon setting with limited time, with the goal of improving scores while understanding how algorithmic and modeling choices affect divergence.</p>
+
+<ul>
+  <li>
+<strong>Proxy mismatch:</strong> (d_i) is only a proxy for the hidden CKA-based evaluation, so selection can still overfit to proxy artifacts.</li>
+  <li>
+<strong>Lightweight SSDE model:</strong> SSDE uses a small MLP on divergence signatures (not raw pixels) to keep training fast; while effective, it may not capture higher-order semantic structure that larger self-supervised encoders can learn from images. Future work could combine SSDE with embeddings from modern image self-supervised models (e.g., DINO-style ViTs) to define richer redundancy measures or to mine hard negatives at the pixel/semantic level. [@caron2021dino]</li>
+  <li>
+<strong>Scaling:</strong> additional compute would allow (i) larger candidate pools, (ii) longer SSDE training with larger batches (often beneficial in contrastive learning), and (iii) ensembling multiple temperatures/seeds for more stable selection. [@chen2020simclr; @he2020moco]</li>
+</ul>
+
+<hr>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>We presented a Red Team stimulus selection pipeline grounded in established representational-analysis and diversity-selection ideas:</p>
+
+<ul>
+  <li>
+<strong>Multi-model divergence signatures</strong> that summarize disagreement geometry across models, motivated by representational similarity analysis and alignment frameworks. [@kriegeskorte2008rsa; @sucholutsky2023getting_aligned]</li>
+  <li>A <strong>multi-directional disagreement</strong> proxy incorporating a <strong>log-det</strong> term to emphasize disagreement spread across multiple directions. [@krause2008sensor_placement]</li>
+  <li>
+<strong>Diversity-aware greedy selection</strong> (MMR), with conceptual ties to log-det/DPP diversity. [@carbonell1998mmr; @kulesza2012dpp]</li>
+  <li>
+<strong>SSDE</strong>, learning a compact divergence embedding via contrastive learning with <strong>hard negative mining</strong>, improving diversity control in a principled way. [@chen2020simclr; @robinson2021hard_negatives]</li>
+</ul>
+
+<p>Across the reported runs, SSDE + diversity selection produced the best score (<strong>0.5447</strong>). These results should be interpreted cautiously due to proxy mismatch and limited hyperparameter exploration. With more time and GPU budget—especially to broaden the candidate pool and to explore richer self-supervised image features—the same methodological framework could plausibly yield further improvements.</p>
+
+<hr>
+
+<h2 id="appendix">Appendix</h2>
+
+<h3 id="a-cka--hsic-relationship">A. CKA / HSIC relationship</h3>
+
+<p>Given centered representation matrices (X\in\mathbb{R}^{n\times p}) and (Y\in\mathbb{R}^{n\times q}), linear CKA can be expressed in terms of HSIC:
+[
+\mathrm{CKA}(X,Y)= \frac{\mathrm{HSIC}(X,Y)}{\sqrt{\mathrm{HSIC}(X,X),\mathrm{HSIC}(Y,Y)}}.
+]
+[@kornblith2019cka; @gretton2005hsic]</p>
+
+<h3 id="b-pseudocode">B. Pseudocode</h3>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>INPUT:
+  Candidate images D = {x_i}_{i=1..N} from allowed datasets (ImageNet-val, ObjectNet)
+  Fixed model suite {f_m}_{m=1..M}
+  Target set size K = 1000
+
+HYPERPARAMETERS (as used in Table 1):
+  Projection / proxy:
+    d = 256                      # random projection dimension for model features
+    alpha = 0.5                  # weight for pairwise disagreement u_i vs log-det term ell_i
+    eps = 1e-3                   # log-det stabilization epsilon in log det(G_i + eps I)
+
+  Baseline selection (MMR):
+    lambda_diversity ∈ {0.0, 0.20}   # diversity weight
+    P = 20000                         # prefilter top-P by proxy score (for MMR runs)
+
+  SSDE training (Run 3–4):
+    p = 128                # SSDE embedding dimension (proj-dim)
+    hidden = 512           # MLP hidden dimension
+    epochs = 8
+    batch_size = 2048
+    lr = 3e-4
+    weight_decay = 1e-4
+    tau = 0.10             # contrastive temperature
+    mask_p = 0.20          # feature dropout prob for signature views
+    noise_std = 0.01       # gaussian noise std for views
+    hard_k = 128           # top-k hardest negatives per anchor
+    hard_alpha = 2.0       # hard-negative weight: w = 1 + hard_alpha
+    score_temp = 1.0       # score weighting temperature (sigmoid) during training
+    max_train = 0          # 0 means train on all N signatures
+    amp = on               # mixed precision
+
+  SSDE selection:
+    lambda_diversity ∈ {0.25, 0.35}
+    P = 20000
+    quota_best = {objectnet:700, imagenet:300}   # used only for best run
+
+ALGORITHM:
+
+(1) Representation extraction:
+    For each image x_i and each model m:
+      extract layer feature h_m(x_i) ∈ R^{d_m}
+
+(2) Standardize + random project:
+    Define standardized vector \tilde{h}_m(x_i) (e.g., centering + L2 norm)
+    e_m(x_i) = P_m * \tilde{h}_m(x_i) ∈ R^{d}
+
+(3) Build per-image matrix:
+    E_i = [e_1(x_i); ...; e_M(x_i)] ∈ R^{M×d}
+
+(4) Compute disagreement proxies:
+    u_i = mean pairwise cosine distance across rows of E_i
+    G_i = (E_i E_i^T)/d
+    ell_i = log det(G_i + eps I)
+    score d_i = alpha * u_i + (1-alpha) * clip(ell_i)
+    Construct signature s_i from flattened upper triangle of G_i + summaries
+
+(5) Train SSDE on signatures (SSDE runs):
+    Create two signature views per sample with (mask_p, noise_std)
+    Train MLP g_theta with InfoNCE loss (temperature tau)
+    Mine hard negatives: top-k by similarity; upweight by (1 + hard_alpha)
+    Output normalized embeddings z_i = normalize(g_theta(s_i)) ∈ R^p
+
+(6) Select K images (baseline or SSDE):
+    Prefilter to top P by d_i (if using MMR)
+    Greedy selection for t = 1..K:
+      choose i* = argmax_{i not in S} [ d_i - lambda_diversity * max_{j in S} sim(v_i, v_j) ]
+      where v_i = s_i (baseline MMR) or v_i = z_i (SSDE MMR)
+      enforce dataset quota if specified (best run)
+
+(7) Output the collection of required images:
+    {"dataset_name": ..., "image_identifier": ...}
+</code></pre></div></div>
+
+<hr>
+
+
+      </d-article>
+
+      <d-appendix>
+        <d-footnote-list></d-footnote-list>
+        <d-citation-list></d-citation-list>
+      </d-appendix>
+
+    </div>
+
+    <d-bibliography src="/2026/challenge/assets/bibliography/2026-04-27-sub-05.bib"></d-bibliography>
+
+    <d-article id="bibtex-container" class="related highlight">
+      For attribution in academic contexts, please cite this work as
+      <pre id="bibtex-academic-attribution">
+        PLACEHOLDER FOR ACADEMIC ATTRIBUTION
+  </pre>
+
+      BibTeX citation
+      <pre id="bibtex-box">
+        PLACEHOLDER FOR BIBTEX
+  </pre>
+    </d-article>
+
+
+    <script src="https://utteranc.es/client.js" repo="iclr-blogposts/2025" issue-term="pathname" theme="github-light" crossorigin="anonymous" async>
+</script>
+    
+    <!-- Bootsrap & MDB scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha256-fgLAgv7fyCGopR/gBNq2iW3ZKIdqIcyshnUULC4vex8=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/js/mdb.min.js" integrity="sha256-NdbiivsvWt7VYCt6hYNT3h/th9vSTL4EDWeGs5SN3DA=" crossorigin="anonymous"></script>
+
+    
+  </body>
+
+
+</html>

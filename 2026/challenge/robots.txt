@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://representational-alignment.github.io/2026/challenge/sitemap.xml

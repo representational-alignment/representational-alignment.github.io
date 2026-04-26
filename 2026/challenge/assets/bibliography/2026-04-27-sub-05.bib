@@ -1,0 +1,360 @@
+
+
+% ---- Workshop / Challenge web resources ----
+@misc{realign_workshop_2026,
+  title        = {{ICLR 2026 Workshop on Representational Alignment (Re-Align)}},
+  howpublished = {\url{https://representational-alignment.github.io/2026/}},
+  note         = {},
+  year         = {2026}
+}
+
+@misc{realign_leaderboard_space_2026,
+  title        = {{Re-Align Challenge Leaderboard (Hugging Face Space)}},
+  howpublished = {\url{https://huggingface.co/spaces/representational-alignment/iclr2026-realign-challenge}},
+  note         = {},
+  year         = {2026}
+}
+
+@misc{realign_challenge_repo,
+  title        = {{representational-alignment/challenge: The Re-Align Challenge (GitHub repository)}},
+  howpublished = {\url{https://github.com/representational-alignment/challenge}},
+  note         = {},
+  year         = {2026}
+}
+
+@misc{realign_hackathon_repo,
+  title        = {{representational-alignment/hackathon: Re-Align Hackathon starter code (GitHub repository)}},
+  howpublished = {\url{https://github.com/representational-alignment/hackathon}},
+  note         = {},
+  year         = {2026}
+}
+
+% ---- Core representational-alignment framing paper linked on the workshop website ----
+@article{sucholutsky2023getting_aligned,
+  title         = {Getting aligned on representational alignment},
+  author        = {Sucholutsky, Ilia and Muttenthaler, Lukas and Weller, Adrian and Peng, Andi and Bobu, Andreea and Kim, Been and Love, Bradley C. and Grant, Erin and Groen, Iris and Achterberg, Jascha and Tenenbaum, Joshua B. and Collins, Katherine M. and Hermann, Katherine L. and Oktar, Kerem and Greff, Klaus and Hebart, Martin N. and Jacoby, Nori and Zhang, Qiuyi and Marjieh, Raja and Geirhos, Robert and Chen, Sherol and Kornblith, Simon and Rane, Sunayana and Lampinen, Andrew K. and M{\"u}ller, Klaus-Robert and Toneva, Mariya and Griffiths, Thomas L.},
+  journal       = {arXiv preprint arXiv:2310.13018},
+  year          = {2023},
+  eprint        = {2310.13018},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.LG},
+  url           = {https://arxiv.org/abs/2310.13018}
+}
+
+% ==============================================================================
+% Datasets used in our pipeline
+% ==============================================================================
+
+@inproceedings{deng2009imagenet,
+  title     = {ImageNet: A Large-Scale Hierarchical Image Database},
+  author    = {Deng, Jia and Dong, Wei and Socher, Richard and Li, Li-Jia and Li, Kai and Fei-Fei, Li},
+  booktitle = {2009 IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
+  year      = {2009},
+  pages     = {248--255},
+  doi       = {10.1109/CVPR.2009.5206848},
+  url       = {https://ieeexplore.ieee.org/document/5206848}
+}
+
+@inproceedings{barbu2019objectnet,
+  title     = {ObjectNet: A large-scale bias-controlled dataset for pushing the limits of object recognition models},
+  author    = {Barbu, Andrei and Mayo, David and Alverio, Julian and Luo, William and Wang, Christopher and Gutfreund, Dan and Tenenbaum, Joshua and Katz, Boris},
+  booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
+  volume    = {32},
+  year      = {2019},
+  url       = {https://papers.nips.cc/paper/2019/hash/bf4d5c0fa3dffbfe0e54f7f09b031d92-Abstract.html}
+}
+
+@misc{objectnet_website,
+  title        = {{ObjectNet Dataset}},
+  howpublished = {\url{https://objectnet.dev/}},
+  note         = {},
+  year         = {2019}
+}
+
+% ==============================================================================
+% Representational similarity 
+% ==============================================================================
+
+@article{kriegeskorte2008rsa,
+  title   = {Representational similarity analysis---connecting the branches of systems neuroscience},
+  author  = {Kriegeskorte, Nikolaus and Mur, Marieke and Bandettini, Peter A.},
+  journal = {Frontiers in Systems Neuroscience},
+  volume  = {2},
+  pages   = {4},
+  year    = {2008},
+  doi     = {10.3389/neuro.06.004.2008},
+  url     = {https://www.frontiersin.org/articles/10.3389/neuro.06.004.2008/full}
+}
+
+@inproceedings{kornblith2019cka,
+  title     = {Similarity of Neural Network Representations Revisited},
+  author    = {Kornblith, Simon and Norouzi, Mohammad and Lee, Honglak and Hinton, Geoffrey},
+  booktitle = {Proceedings of the 36th International Conference on Machine Learning (ICML)},
+  series    = {Proceedings of Machine Learning Research},
+  volume    = {97},
+  pages     = {3519--3529},
+  year      = {2019},
+  url       = {https://proceedings.mlr.press/v97/kornblith19a.html}
+}
+
+@inproceedings{gretton2005hsic,
+  title     = {Measuring Statistical Dependence with {H}ilbert-{S}chmidt Norms},
+  author    = {Gretton, Arthur and Bousquet, Olivier and Smola, Alexander and Sch{\"o}lkopf, Bernhard},
+  booktitle = {Algorithmic Learning Theory},
+  year      = {2005},
+  pages     = {63--77},
+  doi       = {10.1007/11564089_7},
+  url       = {https://link.springer.com/chapter/10.1007/11564089_7}
+}
+
+@article{gretton2012mmd,
+  title   = {A Kernel Two-Sample Test},
+  author  = {Gretton, Arthur and Borgwardt, Karsten M. and Rasch, Malte J. and Sch{\"o}lkopf, Bernhard and Smola, Alexander J.},
+  journal = {Journal of Machine Learning Research},
+  year    = {2012},
+  volume  = {13},
+  pages   = {723--773},
+  url     = {https://jmlr.org/papers/v13/gretton12a.html}
+}
+
+% ==============================================================================
+% SSDE (Self-Supervised Divergence Embedding): contrastive learning + hard negatives
+% ==============================================================================
+
+@inproceedings{chen2020simclr,
+  title     = {A Simple Framework for Contrastive Learning of Visual Representations},
+  author    = {Chen, Ting and Kornblith, Simon and Norouzi, Mohammad and Hinton, Geoffrey},
+  booktitle = {Proceedings of the 37th International Conference on Machine Learning (ICML)},
+  series    = {Proceedings of Machine Learning Research},
+  volume    = {119},
+  pages     = {1597--1607},
+  year      = {2020},
+  url       = {https://proceedings.mlr.press/v119/chen20j.html}
+}
+
+@inproceedings{he2020moco,
+  title     = {Momentum Contrast for Unsupervised Visual Representation Learning},
+  author    = {He, Kaiming and Fan, Haoqi and Wu, Yuxin and Xie, Saining and Girshick, Ross},
+  booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  year      = {2020},
+  pages     = {9729--9738},
+  url       = {https://openaccess.thecvf.com/content_CVPR_2020/html/He_Momentum_Contrast_for_Unsupervised_Visual_Representation_Learning_CVPR_2020_paper.html}
+}
+
+@article{oord2018cpc,
+  title         = {Representation Learning with Contrastive Predictive Coding},
+  author        = {van den Oord, A{\"a}ron and Li, Yazhe and Vinyals, Oriol},
+  journal       = {arXiv preprint arXiv:1807.03748},
+  year          = {2018},
+  eprint        = {1807.03748},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.LG},
+  url           = {https://arxiv.org/abs/1807.03748}
+}
+
+@inproceedings{khosla2020supcon,
+  title     = {Supervised Contrastive Learning},
+  author    = {Khosla, Prannay and Teterwak, Piotr and Wang, Chen and Sarna, Aaron and Tian, Yonglong and Isola, Phillip and Maschinot, Aaron and Liu, Ce and Krishnan, Dilip},
+  booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
+  volume    = {33},
+  year      = {2020},
+  url       = {https://proceedings.neurips.cc/paper/2020/hash/d89a66c7c80a29b1bdbab0f2a1a94af8-Abstract.html}
+}
+
+@inproceedings{robinson2021hard_negatives,
+  title     = {Contrastive Learning with Hard Negative Samples},
+  author    = {Robinson, Joshua and Chuang, Ching-Yao and Sra, Suvrit and Jegelka, Stefanie},
+  booktitle = {International Conference on Learning Representations (ICLR)},
+  year      = {2021},
+  url       = {https://openreview.net/forum?id=CR1XOQ0UTh-}
+}
+
+@inproceedings{kalantidis2020hard_negative_mixing,
+  title     = {Hard Negative Mixing for Contrastive Learning},
+  author    = {Kalantidis, Yannis and Sariyildiz, Mert and Pionnier, Michel and Weinzaepfel, Philippe and Larlus, Diane},
+  booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
+  volume    = {33},
+  year      = {2020},
+  url       = {https://arxiv.org/abs/2010.01028}
+}
+
+@inproceedings{gutmann2010nce,
+  title     = {Noise-Contrastive Estimation: A new estimation principle for unnormalized statistical models},
+  author    = {Gutmann, Michael and Hyv{\"a}rinen, Aapo},
+  booktitle = {Proceedings of the Thirteenth International Conference on Artificial Intelligence and Statistics (AISTATS)},
+  year      = {2010},
+  pages     = {297--304},
+  url       = {http://proceedings.mlr.press/v9/gutmann10a.html}
+}
+
+% ---- Divergence / information measures commonly used to define "divergence scores" ----
+@article{kullback1951kl,
+  title   = {On Information and Sufficiency},
+  author  = {Kullback, Solomon and Leibler, Richard A.},
+  journal = {The Annals of Mathematical Statistics},
+  volume  = {22},
+  number  = {1},
+  pages   = {79--86},
+  year    = {1951},
+  doi     = {10.1214/aoms/1177729694},
+  url     = {https://projecteuclid.org/journals/annals-of-mathematical-statistics/volume-22/issue-1/On-Information-and-Sufficiency/10.1214/aoms/1177729694.full}
+}
+
+@article{lin1991js,
+  title   = {Divergence Measures Based on the {S}hannon Entropy},
+  author  = {Lin, Jianhua},
+  journal = {IEEE Transactions on Information Theory},
+  volume  = {37},
+  number  = {1},
+  pages   = {145--151},
+  year    = {1991},
+  doi     = {10.1109/18.61115},
+  url     = {https://ieeexplore.ieee.org/document/61115}
+}
+
+% ==============================================================================
+% Diversity-aware subset selection
+% ==============================================================================
+
+@inproceedings{carbonell1998mmr,
+  title     = {The Use of {MMR}, Diversity-Based Reranking for Reordering Documents and Producing Summaries},
+  author    = {Carbonell, Jaime and Goldstein, Jade},
+  booktitle = {Proceedings of the 21st Annual International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR)},
+  year      = {1998},
+  pages     = {335--336},
+  doi       = {10.1145/290941.291025},
+  url       = {https://dl.acm.org/doi/10.1145/290941.291025}
+}
+
+% ==============================================================================
+% BrainScore intuition
+% ==============================================================================
+
+@article{schrimpf2020integrative_benchmarking,
+  title   = {Integrative Benchmarking to Advance Neurally Mechanistic Models of Human Intelligence},
+  author  = {Schrimpf, Martin and Kubilius, Jonas and Lee, Michael J. and Murty, N. A. Ravi and Ajemian, Robert and DiCarlo, James J.},
+  journal = {Neuron},
+  volume  = {108},
+  number  = {3},
+  pages   = {413--423},
+  year    = {2020},
+  doi     = {10.1016/j.neuron.2020.07.040},
+  url     = {https://www.cell.com/neuron/fulltext/S0896-6273(20)30605-X}
+}
+
+@inproceedings{kubilius2019brainscore,
+  title     = {Brain-Like Object Recognition with High-Performing Shallow Recurrent {ANN}s},
+  author    = {Kubilius, Jonas and Schrimpf, Martin and Kar, Kohitij and Hong, Ha and Majaj, Najib J. and Rajalingham, Rishi and Issa, Elias B. and Bashivan, Pouya and Prescott-Roy, Jonathan and Schmidt, Kailyn and Nayebi, Aran and Bear, Daniel and Yamins, Daniel L. K. and DiCarlo, James J.},
+  booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
+  volume    = {32},
+  year      = {2019},
+  url       = {https://arxiv.org/abs/1909.06161}
+}
+
+% ==============================================================================
+% Software / platforms used by the pipeline
+% ==============================================================================
+
+@inproceedings{paszke2019pytorch,
+  title     = {PyTorch: An Imperative Style, High-Performance Deep Learning Library},
+  author    = {Paszke, Adam and Gross, Sam and Massa, Francisco and Lerer, Adam and Bradbury, James and Chanan, Gregory and Killeen, Trevor and Lin, Zeming and Gimelshein, Natalia and Antiga, Luca and Desmaison, Alban and K{\"o}pf, Andreas and Yang, Edward and DeVito, Zachary and Raison, Martin and Tejani, Alykhan and Chilamkurthy, Sasank and Steiner, Benoit and Fang, Lu and Bai, Junjie and Chintala, Soumith},
+  booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
+  volume    = {32},
+  year      = {2019},
+  url       = {https://papers.nips.cc/paper/2019/hash/bdbca288fee7f92f2bfa9f7012727740-Abstract.html}
+}
+
+@misc{timm_library,
+  title        = {{timm: PyTorch Image Models}},
+  author       = {Wightman, Ross},
+  howpublished = {\url{https://github.com/huggingface/pytorch-image-models}},
+  note         = {},
+  year         = {2019}
+}
+
+@article{lhoest2021datasets,
+  title         = {Datasets: A Community Library for Natural Language Processing},
+  author        = {Lhoest, Quentin and delangue, Cl{\'e}ment and von Platen, Patrick and Wolf, Thomas and others},
+  journal       = {arXiv preprint arXiv:2109.02846},
+  year          = {2021},
+  eprint        = {2109.02846},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.CL},
+  url           = {https://arxiv.org/abs/2109.02846}
+}
+
+@inproceedings{wolf2020transformers,
+  title     = {Transformers: State-of-the-Art Natural Language Processing},
+  author    = {Wolf, Thomas and Debut, Lysandre and Sanh, Victor and Chaumond, Julien and Delangue, Cl{\'e}ment and Moi, Anthony and Cistac, Pierric and Rault, Tim and Louf, R{\'e}mi and Funtowicz, Morgan and Davison, Joe and Shleifer, Sam and von Platen, Patrick and Ma, Clara and Jernite, Yacine and Plu, Julien and Xu, Canwen and Le Scao, Teven and Gugger, Sylvain and Drame, Mariama and Lhoest, Quentin and Rush, Alexander M.},
+  booktitle = {Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing: System Demonstrations},
+  year      = {2020},
+  pages     = {38--45},
+  url       = {https://aclanthology.org/2020.emnlp-demos.6/}
+}
+
+@misc{huggingface_hub,
+  title        = {{Hugging Face Hub (documentation)}},
+  howpublished = {\url{https://huggingface.co/docs/hub/}},
+  note         = {},
+  year         = {2026}
+}
+
+
+@incollection{johnson1984jl,
+  title        = {Extensions of {L}ipschitz mappings into a {H}ilbert space},
+  author       = {Johnson, William B. and Lindenstrauss, Joram},
+  booktitle    = {Conference in Modern Analysis and Probability},
+  series       = {Contemporary Mathematics},
+  volume       = {26},
+  pages        = {189--206},
+  year         = {1984},
+  publisher    = {American Mathematical Society}
+}
+
+@article{achlioptas2003random_projections,
+  title   = {Database-friendly random projections: {Johnson--Lindenstrauss} with binary coins},
+  author  = {Achlioptas, Dimitris},
+  journal = {Journal of Computer and System Sciences},
+  volume  = {66},
+  number  = {4},
+  pages   = {671--687},
+  year    = {2003}
+}
+
+@article{krause2008sensor_placement,
+  title   = {Near-optimal sensor placements in {Gaussian} processes: Theory, efficient algorithms and empirical studies},
+  author  = {Krause, Andreas and Singh, Ajit and Guestrin, Carlos},
+  journal = {Journal of Machine Learning Research},
+  volume  = {9},
+  pages   = {235--284},
+  year    = {2008}
+}
+
+@article{nemhauser1978submodular,
+  title     = {An analysis of approximations for maximizing submodular set functions---{I}},
+  author    = {Nemhauser, George L. and Wolsey, Laurence A. and Fisher, Marshall L.},
+  journal   = {Mathematical Programming},
+  volume    = {14},
+  number    = {1},
+  pages     = {265--294},
+  year      = {1978},
+}
+
+@book{kulesza2012dpp,
+  title     = {Determinantal Point Processes for Machine Learning},
+  author    = {Kulesza, Alex and Taskar, Ben},
+  series    = {Foundations and Trends in Machine Learning},
+  volume    = {5},
+  number    = {2--3},
+  pages     = {123--286},
+  year      = {2012},
+  publisher = {Now Publishers}
+}
+
+@inproceedings{caron2021dino,
+  title     = {Emerging Properties in Self-Supervised Vision Transformers},
+  author    = {Caron, Mathilde and Touvron, Hugo and Misra, Ishan and J{'e}gou, Herv{'e} and Mairal, Julien and Bojanowski, Piotr and Joulin, Armand},
+  booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
+  pages     = {9650--9660},
+  year      = {2021}
+}
