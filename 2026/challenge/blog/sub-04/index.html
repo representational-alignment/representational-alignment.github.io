@@ -22,7 +22,7 @@
 
     // getting stuff directly from Jekyll
     let publishedWhen = "April 27, 2026";
-    let title = "🟥 Maximally Disagreeing Images CKA-Weighted Multi-Scale Divergence for Red Team Stimulus Selection".replace(/^[🟦🟥]\s*/u, '');
+    let title = "🟥 Maximally Disagreeing Images: CKA-Weighted Multi-Scale Divergence".replace(/^[🟦🟥]\s*/u, '');
     let description = "";
 
     {
@@ -77,7 +77,7 @@ ${academicLFI}, "${title}", ICLR Blogposts, 2026.
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>🟥 Maximally Disagreeing Images CKA-Weighted Multi-Scale Divergence for Red Team Stimulus Selection</title>
+    <title>🟥 Maximally Disagreeing Images: CKA-Weighted Multi-Scale Divergence</title>
     <meta name="author" content="ICLR  Blog">
     <meta name="description" content="Home to the 2025 ICLR Blogposts track
 ">
@@ -148,16 +148,16 @@ ${academicLFI}, "${title}", ICLR Blogposts, 2026.
 
   <d-front-matter>
     <script async type="text/json">{
-      "title": "Maximally Disagreeing Images CKA-Weighted Multi-Scale Divergence for Red Team Stimulus Selection",
+      "title": "Maximally Disagreeing Images: CKA-Weighted Multi-Scale Divergence",
       "description": "",
       "published": "April 27, 2026",
       "authors": [
         {
           "author": "Dhia Naouali",
-          "authorURL": "",
+          "authorURL": "https://dhia-naouali.github.io/",
           "affiliations": [
             {
-              "name": "Higher institute of mathematics and computer sciences of monastir",
+              "name": "University of Monastir",
               "url": ""
             }
           ]
@@ -258,7 +258,7 @@ ${academicLFI}, "${title}", ICLR Blogposts, 2026.
             <span style="font-size:0.75em;line-height:1;">🟥</span>
             
           
-          Maximally Disagreeing Images CKA-Weighted Multi-Scale Divergence for Red Team Stimulus Selection
+          Maximally Disagreeing Images: CKA-Weighted Multi-Scale Divergence
         </h1>
         <p></p>
       </d-title>
@@ -294,7 +294,7 @@ ${academicLFI}, "${title}", ICLR Blogposts, 2026.
 
 <p>We use the unbiased HSIC estimator:</p>
 
-\[\text{HSIC}(K, L) = \frac{\operatorname{tr}(KL) + \dfrac{(\mathbf{1}^\top K \mathbf{1})(\mathbf{1}^\top L \mathbf{1})}{(n-1)(n-2)} - \dfrac{2\,(K\mathbf{1})^\top(L\mathbf{1})}{n-2}}{n(n-3)}\]
+\[\text{HSIC}(K, L) = \frac{\mathrm{tr}(KL) + \dfrac{(\mathbf{1}^\top K \mathbf{1})(\mathbf{1}^\top L \mathbf{1})}{(n-1)(n-2)} - \dfrac{2\,(K\mathbf{1})^\top(L\mathbf{1})}{n-2}}{n(n-3)}\]
 
 \[\text{CKA}(K, L) = \frac{\text{HSIC}(K, L)}{\sqrt{\text{HSIC}(K,K)\cdot\text{HSIC}(L,L)}}\]
 
@@ -302,7 +302,7 @@ ${academicLFI}, "${title}", ICLR Blogposts, 2026.
 
 <ul>
   <li>
-<strong>Pairwise traces:</strong> $T_{ij} = \operatorname{tr}(G_i G_j)$ via <code class="language-plaintext highlighter-rouge">einsum("imn,jmn-&gt;ij", G, G)</code>
+<strong>Pairwise traces:</strong> $T_{ij} = \mathrm{tr}(G_i G_j)$ via <code class="language-plaintext highlighter-rouge">einsum("imn,jmn-&gt;ij", G, G)</code>
 </li>
   <li>
 <strong>Row-sum cross-products:</strong> $R_{ij} = (G_i\mathbf{1})^\top(G_j\mathbf{1})$ via row-sum vectors and a single matmul</li>
@@ -320,8 +320,8 @@ ${academicLFI}, "${title}", ICLR Blogposts, 2026.
 
 <ol>
   <li>Random projection: $Y = X\Omega$, $\Omega \in \mathbb{R}^{D \times (d+10)}$</li>
-  <li>QR: $Q, _ = \operatorname{QR}(Y)$</li>
-  <li>Small SVD: $U, \Sigma, V^\top = \operatorname{SVD}(Q^\top X)$</li>
+  <li>QR: $Q, _ = \mathrm{QR}(Y)$</li>
+  <li>Small SVD: $U, \Sigma, V^\top = \mathrm{SVD}(Q^\top X)$</li>
   <li>Projection: $X_r = X V_{:d}$, then L2-normalised</li>
 </ol>
 
